@@ -1,0 +1,900 @@
+<!-- 	Authors: Santiago Molano - KU Leuven 
+		Template Creation Date: August 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS: 
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>UML and XML</title>
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<!--link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css"><!-- anthrazit background design --> 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    <!-- base target="_blank"--> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+			 <!-- FORMATTING FOR HEADER -->
+			
+					
+				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
+			
+				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
+				 <div  class = "presentation_title" style=" text-align: center " > UML and XML 
+				</div>	<!--The title of the presentation appears on each slide-->
+				 
+
+			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
+				@prefix dc: <http://purl.org/dc/terms/>.
+				@prefix eo4geo: <http://bok.eo4geo.eu/>.
+				<>  	dc:title "UML and XML";
+					dc:creator "Marc Olijslagers; Danny Vandenbroucke; Maria da Saudade De Brito Pontes";
+					dc:subject "Copernicus, EO4GEO, WP5, Satellite, Earth Observation";
+					dc:abstract "XML (Extensible Markup Language) is a de-facto standard for exchanging data over the internet. It is one of the most important IT standards when building Spatial Data Infrastructures (SDI’s).
+					UML (Unified Modelling Language) is a family of graphic notations used in software and database design. The UML class diagrams describe data structures. UML class diagrams are often used in the definition of standards or in the definition of (geospatial) datasets.
+					The module describes the basic concepts of XML (syntax, schema, XSL and parsers) and UML class diagrams and how they are related to each other. It uses examples from geospatial standards (GML, metadata standards) to illustrate the different concepts. The module includes some exercises for reading correctly and easily XML code and UML schemas.
+					The training material consist of presentations, exercises and supporting documents. The module is NOT a self-learning module, but needs class tutoring and interactions.";
+					dc:tableOfContents "1.	What is XML and where is it used for?
+					2.	What is the syntax of XML?
+					3.	How are XML schemas used to define the XML structure?
+					4.	Examples of XML code and exercise for reading fluently XML code
+					5.	What is UML, what are UML class diagrams and how are they used?
+					6.	What are the components of UML class diagrams, what are the different relations defined in UML
+					7.	Examples of UML schemas and exercise to read, understand and explain UML schemas
+					8.	How are XML and UML used in the geospatial world: GML and metadata standards as example";
+					dc:description "Learning outcomes:•	To describe and define the basic concepts of XML and UML
+					•	To describe the use of XML schemas
+					•	To interpret and explain the content of basic XML documents
+					•	To interpret and explain UML class diagrams
+					•	To sketch UML class diagrams (paper) for basic data structures";
+					dc:contributor "------";
+					dc:created "2020-09-01";
+					dc:type "InteractiveResource";
+					dc:format "html";
+					dc:language "EN"; 
+					dc:SizeOrDuration "1.5h"
+					dc:audience "The module is targeting technical experts such as IT experts, web masters, but also spatial data experts that manage, harmonize and publish geospatial data";
+					dc:educationLevelThe module is based on “XML and GML” course developed under previous projects including LINKVIT (http://www.linkvit.eu/en/) and the UML course developed as part of smeSpire and internal training at KU Leuven.-----"";
+					dc:rightsHolder "SADL, KU Leuven";
+					dc:license "CC BY-SA 4.0";
+					dc:relation eo4geo:DA4-2;
+					dc:relation eo4geo:DM1-7;
+					dc:relation eo4geo:DM1-8;
+					dc:relation eo4geo:DM2;
+					dc:relation eo4geo:OI3b .	
+								-->
+
+
+			<div class="slides">
+				
+			
+				<section >
+					<h1 style="font-size:60px">Reading and Understanding UML and XML</h1><br>
+					<h2 style="font-size:30px"> What they are and what they are used for. Structure, components and applicationsin the geospatial world. </h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left class="plain">
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right class="plain">
+				</section>
+							
+				
+				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
+			<section > 
+					<section > 
+						<br><h1>WELCOME! </h1> 
+						<p style="font-size:22px">With the following slides and interactive material you will be able to take part in the journey to discover <strong><span style="color: rgb(41, 105, 176);">Spatial Data Infrastructures</span></strong> (<em>SDI</em>) its components and benefits through the observation of multiple examples and exercises.&nbsp;</p><br>
+						<p style="font-size:22px; text-align:justify">You can navigate through the course by pressing the navigation arrows at the bottom of each slide or using your arrow keys on your keyboard. You can move horizontally <span style="color: rgb(44, 130, 201);"><strong>(</strong></span><span style="color: rgb(41, 105, 176);"><strong>&larr; &rarr;)</strong>&nbsp;</span>for viewing each theme and vertically <strong><span style="color: rgb(44, 130, 201);">(&uarr;&darr;)</span></strong> to view extra recommended information</p>					
+
+						<br><img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/navigation_arrows.png" alt="navigation arrows">	
+					</section >
+			</section>
+			
+				<section >
+					<h1 style="font-size:60px">Reading and Understanding UML and XML</h1><br>
+					<h2 style="font-size:30px"> What they are and what they are used for. Structure, components and applicationsin the geospatial world. </h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left class="plain">
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right class="plain">
+				</section>
+				<section >
+					<h2 style="color:#5DADE2;"> 01 Extensible Markup Language XML</h2>
+					<div style= "vertical-align:right">
+					<table>
+						<tr><th>#</th><th align="center">Content</th></tr>
+						<tr><td><a href="#02.1.1">1</a></td><td>What is XML and what is it used for?</td></tr>
+						<tr><td><a href="#02.1.2">2</a></td><td>XML to Structure Data</td></tr>
+						<tr><td><a href="#02.1.3">3</a></td><td>Syntax</td></tr>
+						<tr><td><a href="#02.1.4">4</a></td><td>Why XML?</td></tr>
+						<tr><td><a href="#02.1.5">5</a></td><td>Validation of XML</td></tr>
+						<tr><td><a href="#02.1.6">6</a></td><td>XML schema</td></tr>
+						<tr><td><a href="#02.1.7">7</a></td><td>XML namespaces</td></tr>
+						<tr><td><a href="#02.1.8">8</a></td><td>XML Examples</td></tr>
+						<tr><td><a href="#02.1.9">9</a></td><td>XML Exercise</td></tr>
+					</table></div>
+				</section>
+				<section id="02.1.1">
+					<h1 style="color:#5DADE2;"> 01 What is XML and what is it used for?</h1>
+				</section>
+				<section>
+					<div class="img-div" style="position: absolute; top: 288px; left: 210px; height: 146px;  width: 311px">
+							<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image3.png"></img>
+					</div>
+				   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;"> 01 | Introduction</h2>
+
+				   </div>
+					
+					 <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">In standards, metadata, data models and geospatial services XML and UML are frequently used. Therefore a basic knowledge about reading and understanding XML and UML is important.
+						</p>
+						<br>
+						<br>
+						<br>
+						<br>
+						<p style="font-size: 30.33px; text-align: right;">Let’s start with XML</p>
+					</div>
+					<aside class="notes">
+					Notes for slide 5
+					Notes in Chinese
+					<br>This is a test to see if notes can be added in a proper way
+					<br>	tabs are preserved?
+					<br>I don’t know we’ll see but what about bullet oints
+					<br>This is one 
+					<br>This is bullet point 2
+					<br>And this is the third one
+					<br>
+					<br>So after an empty line the text continues with some Bold in it<br>5<br></aside>
+				</section>
+				<section>
+					 <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;">01 | 02 What is XML and what is it used for?</h2>
+					</div>
+				   <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">XML: eXtensible Markup Language
+					</p>
+					<ul><li style="font-size: 26px; text-align: left;" class="fragment">It is a markup language: a set of rules for encoding data in specific format to communicate between machines and with humans i.e., both human readable and machine-readable
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">World Wide Web Consortium (W3C) recommendation
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">Designed to structure, describe and transport data in textual format.
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">&lt;Tags&gt; are fundamental in every MarkUp Language; 
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">&lt;Tags&gt; are nested to build structure
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">XML doesn’t DO anything</li></ul>
+
+				   </div>
+					<aside class="notes">
+					No notes for slide 6
+					</aside>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 02 What is XML and what is it used for?</h2>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">XML is NOT HTML<br>
+					</p>
+					<ul><br><li style="font-size: 30.33px; text-align: left;" class="fragment">In XML you define your own tags. (in HTML tags are predefined)
+					</li>
+					<li style="font-size: 32px; text-align: left;" class="fragment">Hypertext Markup Language (HTML) – used to display information on web pages
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">HTML does not fully conform to the XML rules
+					</li>
+					<br>
+
+					   </div>
+					<aside class="notes">
+					No notes for slide 7
+					</section>
+				</section>
+				<section id="02.1.2">
+				   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;">01 XML to structure data</h2>
+					</div>	
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Relational database table:
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p style="font-size: 30.33px; text-align: left;">Table name: Parcel
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">Column names on the first row
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">A relational table can easily be expressed in XML</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 195px; left: 268px; height: 92px;  width: 363px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image4.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 166px; left: 268px; height: 29px;  width: 75px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image5.PNG"></img>
+					   </div>
+					<aside class="notes">
+					No notes for slide 8
+					</aside>
+				</section>
+				<section>
+					   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;">01 | 01 XML to structure data</h2>
+						</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Same data in XML:
+					</p>
+					<p style="font-size: 24px; text-align: left;">Values are within the tags
+					</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 297px; left: 55px; height: 67px;  width: 266px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image4.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 125px; left: 462px; height: 371px;  width: 328px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image6.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 276px; left: 59px; height: 20px;  width: 52px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image5.PNG"></img>
+					   </div>
+					<aside class="notes">
+					No notes for slide 9
+					</aside>
+					
+				</section>
+				<section>
+					   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+							<h2 style="color:#5DADE2;">01 | 01 | 02 XML to structure data</h2>
+					   </div>
+				<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Important terms:
+				</p>
+
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 125px; left: 462px; height: 371px;  width: 328px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image6.PNG"></img>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 95px; left: 823px; height: 24px;  width: 222px"><p style="font-size: 14px; font-weight: bold; text-align: left;">XML declaration</p>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 278px; left: 348px; height: 24px;  width: 125px"><p style="font-size: 14px; font-weight: bold; text-align: left;">Root element</p>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 176px; left: 795px; height: 24px;  width: 175px"><p style="font-size: 14px; font-weight: bold; text-align: left;">Start tag</p>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 291px; left: 797px; height: 24px;  width: 175px"><p style="font-size: 14px; font-weight: bold; text-align: left;">End tag</p>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 430px; left: 559px; height: 29px;  width: 147px"><p style="font-size: 14px; font-weight: bold; text-align: left;">Child</p>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 333px; left: 555px; height: 29px;  width: 147px"><p style="font-size: 14px; font-weight: bold; text-align: left;">Parent</p>
+
+
+				   </div>	
+					<div class="all-div" style="position: absolute; top: 140px; left: 447px; height: 341px;  width: 447px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/shape1.png"></img>
+				   </div>
+
+				   <div class="all-div" style="position: absolute; top: 304px; left: 548px; height: 161px;  width: 247px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/shape2.png"></img>
+				   </div>
+					<div class="all-div" style="position: absolute; top: 194px; left: 548px; height: 161px;  width: 247px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/shape2.png"></img>
+				   </div>
+
+
+
+				   <div class="all-div" style="position: absolute; top: 365px; left: 393px; height: 83px;  width: 157px">
+					  <img class="ppt-img" data-src="">4</img>
+				   </div>
+				<aside class="notes">
+				No notes for slide 10
+				</aside>
+				</section>
+
+				<section id="02.1.3">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 01 XML syntax</h2>
+
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 897px"><p style="font-size: 30.33px; font-weight: bold; text-align: left;">XML tagging rules
+					</p>
+					<ul><li style="font-size: 30.33px; text-align: left;" class="fragment">Tags are enclosed in angle brackets &lt;&gt; and come in pairs
+					
+					<ul><li style="font-size: 26px; text-align: left;">All start tags &lt;tag&gt;
+					</li>
+					<li style="font-size: 26px; text-align: left;">All end tags &lt;/tag&gt; 
+					</li></ul></li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">Tags are case sensitive
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">Tags must be properly nested
+					<ul>
+					<li style="font-size: 26px; text-align: left;"><code style="color:blue">&lt;painting&gt;</code><code style="color:green">&lt;caption&gt;</code>…<code style="color:blue">&lt;/painting&gt;</code>&lt;<code style="color:green">/caption&gt; </code>is not allowed
+					</li>
+					<li style="font-size: 26px; text-align: left;"><code style="color:blue">&lt;painting&gt;</code><code style="color:green" class="fragment">&lt;caption&gt;…&lt;/caption&gt;</code><code style="color:blue">&lt;/painting&gt;</code>is correct</li></ul>
+					</li></ul>
+					   </div>
+					<aside class="notes">
+					No notes for slide 11</aside>
+				</section>
+
+				<section>
+					   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;">01 | 02 XML syntax</h2>
+						</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; font-weight: bold; text-align: left;">XML Element
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">An XML element is everything from (including) the element's start tag to (including) the element's end tag.
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">An element can contain:
+					</p>
+					<ul><li style="font-size: 26px; text-align: left;" class="fragment">text
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">Attributes (see later)
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">other elements
+					</li>
+					<li style="font-size: 26px; text-align: left;" class="fragment">or a mix of the above
+					</li></ul>
+					<p style="font-size: 30.33px; text-align: left;" class="fragment">An empty element can be written as &lt;tag/&gt; (=&lt;tag&gt;&lt;/tag&gt;)
+					</p>
+					</div>
+					<aside class="notes">
+					No notes for slide 12</aside>
+				</section>
+
+				<section>
+					   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;">01 | 03 XML syntax</h2>
+						</div>
+						<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">XML Attributes
+						</p>
+						<ul><li style="font-size: 28px; text-align: left;" >Used to provide extra information about an element
+						</li>
+						<li style="font-size: 28px; text-align: left;">Are contained within a start element tag
+						</li>
+						<li style="font-size: 28px; text-align: left;">Syntax: attributename=“value” (attribute values quoted)
+						</li>
+						<br>
+						<li style="font-size: 28px; text-align: left;">Can be included in empty elements
+						</li></ul>
+						<br>
+						<br>
+
+						   </div>
+						   <div class="img-div" style="position: absolute; top: 278px; left: 258px; height: 32px;  width: 463px">
+							  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image7.PNG"></img>
+						   </div>
+						   <div class="img-div" style="position: absolute; top: 372px; left: 258px; height: 105px;  width: 404px">
+							  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image8.PNG"></img>
+						   </div>
+						<aside class="notes">
+						No notes for slide 13</aside>		
+					
+				</section>
+				<section>
+					   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+						<h2 style="color:#5DADE2;">01 | 03 XML syntax</h2>
+						</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">No rules or preferences between element or tag:
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">	Both are the same:
+					</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 260px; left: 108px; height: 130px;  width: 348px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image9.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 238px; left: 533px; height: 153px;  width: 341px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image10.PNG"></img>
+					   </div>
+					<aside class="notes">
+					No notes for slide 14</aside>
+				</section>
+				<section id="02.1.4">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 04 Why XML?</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Self documenting. People can read and understand the data.<br><br>
+					</p>
+					<ul><p style="font-size: 30.33px; text-align: left;" class="fragment">•Standard tools can be used – no need to create custom tools to read/display data.
+					</p>
+					<p style="font-size: 30.33px; text-align: left;" class="fragment">•Standard tools ensure data integrity.
+					</p>
+					<p style="font-size: 30.33px; text-align: left;" class="fragment">•Can leverage a whole world of XML technologies and tools!
+					</p>
+					<p style="font-size: 30.33px; text-align: left;" class="fragment">•Easy to integrate different kinds of data.</p></ul>
+
+					   </div>
+					<aside class="notes">
+					No notes for slide 15</aside>
+					
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 04 Why XML?</h2>
+					<iframe data-src="https://www.liquid-technologies.com/" width="100%" height="500"> </iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 04 Why XML?</h2>
+					<iframe data-src="https://xml-copy-editor.sourceforge.io/" width="100%" height="500"> </iframe>
+				</section>
+				<section id="02.1.5">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 05 Validation of XML</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px">
+					<ul><li style="font-size: 30.33px; text-align: left;" class="fragment">Well formed XML document – adhere to the general XML rules
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">Valid XML documents – follow semantic rules
+						<ul>
+					<li style="font-size: 24px; text-align: left;">The grammar of an XML documents
+					</li>
+					<li style="font-size: 24px; text-align: left;">Tells an application – and people – what each element means and how to use it
+					</li>
+					<li style="font-size: 24px; text-align: left;">Specify rules that a large set of documents must follow
+					</li></ul></li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment"><b>XML schema </b>(.XSD file; XML Schema Definition) 
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">In older versions: DTD (Document Type Definition)
+					</li></ul>
+
+					   </div>
+					<aside class="notes">
+					No notes for slide 17</aside>
+				</section>
+				<section id="02.1.6">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 06 XML Schema</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">An XML schema can define
+					</p>
+					<ul><li style="font-size: 26px; text-align: left;">Element names
+					</li>
+					<li style="font-size: 26px; text-align: left;">Data types
+					</li>
+					<li style="font-size: 26px; text-align: left;">Minimum/maximum occurences
+					</li>
+					<br>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 268px; left: 366px; height: 228px;  width: 584px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image12.PNG"></img>
+					   </div>
+					<aside class="notes">
+					No notes for slide 18</aside>
+					
+				</section>
+				<section>
+					 <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 06 XML Schema</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Validation tools can compare an XML document and check if it adheres to the rules defined in the schema.
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">Examples: 
+					</p>
+					<ul><li style="font-size: 24px; text-align: left;">if minOccurs in the XML schema is 1, the element must be present.
+					</li>
+					<li style="font-size: 24px; text-align: left;">If an attribute is not defined in the schema, it should not be present in the XML file</li></ul>
+
+					   </div>
+					<aside class="notes">
+					No notes for slide 19</aside>
+				</section>	
+				<section id="02.1.7">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 07 XML Namespaces</h2>
+					</div>
+					 <div class="ppt-txt" style="position: absolute; top: 82px; left: 63px; height: 405px;  width: 828px"><p style="font-size: 28px; text-align: left;">When working with documents from different sources, conflict can arise because the same element name (table) might have different meanings in different documents.
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p style="font-size: 28px; text-align: left;">By adding prefixes to xml tag or attribute names, we create namespaces.</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 190px; left: 552px; height: 125px;  width: 181px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image14.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 200px; left: 143px; height: 105px;  width: 277px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image13.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 379px; left: 143px; height: 103px;  width: 305px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image15.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 357px; left: 552px; height: 125px;  width: 193px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image16.PNG"></img>
+					   </div>
+					<aside class="notes">
+					No notes for slide 20</aside>					
+				</section>
+				<section>
+					
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 07 XML Namespaces</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 504px"><p style="font-size: 30.33px; text-align: left;">Namespaces must be defined in the start-tag of the element where it is used. For this the xmlns attribute is used. This declaration can also be done in the XML root element</p>
+
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 120px; left: 585px; height: 343px;  width: 347px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image17.PNG"></img>
+				   </div>
+					<aside class="notes">
+					No notes for slide 21</aside>
+				</section>
+				<section>
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 07 XML Namespaces</h2>
+
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 28px; text-align: left;">The URI in the namespace definition doesn’t need to be valid (resolvable).
+					</p>
+					<p style="font-size: 28px; text-align: left;">But often in points to an URL that contains information about the namespace. It can be used to point to the XML schema definition of that namespace!
+					</p>
+					<p style="font-size: 28px; text-align: left;">This is for example used in standards
+					</p>
+					<br>
+					<br><br><br>
+					<p style="font-size: 28px; text-align: left;">This can greatly help to analyse a XML document
+					</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 355px; left: 66px; height: 60px;  width: 843px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image18.PNG"></img>
+					   </div>
+					<aside class="notes">
+					No notes for slide 22</aside>
+					
+				</section>
+				<section id="02.1.8">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">01 | 08 XML Examples</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px">
+					<p style="text-align:center"> <br>Example XML file from Inspire protected sites<br>
+					<br>Example XML schema document</p>
+					</div>
+				</section>
+				<section id="02.1.9">					
+			   <div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+				<h2 style="color:#5DADE2;">01 | 08 XML Exercise</h2>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Which XML elements are invalid, and why
+				</p>
+				<p style="font-size: 24px; text-align: left;"><br>1.1 &lt;map/&gt;
+				</p>
+				<p style="font-size: 24px; text-align: left;">1.2 &lt;map&gt;Belgium&lt;map/&gt;
+				</p>
+				<p style="font-size: 24px; text-align: left;">1.3 &lt;map&gt;Belgium&lt;/map&gt;
+				</p>
+				<p style="font-size: 24px; text-align: left;">1.4 &lt;map country=Belgium&gt;in Europe&lt;/map&gt;
+				</p>
+				<p style="font-size: 24px; text-align: left;">1.5 &lt;building&gt;school&lt;building&gt;
+				</p>
+				<p style="font-size: 24px; text-align: left;">1.6 &lt;building floors=“3”&gt;school&lt;/building&gt;
+				</p>
+				<p style="font-size: 24px; text-align: left;">1.7 &lt;Map&gt;Africa&lt;map&gt;</p>
+
+				   </div>
+				<aside class="notes">
+				Notes for slide 35
+				1 valid empty elem
+				<br>2 invalid (end elem wrong
+				<br>3ok
+				<br>4 wrong “” for attribute value
+				<br>5 wrong / in backslash
+				<br>6 ok
+				<br>7 wrong Begin and end tag not equal, no / in end tag (or alternatively, the element is not complete, both elems still need to be closed)<br>35<br></aside>
+				</section>
+				<section>
+				<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+				<h2>XML exercise</h2>
+
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 24px; text-align: left;">2.1 Indicate the root element
+				</p>
+				<br>
+				<p style="font-size: 24px; text-align: left;">2.2 How many children has Parcel?
+				</p>
+				<br>
+
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 118px; left: 488px; height: 371px;  width: 328px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image6.PNG"></img>
+				   </div>
+				<aside class="notes">
+				No notes for slide 36
+				</section>
+
+
+
+
+
+				<section>
+					<h2 style="color:#5DADE2;">01 Unified Modeling Language UML</h2>
+					<div style="position: absolute; width: 100%; left: 0em">
+					<table>
+						<tr><th>#</th><th align="center">Content</th></tr>
+						<tr><td><a href="#02.2.1">1</a></td><td>What is UML?</td></tr>
+						<tr><td><a href="#02.2.2">2</a></td><td>UML Class diagrams</td></tr>
+						<tr><td><a href="#02.2.3">3</a></td><td>UML Associations</td></tr>
+						<tr><td><a href="#02.2.4">4</a></td><td>UML Dependency</td></tr>
+						<tr><td><a href="#02.2.5">5</a></td><td>UML Generalisation</td></tr>
+						<tr><td><a href="#02.2.6">6</a></td><td>UML Aggregation</td></tr>
+						<tr><td><a href="#02.2.7">7</a></td><td>UML Composition</td></tr>
+						<tr><td><a href="#02.2.8">8</a></td><td>Exercise: UML Simple features</td></tr>
+					</table></div>
+
+				</section>
+				<section id="02.2.1">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 01 Unified Modeling Language UML</h2>
+					</div>
+					 <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px">
+					<ul><li style="font-size: 30.33px; text-align: left;" class="fragment">Family of graphical notations, aimed for the design of software
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">Consists of several different types of diagrams
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">We will look on class diagrams
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">For classes, features and relationships
+					</li>
+					<li style="font-size: 30.33px; text-align: left;" class="fragment">The conceptual language for ISO TC211 standards
+					</li></ul>
+					   </div>					
+				</section>
+				<section>
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 01 Unified Modeling Language UML</h2>
+					</div>
+					<div class="img-div" style="position: absolute; top: 82px; left: 190px; height: 402px;  width: 596px">
+					<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image19.PNG"></img>
+				   </div>
+				</section>
+				<section id="02.2.2">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 02 UML Class diagrams</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">A class is a description of a set of 
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">objects that share the same attributes, operations, relationships, and semantics.
+					</p>
+					<p style="font-size: 30.33px; text-align: left;"><br>In UML it is drawn as a rectangle:
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">It contains 
+					</p>
+					<ul><li style="font-size: 30.33px; text-align: left;">the class name
+					</li>
+					<li style="font-size: 30.33px; text-align: left;">Attributes
+					</li>
+					<li style="font-size: 30.33px; text-align: left;">Operations
+					</li>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 353px; left: 442px; height: 86px;  width: 119px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image20.PNG"></img>
+					   </div>					
+				</section>
+				<section>
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 02 UML Class diagrams - Atributes </h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">For the attributes of a class, 
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">the type is defined, for example float or string
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">Attributes with different prefix have different visibility
+					</p>
+					<br>
+					<p style="font-size: 30.33px; text-align: left;">+ are always visible
+					</p>
+					<p style="font-size: 30.33px; text-align: left;"># is protected
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">- is private
+					</p>
+					<br>
+					<br>
+					<p style="font-size: 30.33px; text-align: left;">In the example: not everybody can see the owner</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 280px; left: 551px; height: 158px;  width: 218px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image21.PNG"></img>
+					   </div>
+				</section>
+				<section>
+					<div class="img-div" style="position: absolute; top: 215px; left: 585px; height: 261px;  width: 467px">
+				   <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image22.PNG"></img>
+				   </div>
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 02 UML Class diagrams - Relations </h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">In UML, interconnections between objects (logical or physical) are modelled as relationships
+					</p>
+					<br><br>
+					<p style="font-size: 30.33px; text-align: left;">UML has different kind of relationships:
+					</p>
+					<ul><li style="font-size: 26px; text-align: left;">Dependencies
+					</li>
+					<li style="font-size: 26px; text-align: left;">Generalisations
+					</li>
+					<li style="font-size: 26px; text-align: left;">Associations
+					</li></ul>
+					<p style="font-size: 30.33px; text-align: left;">Relations can have cardinality</p>
+
+					   </div>
+				</section>
+				<section id="02.2.3">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 03 UML Associations</h2>
+					</div>
+					   <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Classes that need to communicate with each other, are linked by association. 
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">An association 
+					</p>
+					<ul><li style="font-size: 30.33px; text-align: left;">can have a direction
+					</li>
+					<li style="font-size: 30.33px; text-align: left;">can have a role
+					</li>
+					<li style="font-size: 30.33px; text-align: left;">Can have a cardinality
+					</li></ul>
+					<p style="font-size: 30.33px; text-align: left;">More than one relation can
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">exist between 2 classes</p>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 295px; left: 477px; height: 122px;  width: 469px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image23.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 200px; left: 577px; height: 38px;  width: 355px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image24.PNG"></img>
+					   </div>
+				</section>
+				<section id="02.2.4">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 04 UML Dependency</h2>
+					</div>
+					<div class="img-div" style="position: absolute; top: 277px; left: 84px; height: 160px;  width: 550px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image25.png"></img>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 172px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">A class depends on another one because the other one is used in its functions. </p>
+
+				   </div>
+				</section>
+				<section id="02.2.5">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 05 UML Generalisation</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Connects sub- and superclass. Subclasses inherit from the superclass. The superclass is more general, the subclass is a specialised version of the superclass</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 317px; left: 107px; height: 140px;  width: 241px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image26.PNG"></img>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 238px; left: 543px; height: 229px;  width: 333px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image27.PNG"></img>
+				   </div>
+				</section>
+				<section id="02.2.6">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 06 UML Aggregation</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">A whole-part relationship. The parts can exist without the whole.
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 225px; left: 137px; height: 140px;  width: 215px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image28.PNG"></img>
+					   </div>
+					   <div class="img-div" style="position: absolute; top: 194px; left: 531px; height: 236px;  width: 316px">
+						  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image29.PNG"></img>
+					   </div>
+				</section>
+				<section id="02.2.7">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 07 UML Composition</h2>
+					</div>
+					<div class="ppt-txt" style="position: absolute; top: 120px; left: 63px; height: 367px;  width: 828px"><p style="font-size: 30.33px; text-align: left;">Composition = strong ownership, coincident lifespan
+					</p>
+					<p style="font-size: 30.33px; text-align: left;">In the example, if the window disappears, the menu and scrollbar also disappear</p>
+
+					  </div>
+					  <div class="img-div" style="position: absolute; top: 225px; left: 600px; height:200px;  width: 250px">
+						  <img  class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image29_1.png"></img>
+					   </div>
+				</section>
+				<section id="02.2.8">
+					<div class="ppt-h2" style="position: absolute; top: 24px; left: 66px; height: 58px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | 08 Exercise: UML Simple features</h2>
+					</div>
+					<div class="img-div" style="position: absolute; top: 82px; left: 41px; height: 405px;  width: 526px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image30.png"></img>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 82px; left: 608px; height: 235px;  width: 333px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module02/image31.PNG"></img>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 349px; left: 567px; height: 116px;  width: 374px"><ol><li style="font-size: 18px; text-align: left;">How many points can a LineString have
+				</li>
+				<li style="font-size: 18px; text-align: left;">What is the relation between Multipoint and point
+				</li>
+				<li style="font-size: 18px; text-align: left;">Is a Polygon a Geometry
+				</li>
+				   </div>
+				<aside class="notes">
+				Immediately correct, extra similar questions if the concept is not clear yet.<br>34<br></aside>
+				</section>
+
+
+
+
+
+				<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
+				<section> 
+				<h1 style="color:#5DADE2;"> Reference list </h1>
+				<br>
+				<reference_list>exemplary doi:<br><br>
+				Barbara Hofer (2018). Innovation in geoprocessing for a Digital Earth. International Journal in Digital Earth.
+				<br>
+				<a href="https://doi.org/10.1080/17538947.2017.1379154">10.1080/17538947.2017.1379154</a>
+				</reference_list>
+				</section>
+				
+				
+				<section>Slide show ends</section>
+			
+			</div>
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 960,
+				height: 540,
+				viewDistance: 500,
+				preloadIframes: true,
+				slideNumber: 'c/t',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+			
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>

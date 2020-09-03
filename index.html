@@ -1,5 +1,5 @@
-<!-- 	Template Authors: Stefan Lang, Eva Missoni - PLUS 
-		Template Creation Date: March-June 2020 
+<!-- 	Authors: Santiago Molano - KU Leuven 
+		Template Creation Date: August 2020 
 		
 		IMPORTANT NOTICES FOR USERS/AUTHORS: 
 		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
@@ -14,13 +14,12 @@
 	<head>
 		<meta charset="utf-8">
 		 
-		<title>eo4geo template for Reveal JS</title>
+		<title>Technical Introduction to SDI</title>
 
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
 		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
-		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
-		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
+		<!--link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css"><!-- anthrazit background design --> 
 		<!-- EO4GEO FONT ROBOTO SLAB -->
 		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
 		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
@@ -40,29 +39,31 @@
 				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
 			
 				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
-				 <div  class = "presentation_title" style=" text-align: center " >What is Copernicus?</div>	<!--The title of the presentation appears on each slide-->
+				 <div  class = "presentation_title" style=" text-align: center " > Technical Introduction to SDI 
+				</div>	<!--The title of the presentation appears on each slide-->
 				 
 
 			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
 				@prefix dc: <http://purl.org/dc/terms/>.
 				@prefix eo4geo: <http://bok.eo4geo.eu/>.
-				<>  	dc:title "What is Copernicus?";
-					dc:creator "Stefan Lang, University of Salzburg";
+				<>  	dc:title "Training module on SDI Architecture and SDI components";
+					dc:creator "-----";
 					dc:subject "Copernicus, EO4GEO, WP5, Satellite, Earth Observation";
-					dc:abstract "This is a template slideset for EO4GEO Partners to familiarize with EO4GEO, introducing the idea of Copernicus and its services. Nevertheless, content-generation is not the prime concern of the template. ";
-					dc:tableOfContents "(1) What is EO?; (2) Benefits of Copernicus; (3) Integration of Jupyter Notebooks; 
-						(4) Integration of Youtube Video; (5) Integration of H5P; (6) Copernicus Services; (7) Reference list;";
-					dc:description "Learning outcomes: Understand the Copernicus ecosystem and services; perform simple analysis with Jupyter Notebook; Understand Copernicus Climate Change Service;";
-					dc:contributor "Eva Missoni, Barbara Hofer";
-					dc:created "2020-06-20";
+					dc:abstract "Spatial data are widely used in public and private organisations. However, the data are often difficult to find, access, use and combine. Spatial data infrastructures (SDI) are a solution to this lack of accessibility and interoperability. An SDI is a set of technological and non-technological components meant to facilitate access, exchange and re-use of geospatial data within and between organisations.
+					The module introduces the concept of SDIs and explains the rationale behind it. It explains the  different technical and non-technical components of an SDI: data, services, metadata, standards, technology, organisational and institutional aspects (people), etc. and how the technological components work together. The module discusses also what SDI are used for, i.e. what are the objectives of a good functioning SDI.. The components and the benefits of an SDI are illustrated using real world examples. The access to SDIs through geoportals is demonstrated. Learners will visit several geoportals and will learn to browse for data.
+					The training material consist of presentations, exercises and supporting documents. The module is NOT a self-learning module, but needs class tutoring and interactions.";
+					dc:tableOfContents "(1) Geospatial data and their widespread use; (2) What is a Spatial Data Infrastructure and what is it used for?; (3) 3.	A typical architecture of an SDI: different tiers; (4) What is required to build an SDI; (5) What are the 5 key components of an SDI, a short description of each component and how they work together; (6) Examples of SDIs and how to access them through a geoportal ; (7) Exercises: search for datasets and explore their characteristics (through the metadata);";
+					dc:description "Learning outcomes:To describe and explain the rationale and concepts of SDIs; To explain the requirements for building a successful SDI;to recognise and describe the different components of an SDI; To explain how these components work together in an SDI; To explain how geoportals are a user interface to SDIs and their specific functions; To identify the benefits of an SDI for her/his organisation; To search and find specific datasets";
+					dc:contributor "------";
+					dc:created "2020-08-04";
 					dc:type "InteractiveResource";
 					dc:format "html";
 					dc:language "EN"; 
-					dc:SizeOrDuration "45min"
+					dc:SizeOrDuration "4.5h"
 					dc:audience "students";
 					dc:educationLevel "EQF 6";
-					dc:source "Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh"";
-					dc:rightsHolder "Stefan Lang, University of Salzburg";
+					dc:source "-----"";
+					dc:rightsHolder "SADL, KU Leuven";
 					dc:license "CC BY-SA 4.0";
 					dc:relation eo4geo:TA7-5-1;
 					dc:relation eo4geo:TA7-5-2;
@@ -70,346 +71,96 @@
 								-->
 
 
-				<div class="slides">
+			<div class="slides">
 				
 			
-				<!-- AUTHORS: DEFINE CONTENT ON YOUR FIRST SLIDE --> 
-				<section >
-					<h1>What is Copernicus?</h1>
-					(A demo slide deck using the <em>Reveal.js</em> framework)
-				<!-- AUTHORS: PUT YOUR PRESENTER NOTES HERE: -->
-				<aside class="notes">
-					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
-				</aside>
-				</section>
-				
-				
-				<!-- AUTHORS: DEFINE CONTENT FOR YOUR SECOND SLIDE: --> 
-				<!--<section class="scrollable">
-					<h1>Copernicus</h1> 
-					<br>Copernicus and Galileo are the two flagships of the <em>European Space Policy</em>. Galileo denotes the European satellite navigation system, while Copernicus is the name of the European Earth observation <a href="https://www.copernicus.eu">programme</a>
-					<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\CopMountain.jpg" alt="Copernicus allegory">
-				</section>
-				
-					<!-- AUTHORS: DEFINE CONTENT FOR YOUR SECOND SLIDE: --> 
-				<!--<section >
-					<h1>Copernicus</h1> 
-					<br>
-					 
-					<br><img  style="width: 100%; max-width: 600px; max-height:600px; height:100%" data-src="resources\2560pxAERONET.jpg" alt="Copernicus allegory">
-					 
-				</section>
-				
-				<!-- AUTHORS: Same content as above - now as example in Markdown language   --> <!-- AUTHORS: for horizontally organised slides, use three dashes ---, for vertical slides two dashes -- -->
-				<!--section data-markdown data-separator="---" data-separator-vertical="--" data-separator-notes="^Note:"> 
-				                    <script type="text/template">
-                        # What is Copernicus?
-                        (A demo slide deck using the Reveal.js framework)
+			<section >
 					
-						
-                        ---
-						
-                        # Copernicus
-                        Copernicus and Galileo are the two flagships of the European Space Policy. Galileo denotes the European satellite navigation system, while Copernicus is the name of the <a href="https://www.copernicus.eu">European Earth observation programme</a>
-						<img width="600" height="300" data-src="resources\template_WhatCopernicus\CopMountain.jpg" alt="Copernicus allegory">
-						
-						
-						--
-						
-						# Earth observation (EO)
-						EO is one out of three main space assets
-						- SatNav
-                        - SatCom
-						- SatObs (EO)
-						
-						<img width="600" height="250" data-src="resources\template_WhatCopernicus\3SpaceComponents.png" alt="3SpaceComponents">	
-                    </script>
-                </section-->
+					<h1 style="font-size:60px">Technical introduction to Spatial Data Infrastructures </h1><br>
+					<h2 style="font-size:30px"> Spatial  data  infrastructures (SDI) are a set of technological and non-technological components meant to facilitate access, exchange and re-use of geospatial data within and between organisations.</h2><br> 
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="KU Leuven" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+
+			</section>
 				
+					
 			
 				
 				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
-				<section id="EO">
+			<section > 
 					<section > 
-						<h2>Earth observation (EO)</h2> 
-						<p>EO is one out of three main <em>space assets</em>.</p>
-						<!-- AUTHORS: CREATE BULLETED LIST: --> 
-						<ul>
-							<li style="color:#89b3e479;">SatNav</li>
-							<li style="color:#89b3e479;">SatCom</li>
-							<li style="color:#337acc;">SatObs (EO)</li>
-						</ul>
-						<br><img width="600" height="250" data-src="resources\template_WhatCopernicus\3SpaceComponents.png" alt="3SpaceComponents">	
+						<br><h1>WELCOME! </h1> 
+						<p>With the following modules and interactive material you will be able to take part in the journey to discover  <strong><span style="color: rgb(41, 105, 176);">Spatial Data Infrastructures</span></strong> (<em>SDI</em>) its components and benefits through the observation of multiple examples.&nbsp;</p><br>
+						<p>You can navigate through the different modules of this course using the horizontal arrows <span style="color: rgb(44, 130, 201);"><strong>(</strong></span><span style="color: rgb(41, 105, 176);"><strong>&larr; &rarr;)</strong>&nbsp;</span> and clicking on the <span style="color: rgb(230, 126, 34);"><b>TITLE</b></span> or in the link icon placed on each page:</p>								
+						<br><img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="link icon">	
 						
 						<aside class="notes">
 						You can find your presenter notes here (hit »S« on your keyboard).
 						</aside>
-					</section>
-					
-					<section >
-						<h2 style="color:#89b3e479;">Satellite navigation (SatNav)</h2>
-						<p>The European SatNav programme is called <em>Galileo</em>. With EGNOS, the European differential global positioning system, it belongs to the world spanning <em>global navigation satellite systems</em> (GNSS).</p>
-						<br><img width="600" height="200" data-src="resources\template_WhatCopernicus\UseGalileo.jpg" alt="sat1">
-						<small>Galileo-enabled smartphones can be used in many different <a href="https://www.usegalileo.eu/">applications</a>.</small>
-					</section>
-					
-					<section >
-						<h2 style="color:#89b3e479;">Satellite communication (SatCom)</h2>
-						<p>SatCom allows <em>telecommunication</em> all around the globe. Communication satellites receive signals from Earth and retransmit them by a <em>transponder</em>.</p>
-						<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\SatComIntelsat.jpg" alt="sat1"></a>
-						<small>The satellite as a self-contained communications system, the example of <a href="https://www.intelsatgeneral.com/satellite-basics/">IntelSat</a>.</small>
-						
-					</section>
-					
-					<section >
-						<h2 style="color:#337acc;">Earth observation (EO)</h2>
-						<p>Earth observation is the systematic usage of <em>satellite remote sensing</em> technology for continuous or on-demand <em>imaging</em> or <em>measuring</em> the Earth surface </p>
-						<br><a href="#/EO"><img width="500" height="250" data-src="resources\template_WhatCopernicus\ISS_AstroAlex.jpg" alt="sat1"></a>
-						<small>A view from the Cupola, the observation deck of the ISS. Photograph by astronaut <a href="https://twitter.com/astro_alex">A. Geerst</a>.</small>
-						<br>
-						<a href="#/EO"> Back to top </a>
-					</section>
-				</section>
-				
-				<!-- AUTHORS: INCLUDE AN IMAGE IN YOUR SLIDE: --> 
-				<section ><h2> ... a little allegory on the benefit of Copernicus</h2>
-					<br>New EO data, depicted by the database symbol on the left hand side of the seesaw, make Mr/Mrs Copernicus better positioned for their observations. Thus, EO data <em>leverage</em> a better overview and understanding.
-					<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\EOlever.jpg" alt="Copernicus allegory">
-					<br>
-					
-					<!-- AUTHORS: ADD REFERENCES TO YOUR resources,... -->
-					<citation>(St Lang & A Traun, 2015) [set border to zero, set background to transparent, figure to be obtained via JQuery from pic/caption collection]</citation>
-				</section>
-				
-				<!-- AUTHORS:   Option to Jupyter Notebook (Python) AS IFRAME (deriving from the H5P.org site or from a H5P plugin in Moodle, Blackboard, WordPress,...): --> 
-				<section data-background-iframe="https://nbviewer.jupyter.org/github/carljv/Will_it_Python/blob/master/ARM/ch5/arsenic_wells_switching.ipynb">
-				</section>
-				
-				<!-- AUTHORS: 1st Option to INCLUDE H5P CONTENT AS IFRAME (deriving from the H5P.org site or from a H5P plugin in Moodle, Blackboard, WordPress,...): --> 
-				<section data-background-iframe="https://ideaslab.sbg.ac.at/ideaslab/wp-admin/admin-ajax.php?action=h5p_embed&id=5">
-				</section>
-				
-				<!-- AUTHORS: 2nd Option to INCLUDE H5P CONTENT AS IFRAME (deriving from the H5P.org site or from a H5P plugin in Moodle, Blackboard, WordPress,...): -->
-				<section class="scrollable"> 
-					 <iframe src="https://ideaslab.sbg.ac.at/ideaslab/wp-admin/admin-ajax.php?action=h5p_embed&id=5" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen"></iframe></script>
-					</section>
-				<!--AUTHORS: Integration of Jupyter Notebooks from VITO-Platform - user authentification not solved yet -->
-				<!--section class="scrollable"> 
-					 <iframe src="https://notebooks.vgt.vito.be/user/emissoni/lab/tree/PLUS_Test.ipynb" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen"></iframe></script>
-				</section-->	
-					
-					
+					</section >
+			</section>
+
+			<section id="01.01">									
 				<section >
-					<section>
-						<h2>The Copernicus idea</h2>
-						<p>Copernicus comprises two major  <em>components</em>.</p>
-						<ul>
-							<li style="color:#337acc;">Space component</li>
-							<li style="color:#33b5cc;">(Integrated) Ground segment</li>
-						</ul>
-						<br><img width="400" height="200" data-src="resources\template_WhatCopernicus\sat1.jpg" alt="sat1">
-
-					</section>
-					
-					<section >
-						<h2 style="color:#337acc;">Space component (satellites)</h2>
-						<p>The Sentinel family is the backbone of the Copernicus EO space asset</p>
-						<!-- AUTHORS: CREATE A TABLE: --> 
-						<table>
-							<thead>
-								<tr>
-									<th><small>Satellite</th>
-									<th><small>Sensor</th>
-									<th><small>Type</small></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Sentinel-1</td>
-									<td>SAR</td>
-									<td>radar</td>
-								</tr>
-								<tr>
-									<td>Sentinel-2</td>
-									<td>MSI</td>
-									<td>optical</td>
-								</tr>
-								<tr>
-									<td>Sentinel-3</td>
-									<td>...</td>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td>Sentinel-5</td>
-									<td>...</td>
-									<td>...</td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-					<section >
-						<h2 style="color:#33b5cc;">Ground segment</h2>
-						<p>The Copernicus integrated ground segment includes</p>
-						<ul>
-							<li>Receiving stations</li>
-							<li>Satellite data storage systems</li>
-							<li>In-situ observation network</li>
-						</ul>
-						<br>
-					</section>
-
+					<a href="index_01_Lecture_General_Introduction_SDI.html"><h1 style="font-size:60px">01 | SDI Architecture and SDI components</h1></a><br>
+					<h2 style="font-size:30px"> Elaboration of Standards, Norms and Procedures in the Acquisition and Dissemination of Geospatial Information </h2><br>
+					<img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+					<a href="index_01_Lecture_General_Introduction_SDI.html"><img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="KU Leuven" align=center-right></a>
 				</section>
+			</section>
 
+			<section >
 				<section >
-					<h3>beyond space assets and data</h3>
-					<br>The fundamental objective of Copernicus is to support <em>global policies and conventions</em> as well as <em>EU regulations and directives</em> with a defined portfolio of geospatial information services.
-				</section>
-				
-				<section >
-				<!-- AUTHORS: make long content scrollable --> 
-					<section class="scrollable">
-						<h2>Copernicus services</h2>
-						<p>There are six so-called <em>Copernicus [core] services</em> in six major thematic areas.</p>
-						<table><small>
-							<tr>
-							<ul>
-								<li>Land monitoring</li>
-								<li>Ocean monitoring</li>
-								<li>Atmosphere monitoring</li>
-							</ul>	
-							</tr>
-							<tr><ul>
-								<li>Climate change</li>
-								<li>Emergency management</li>
-								<li>Human security</li>
-							</ul></tr>
-							</small>
-						</table>
-						<br><img width="800" height="130" data-src="resources\template_WhatCopernicus\6services.png" alt="six services">
-						
-						<p>There are six so-called <em>Copernicus [core] services</em> in six major thematic areas.</p>
-						<table><small>
-							<tr>
-							<ul>
-								<li>Land monitoring</li>
-								<li>Ocean monitoring</li>
-								<li>Atmosphere monitoring</li>
-							</ul>	
-							</tr>
-							<tr><ul>
-								<li>Climate change</li>
-								<li>Emergency management</li>
-								<li>Human security</li>
-							</ul></tr>
-							</small>
-						</table>
-						<br><img width="800" height="130" data-src="resources\template_WhatCopernicus\6services.png" alt="six services">
-						
-						<p>There are six so-called <em>Copernicus [core] services</em> in six major thematic areas.</p>
-						<table><small>
-							<tr>
-							<ul>
-								<li>Land monitoring</li>
-								<li>Ocean monitoring</li>
-								<li>Atmosphere monitoring</li>
-							</ul>	
-							</tr>
-							<tr><ul>
-								<li>Climate change</li>
-								<li>Emergency management</li>
-								<li>Human security</li>
-							</ul></tr>							
-							</small>
-						</table>
-						<br><img width="800" height="130" data-src="resources\template_WhatCopernicus\6services.png" alt="six services">
+					<a href="index_02_Lecture UML and XML.html"><h1 style="font-size:58px">02 | Reading and Understanding UML and XML</h1></a><br>
+					<h2 style="font-size:30px"> What they are and what they are used for. Structure, components and applicationsin the geospatial world. </h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left class="plain">
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right class="plain">
+					<a href="index_02_Lecture UML and XML.html"><img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="KU Leuven" align=center-right></a>
+				</section>			
+			</section>
 
-					</section>
-						<section>
-						<img width="150" height="60" data-src="resources\template_WhatCopernicus\CLMS_logo.png" alt="six services">
-						<h2 style="color:#33cc80;">Land monitoring (CLMS)</h2>
-						<p>Copernicus is a European system for monitoring the Earth.</p>
-						<img width="800" height="200" data-src="resources\template_WhatCopernicus\CLand.png" alt="six services">
-						<small>The four Copernicus land monitoring <a href="https://land.copernicus.eu">service</a> components</small>
-					</section>
-					<section>
-						<img width="100" height="100" data-src="resources\template_WhatCopernicus\CMEMS_logo.png" alt="six services">
-						<h2 style="color:#33adcc;">Ocean monitoring (CMEMS)</h2>
-						<p>The Copernicus Marine Environment Monitoring Service focuses on the global ocean.</p>
-						<img width="800" height="200" data-src="resources\template_WhatCopernicus\CMarine.png" alt="six services">
-						<small>The Copernicus marine monitoring <a href="http://marine.copernicus.eu/services-portfolio/access-to-products">service</a> portfolio</small>
-					</section>
-					<section>
-						<img width="250" height="80" data-src="resources\template_WhatCopernicus\CAMS_logo.png" alt="six services">
-						<h2 style="color:#33adcc8c;">Atmosphere monitoring (CAMS)</h2>
-						<p>The Copernicus Marine Environment Monitoring Service focuses on the global ocean.</p>
-						<img width="800" height="200" data-src="resources\template_WhatCopernicus\CAtm.png" alt="six services">
-						<small>The Copernicus atmosphere monitoring <a href="https://atmosphere.copernicus.eu/catalogue#/">service</a> portfolio</small>
-					</section>
-					<section>
-						<h2 style="color:#cc4533d3;">Climate change</h2>
-						<p>...</p>
-					</section>
-					<section>
-						<h2 style="color:#caae60b9;">Emergency management</h2>
-						<p>...</p>
-						<br>
-					</section>
-					<section>
-						<h2 style="color:#33adcc49;">Human security</h2>
-						<p>...</p>
-						<br>
-					</section>
+			<section>
+				<section >
+					<a href="index_03_Lecture Overview of SDI standards.html"><h1 style="font-size:60px">03 | SDI Standards</h1></a><br>
+					<h2 style="font-size:40px"> Why they are needed, how they are created and how to work with them</h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+					<a href="index_03_Lecture Overview of SDI standards.html"><img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="KU Leuven" align=center-right></a>
 				</section>
 
+			</section>
+			<section>
 				<section >
+					<a href="index_04_Lecture_Metadata_and_catalogue_services.html"><h1 style="font-size:60px">04 | Metadata and Catalog Services </h1></a><br>
+					<h2 style="font-size:30px"> What metada and data catalogs are, their use in geographic information, their quality and where to find them in geoportals</h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+					<a href="index_04_Lecture_Metadata_and_catalogue_services.html"><img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="KU Leuven" align=center-right></a>
+				</section>
+			</section>
+			<section>
+				<section>
+					<a href="index_05_Lecture_Data_models_and_data_specifications.html"><h1 style="font-size:60px">05 | Data models and data specifications</h1></a><br>
+					<h2 style="font-size:30px">Use of models, scope and specification objectives. Modelling frameworks and applied examples</h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+					<a href="index_05_Lecture_Data_models_and_data_specifications.html"><img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="KU Leuven" align=center-right></a>
+				</section>
+			</section>
+			<section>
 					<section >
-						<h2>The Copernicus ecosystem</h2>
-						<p>Copernicus engages different <em>actor groups</em>.</p>
-						<ul>
-							<li style="color:#bbb7a8;">Data providers</li>
-							<li style="color:#c5b2ca8f;">Service providers</li>
-							<li style="color:#cc5733;">Users and stakeholders</li>
-						</ul>
-						<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\UserUptake.png" alt="User uptake">
-					</section>
-					
-					<section>
-						<h2 style="color:#bbb7a8;">Data providers</h2>
-						<p>Next to the Sentinel satellites there is a series of contributing missions, including commercial providers of very high (spatial) resolution (VHR)  data.</p>
-						<br><img width="600" height="300" data-src="resources\template_WhatCopernicus\SatSubmeter.png" alt="Worldview-2">
-					</section>
-					
-					<section>
-						<h2 style="color:#c5b2ca8f;">Service providers</h2>
-						<p>...</p>
-						<br>
-					</section>
-					
-					<section>
-						<h2 style="color:#cc5733;">Users and stakeholders</h2>
-						<p>...</p>
-						<br>
-					</section>
+					<a href="index_06_Lecture_Web_services.html"><h1 style="font-size:60px">06 | Web Services to Access Spatial Data</h1></a><br>
+					<h2 style="font-size:30px">How they work, tools use and examples. Recommended Software, relevant standards and exercises</h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+					<a href="index_06_Lecture_Web_services.html"><img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" alt="KU Leuven" align=center-right></a>
 				</section>
-				
-				<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
-				<section> 
-				<h2> Reference list </h2>
-				<br>
-				<reference_list>exemplary doi:<br><br>
-				Barbara Hofer (2018). Innovation in geoprocessing for a Digital Earth. International Journal in Digital Earth.
-				<br>
-				<a href="https://doi.org/10.1080/17538947.2017.1379154">10.1080/17538947.2017.1379154</a>
-				</reference_list>
-				</section>
-				
-				
-				<section>Slide show ends</section>
+			</section>
 			
-                </section>
 
-              </div>
-
+				
+			</div>
 
 		<script src="internal_restricted/v1.0/js/reveal.js"></script>
 

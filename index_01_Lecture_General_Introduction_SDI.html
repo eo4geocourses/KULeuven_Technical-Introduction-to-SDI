@@ -1,0 +1,1002 @@
+<!-- 	Authors: Santiago Molano - KU Leuven 
+		Template Creation Date: August 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS: 
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>General introduction to Spatial Data Infrastructures</title>
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<!--link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css"><!-- anthrazit background design --> 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    <!-- base target="_blank"--> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+			 <!-- FORMATTING FOR HEADER -->
+			
+					
+				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
+			
+				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
+				 <div  class = "presentation_title" style=" text-align: center " > General introduction to Spatial Data Infrastructures 
+				</div>	<!--The title of the presentation appears on each slide-->
+				 
+
+			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
+				@prefix dc: <http://purl.org/dc/terms/>.
+				@prefix eo4geo: <http://bok.eo4geo.eu/>.
+				<>  	dc:title "General introduction to Spatial Data Infrastructures";
+					dc:creator "-----";
+					dc:subject "Copernicus, EO4GEO, WP5, Satellite, Earth Observation";
+					dc:abstract "Spatial data are widely used in public and private organisations. However, the data are often difficult to find, access, use and combine. Spatial data infrastructures (SDI) are a solution to this lack of accessibility and interoperability. An SDI is a set of technological and non-technological components meant to facilitate access, exchange and re-use of geospatial data within and between organisations.
+					The module introduces the concept of SDIs and explains the rationale behind it. It explains the  different technical and non-technical components of an SDI: data, services, metadata, standards, technology, organisational and institutional aspects (people), etc. and how the technological components work together. The module discusses also what SDI are used for, i.e. what are the objectives of a good functioning SDI.. The components and the benefits of an SDI are illustrated using real world examples. The access to SDIs through geoportals is demonstrated. Learners will visit several geoportals and will learn to browse for data.
+					The training material consist of presentations, exercises and supporting documents. The module is NOT a self-learning module, but needs class tutoring and interactions.";
+					dc:tableOfContents "(1) Geospatial data and their widespread use; (2) What is a Spatial Data Infrastructure and what is it used for?; (3) 3.	A typical architecture of an SDI: different tiers; (4) What is required to build an SDI; (5) What are the 5 key components of an SDI, a short description of each component and how they work together; (6) Examples of SDIs and how to access them through a geoportal ; (7) Exercises: search for datasets and explore their characteristics (through the metadata);";
+					dc:description "Learning outcomes:To describe and explain the rationale and concepts of SDIs; To explain the requirements for building a successful SDI;to recognise and describe the different components of an SDI; To explain how these components work together in an SDI; To explain how geoportals are a user interface to SDIs and their specific functions; To identify the benefits of an SDI for her/his organisation; To search and find specific datasets";
+					dc:contributor "------";
+					dc:created "2020-08-04";
+					dc:type "InteractiveResource";
+					dc:format "html";
+					dc:language "EN"; 
+					dc:SizeOrDuration "1.5h"
+					dc:audience "students";
+					dc:educationLevel "EQF 4";
+					dc:source "-----"";
+					dc:rightsHolder "SADL, KU Leuven";
+					dc:license "CC BY-SA 4.0";
+					dc:relation eo4geo:OI3b;
+					dc:relation eo4geo:DA4-2;
+					dc:relation eo4geo:???? .	
+								-->
+
+
+			<div class="slides">
+				
+			
+				<section >
+					<h1 style="font-size:60px">01 | SDI Architecture and SDI components</h1><br>
+					<h2 style="font-size:30px"> Elaboration of Standards, Norms and Procedures in the Acquisition and Dissemination of Geospatial Information </h2><br>
+					<img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+				</section>
+				
+
+			
+				
+				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
+			<section > 
+					<section > 
+						<br><h1>WELCOME! </h1> 
+						<p style="font-size:22px">With the following slides and interactive material you will be able to take part in the journey to discover <strong><span style="color: rgb(41, 105, 176);">Spatial Data Infrastructures</span></strong> (<em>SDI</em>) its components and benefits through the observation of multiple examples and exercises.&nbsp;</p><br>
+						<p style="font-size:22px; text-align:justify">You can navigate through the course by pressing the navigation arrows at the bottom of each slide or using your arrow keys on your keyboard. You can move horizontally <span style="color: rgb(44, 130, 201);"><strong>(</strong></span><span style="color: rgb(41, 105, 176);"><strong>&larr; &rarr;)</strong>&nbsp;</span>for viewing each theme and vertically <strong><span style="color: rgb(44, 130, 201);">(&uarr;&darr;)</span></strong> to view extra recommended information</p>					
+
+						<br><img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/navigation_arrows.png" alt="navigation arrows">	
+					</section >
+			</section>
+						
+				<section >
+					<h1 style="font-size:60px">01 | SDI Architecture and SDI components</h1><br>
+					<h2 style="font-size:30px"> Elaboration of Standards, Norms and Procedures in the Acquisition and Dissemination of Geospatial Information </h2><br>
+					<img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+				</section>
+				<section >
+					<h2 style="color:#5DADE2;">SDI Architecture and SDI components</h2>
+					<div style= "vertical-align:right">
+					<table>
+						<tr><th>#</th><th align="center">Content</th></tr>
+						<tr><td><a href="#01.1.0">1</a></td><td>Geographic Information for policy making</td></tr>
+						<tr><td><a href="#01.2.0">2</a></td><td>Combining Geographical Data</td></tr>
+						<tr><td><a href="#01.3.0">3</a></td><td>SDI definitions and approaches</td></tr>
+						<tr><td><a href="#01.4.0">4</a></td><td>SDI Components</td></tr>
+						<tr><td><a href="#01.5.0">5</a></td><td>Data specifications</td></tr>
+						<tr><td><a href="#01.6.0">6</a></td><td>Services</td></tr>
+						<tr><td><a href="#01.7.0">7</a></td><td>Standards</td></tr>
+						<tr><td><a href="#01.8.0">8</a></td><td>Metadata</td></tr>
+						<tr><td><a href="#01.9.0">9</a></td><td>Geoportals</td></tr>
+						<tr><td><a href="#01.10.0">10</a></td><td>Concepts Exercise</td></tr>
+					</table></div>
+				</section>
+
+				<section id="01.1.0">
+
+					<h1 style="color:#5DADE2;" > 01 | Geographic Information for policy making</h1>
+					<ol><br>
+						<p style="font-size: 30.33px; text-align:left"><b>EUROSION</b></p><br>
+						<li>In Context</li>
+						<li>Applied Examples</li>
+						<li>Combining Datasets</li>
+					</ol>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;"> <b>01 | Geographic Information for policy making </b></h2>
+					<br><h4 style="text-align: left;"><b>Geographic Information is needed in many policy domains</b></h4>
+					<h4 style="text-align: left;">Many stakeholders and organizations produce spatial datasets but there is...</h4>
+					<table style="width: 100%;">
+						<tbody>
+							<tr>
+								<td style="width: 50.0000%;">
+									<ul><li>Lack of reference and authentic data</li>
+										<li>Difficult to obtain spatial data;<ul>
+												<li>Not always accessible</li>
+												<li>Uneasy process to obtain and process</li>
+												<li>Often expensive</li>
+											</ul></li>
+										<li>Gaps in availability of spatial data and duplication of efforts<ul>
+												<li>Sometimes low quality</li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+								<td style="width: 50.0000%;">
+									<ul>
+										<li>Spatial data not harmonized;<ul>
+												<li>Difficulty to use across entities</li>
+												<li>Impossibility to process or combine with data from other countries</li>
+											</ul>
+										</li>
+										<li>Difficult to interpret and understand;<ul>
+												<li>Often not documented</li>
+											</ul>
+										</li>
+									</ul><br>
+								</td>
+							</tr>
+						</tbody>
+					</table>	
+				</section>
+				<section>
+					<h1 style="color:#5DADE2;" > 01 | EUROSION</h1>
+					<br>
+						<p style="font-size: 30.33px; text-align:justify">“To provide the European Commission with a package of <B>recommendations on policy and management</b> measures to address <b>coastal erosion</b> in the EU. 
+					These recommendations should be based on a thorough <b>assessment of the state of coastline </b> and of the response options available at each level of administration.”
+					</p><br>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;"> 01 | 01 Applied Examples </h2>	
+					<table>
+						<tr><td width="50%"><image src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image5.png" alt="Ajaccio_Bay.png" align=left> </td>
+						<td> <p>Example of Ajaccio Bay</p> <image src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image6.png" alt="Ajaccio_Bay.png" align=left> </td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2 align=left style="color:#5DADE2;">01 | 02 Combining Datasets </h2>
+					<br> <image src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Combining_datasets1.png" align=center>
+				</section>	
+				<section id="01.2.0">
+					<h1 style="color:#5DADE2;">02 | Combining Geographical Data</h1>
+					<ol>
+						<li>Common Issues</li>
+						<li>Summary</li>
+						<li>Exercise</li>
+					</ol>
+				</section>
+				<section>
+					<h1 style="color:#5DADE2;">02 | Common Issues:</h1>
+					<ul>
+						<li>A large variety of formats exist</li>
+						<li>Many geographical gaps still remain</li>
+						<li>Reference systems are not harmonized</li>
+						<li>Many data sources are not consistent</li>
+						<li>Scales are not compatible</li>
+						<li>All data are not interoperable</li>
+						<li>Costs and access restrictions</li>
+					</ul>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 1 - A large variety of formats exists </h2>
+					<div class="ppt-txt; fragment" style="position: absolute; top: 120px; left: 500px; height: 367px;  width: 828px">
+					<li>Satellite images</li>
+					</div>
+					<div class="img-div; fragment" style="position: absolute; top: 200px; left: 230px; height: 300px;  width: 311px" >
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image5.png"></img>
+					</div>
+
+					<div class="ppt-txt; fragment" style="position: absolute; top: 160px; left: 500px; height: 367px;  width: 828px">
+					<li>Maps</li>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 170px; height: 300px;  width: 311px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image8.jpeg"></img>
+					</div>
+					
+					<div class="ppt-txt; fragment" style="position: absolute; top: 200px; left: 500px; height: 367px;  width: 828px">
+					<li>Aerial Photographs</li>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 210px; height: 300px;  width: 311px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image10.jpeg"></img>
+					</div>
+					<div class="ppt-txt; fragment" style="position: absolute; top: 240px; left: 500px; height: 367px;  width: 828px">
+					<li>Diagrams</li>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 210px; height: 300px;  width: 311px">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image11.jpeg"></img>
+					</div>
+
+					<div class="ppt-txt; fragment" style="position: absolute; top: 280px; left: 500px; height: 367px;  width: 828px">
+					<li>Statistics</li>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 210px; height: 300px;  width: 311px">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image12.png"></img>
+					</div>
+
+					<div class="ppt-txt; fragment" style="position: absolute; top: 320px; left: 500px; height: 367px;  width: 828px">
+					<li>Reports</li>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 210px; height: 300px;  width: 311px">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image13.png"></img>
+					</div>
+					
+					<div class="ppt-txt; fragment" style="position: absolute; top: 360px; left: 500px; height: 367px;  width: 828px">
+					<li>Databases</li>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 210px; height: 300px;  width: 311px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image6_1.png"></img>
+					</div>			
+										
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 2 – Many geographical gaps still remain </h2>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 50px; height: 600px;  width: 511px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/image14.png"></img>
+					</div>
+					<div class="ppt-txt; fragment" style="position: absolute; top: 200px; left: 500px; height: 367px;  width: 828px">
+					<p>Geological data at scale 1:50,000<br>(source: BRGM, France)</p>
+					</div>
+					<div class="fragment" style="position: absolute; top: 360px; left: 500px; height: 367px;  width: 500px; border-width:3px; border-color:red">
+					<p><b>Need to identify the gaps and make priorities to bridge them</b></p>
+					</div>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 3 - Reference systems are not harmonized </h2>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 50px; height: 700px;  width: 611px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/borders0.png"></img>
+					</div>
+    
+					<div class="fragment" style="position: absolute; top: 360px; left: 500px; height: 367px;  width: 500px; border-width:3px; border-color:red">
+					<p><b>Need to define a common terrestrial reference system for data production and processing</b></p>
+					</div>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 4 – Many data sources are not consistent</h2>
+					<div class="img-div ; fragment" style="position: absolute; top: 200px; left: 50px; height: 400px;  width: 511px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Lines2.png"></img>
+					</div>
+					<div class="img-div ; fragment" style="position: absolute; top: 201px; left: 50px; height: 400px;  width: 511px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Lines1.png"></img>
+					</div>
+					<div class="fragment" style="position: absolute; top: 150px; left: 500px; height: 367px;  width: 500px; border-width:3px; border-color:red">
+					<p><b>Need to build pan-european “seamless” data with standard specifications</b></p>
+					</div>
+					<div class="ppt-txt; fragment" style="position: absolute; top: 250px; left: 500px; height: 367px;  width: 828px">
+					<p><b>Sources 1:</b><br>
+						<br>Coastline : SABE (EuroGeographics)
+						<br>Bathymetry : TCIFMS (SHOM)
+						<br>Topography : BDTOPO (IGN)</p>
+					</div>
+					<div class="ppt-txt; fragment" style="position: absolute; top: 450px; left: 500px; height: 367px;  width: 828px">
+					<p><b>Sources 2:</b><br>
+						<br>Coastline : SABE (EuroGeographics)
+						<br>Bathymetry : GEBCO (BODC)
+						<br>Topography : MONA PRO</p>
+					</div>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 5 - Scales are not compatible</h2>
+					<div class="img-div ; fragment" style="position: absolute; top: 201px; left: 50px; height: 500px;  width: 611px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Scales.png"></img>
+					</div>
+					<div class="fragment" style="position: absolute; top: 400px; left: 500px; height: 367px;  width: 500px; border-width:3px; border-color:red">
+					<p><b>Need to adopt a common level  of perception and representation of data</b></p>
+					</div>
+				</section>
+				<section>
+					<div class="ppt-txt" style="position: absolute; top: 90px; left: 63px; height: 367px;  width: 828px">
+					<h2 style="color:#5DADE2;">02 | Issue No. 6 – Data not interoperable</h2>
+					<div class="img-div ; fragment" style="position: absolute; top: 100px; left: 50px; height: 450px;  width: 411px" class="fragment">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Coast.png"></img>
+					</div>
+					<div class="fragment" style="position: absolute; top: 200px; left: 500px; height: 367px;  width: 500px; border-width:3px; border-color:red">
+					<p><b>CORINE Land Cover 1990<br><br>SABE Coastline</b></p><br>
+					<p>0 m &lt; Difference &lt; 50 m 
+					<br>50 m &lt; Difference &lt; 200 m
+					<br>Difference &gt; 200 m</p>
+					</div>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 7 – Costs and access restrictions</h2>
+					<ul><li> Most existing datasets are “copyrighted”: you do not buy information itself, but a right to use it (“license”)</li><br>
+					<li> Dissemination of end-products is restricted	(sometimes, end-products have to be “degraded”)</li><br>
+					<li>Quality “label” are not commonly adopted: uncertainty about the products</li></ul>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Issue No. 7 – Costs and access restrictions</h2>
+					<p style="text-align:left">EUROSION database = 2 Millions Euros</p><br><br>
+					<ul><li>   26% acquisition of licensed data (e.g. Elevation)</li><br>
+					<li>   17% update of existing data (e.g. Coastal Erosion)</li><br>
+					<li>  33% production of missing data (e.g. Hydrodynamics)</li><br>
+					<li>24% Format conversion, integration, and quality control</li> </ul>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">02 | Summary</h2>
+					<p style="text-align:left">The absence of a European spatial data infrastructure results in:</p><br><br>
+					<ul><li>   Higher investment costs (2 to 3 times)</li><br>
+					<li>   Delayed implementation (8 to 10 months)</li><br>
+					<li>    Uncertain quality</li><br>
+					<li>Dissemination constraints</li> </ul><br><br>
+					<p> There is a need for developing an infrastructure that provides
+					direct access to harmonized (interoperable) data 
+					and that can be shared amongst all those that need it</p>
+				</section>
+				<section id="01.3.0">
+					<h1 style="color:#5DADE2;"> 03 | SDI definitions and approaches</h1>
+					<ol>
+						<li>Common definitions and approaches</li>
+						<li>GIS and SDI</li>
+					</ol>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">  03 | 01 SDI definitions and approaches </h2>
+					<p> Many attempts to define and conceptualize SDI</p><br>
+					<p style="text-align:left">Focus on the components (spatial data, technology, policies, standards and people)<br> Recognizing its dynamic nature (evolution)<br> Identifying (data) sharing as a key issue<br>Describing different views of SDI hierarchy<br><br>
+					<ul>
+						<li>Rajibifard</li>
+						<li>Masser</li>
+						<li>Chan</li>
+						<li>GSDI</li>
+						<li>...</li>
+					</ul></p>
+				</section>
+				<section>	
+					<h2>  03 | 02 SDI definitions and approaches </h2>
+					<br><image src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/technological_set_ups.png" align=left class=plain>			
+				</section>
+				<section>
+					<h2> 03 | 03 SDI definitions and approaches </h2>
+					<br><table>
+						<tr><td><ul><ul>
+						<li>Few define SDI as a (dynamic) network<q>Tulloch & Harvey (2007)</q><br>
+						Few operational set-ups to analyse SDI-networks<q>Vandenbroucke et al (2009)</q><br>
+						<image src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Networks.jpg" align=center-left class=plain height="150"></q></li>
+						</ul></td>
+						<td><image src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Network.png" align=right class=plain>
+						</td>
+					</table>
+				</section>
+				<section>
+					<br><h2> 03 | 04 SDI definitions and approaches </h2>
+					<br><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Dataflow.png" height="500">
+				</section>
+				<section>
+					<br><h2> 03 | 05 GIS and SDI </h2>
+					<br><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/GIS&SDI.png" height="500">
+				</section>
+				<section id="01.4.0">
+					<h1 style="color:#5DADE2;">04 | SDI Components</h1>
+					<ol>
+						<li>Principal components</li>
+						<li>Data specifications</li>
+					</ol>
+				</section>
+				<section>
+					<br><h2> 04 | 01 SDI Components </h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Institutional and organizational aspects.png" height="500">
+				</section>
+				<section>
+						<br><br><h2> 04 | 01  SDI Components </h2>
+						<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Institutional and organizational aspects01.png
+						" height="500">
+				</section>
+				<section>
+					<h2> 04 | 01 SDI Components </h2>
+						<table>
+						<tr><td>
+							<br><p style="text-align: justify;">Laws or voluntary agreements governing the collaboration between producers and/or users of geodata.</p>
+							<p style="text-align: justify;">An organizational structure; mandates; who does what? - Mechanisms for financing the SDI and its coordination</p>
+						</td>
+						<td>
+							<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Important.jpg" width="300" align=right>
+						</td>
+						</tr>
+						</table>
+						<table> 
+						<tr> 
+							<th><p style="text-align: center;">Laws/agreements about pricing and licensing of geodatasets:</p></th>
+							<th><p style="text-align: center;">Laws/agreements about how to deal with:</p><th>
+						<tr>
+							<td>
+								<ul style="list-style-type: circle;">
+								<li style="text-align: justify;">Data free of charge</li>
+								<li style="text-align: justify;">Data at distribution cost</li>
+								<li style="text-align: justify;">Data at full cost</li>
+								<li style="text-align: justify;">Data at market price</li>
+								<li style="text-align: justify;">Exchange of data</li>
+							</ul>
+							</td>
+							<td>
+							<ul style="list-style-type: circle;">
+								<li>Intellectual property rights on datasets and services</li>
+								<li>Confidentiality - privacy issues (cfr. Google Street View)</li>
+								<li>Access to public sector information (e.g. EU-Public sector Information Directive)</li>
+								<li>Homeland security</li>
+								<li>...</li>
+							</ul>
+							</td>
+						</tr>
+						</table>
+				</section>
+				<section>
+					<h2>04 | 04 SDI Components </h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Data.png" height="500" align=center>
+				</section>
+				<section>
+					<h2>04 | 05 SDI Components </h2>
+					<br><h3 style="text-align: justify;"><strong style="color:#F39C12">REFERENCE GEODATASETS:</strong></h3>
+					<p style="text-align: justify;">Required in almost every application as the geometric foundation</p>
+					<ul style="list-style-type: circle;">
+						<li>"Stable" topographic entities (roads, water courses, administrative boundaries)</li>
+						<li>Orthophotographs</li>
+						<li>"Stable" terrain characteristics (elevation, ...)</li>
+					</ul>
+				</section>
+				<section>
+					<h2> 04 | 06 SDI Components </h2>
+					<br><h3 style="text-align: justify;"><strong style="color:#F39C12">REFERENCE (CORE) THEMATIC GEODATASETS:</strong></h3>
+					<p style="text-align: justify;">Useful for several thematic domains</p>
+					<ul style="list-style-type: circle;">
+						<li>Land cover and land use</li>
+						<li>Spatial destination</li>
+						<li>Soils</li>
+						<li>Geology</li>
+					</ul>
+				</section>
+				<section>
+					<h2> 04 | 06 SDI Components </h2>
+					<br><h2 style="text-align: justify;">Datasets are standardized and kept in repositories, ‘somewhere’ in the infrastructure/on the network</h2>
+					<ul ul ul> <strong>
+						<li>‘Big Data’, but highly structured and standardized</li>
+						<li>‘Cloud’ but highly structured</li>
+					</ul> </strong>
+				</section>
+				<section id="01.5.0">
+					<h1 style="color:#5DADE2;">01 | 05 Data specifications</h1>
+				</section>
+				<section>
+					<h2> 05 | 01 Data specifications </h2>
+					<table>
+					<tr><td><strong>Application schema </strong><br>(defines the model)</td> <td rowspan="2"> 
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Data specifications.png" width="500"></td> <br></tr>
+					<tr><td><strong>Data harmonization </strong><br>
+						<ul>
+						<li>Getting your data in the reference (standard) model</li>
+						<li>Data transformations might be necessary (ETL)</li>
+						</ul>
+					</td></tr>
+					</table>
+				</section>
+				<section>
+					<h2>05 | 02 Data specifications </h2>
+					<br><p style="text-align: left;"><strong>It is about more than the dataset alone</strong></p><br>
+					<table>
+						<tr><td>
+						<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Data_specification01.bmp" width="500"></td>
+						<td>
+						<strong>This is reflected in the geospatial standards! </strong>
+						</td></tr>
+					</table>
+				</section>
+				<section id="01.6.0">
+					<h1 style="color:#5DADE2;">06 | Services</h1>
+					<ol>
+						<li>Services for SDIs</li>
+						<li>View services</li>
+						<li>Download services</li>
+						<li>Transformation services</li>
+						<li>Catalgue service for the web CSW</li>
+						<li>Rights management services</li>
+					</ol>
+				</section>
+				<section>
+					<h2>06 | 01 Technological components of SDI: services </h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Services.png" height="500" align=center>
+				</section>
+				<section>
+					<h2>06 | 02 Technological components of SDI: services </h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Services01.png" height="500" align=center>
+				</section>
+				<section>
+					<h2>06 | 03 Services for SDIs </h2>
+					<br><h3 style="text-align: justify;"><strong style="color:#F39C12">MOST IMPORTANT SERVICES:</strong></h3>
+					<ul style="list-style-type: circle;">
+						<li>View services (WMS)<ul>
+							<li>View data (as image)</li>
+						</ul></li>
+						<li>Download services (features WFS, coverages WCS)</li>
+						<li>Transformation services (WPS, processing)<ul>
+							<li>Often in the background (e.g. coordinate transformation)</li>
+						</ul></li>
+						<li>Discovery services (CSW, Catalogue)<ul>
+							<li>Provider publishes data</li>
+							<li>User finds the data and access services</li>
+						</ul></li>							
+					</ul>
+				</section>
+				<section>
+					<h2>06 | 04 View Services: Web map services WMS </h2>
+					<ul>
+					<li>As its name implies, is a service that provides maps.</li>
+					<li>Data only leaves the server as an image</li>
+					<li>Map is rendered on the server so styling and presentation is chosen by the data provider</li>
+					<li>Limited client interactivity with the map</li>
+					</ul>
+				</section>
+				<section>
+					<h2>06 | 05 View Services: Web map services WMS </h2>
+					<p style="text-align: justify;"> Note: source material (data) from which the image is generated does not need to be an image, but can be a Shapefile, PostGIS database, Oracle Spatial,…</p><br>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/WebMapServices.png" width="600" align=center>
+				</section>
+				<section>
+					<h2>06 | 06 Download Services:Web feature services WFS </h2>
+					<ul>
+					<li>Provides map data (GML) to a (web) client</li>
+					<li>The client chooses style & presentational details</li>
+					<li>Geospatial features</li>
+					<li>Selection query for features in the request</li>
+					<li>Requesting predefined datasets</li>
+					<li>Optional: Transactional Web Feature Service (WFS-T) enables the creation, deletion, and updating of features</li>
+					</ul>
+				</section>
+				<section>
+					<h2>06 | 07 Download Services:Web feature services WFS </h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/WFS.png " width="600" align=center>
+				</section>
+				<section>
+					<h2>06 | 08 Transformation services: Web processing services WPS </h2>
+					<ul>
+					<li>Requests the execution of a spatial calculation</li>
+					<li>One of the benefits of WPS is its ability to chain processes</li>
+					<li>A WPS process can use as its input the output of another (previous) process</li>
+					<li>Many complex functions can thus be combined in to a single powerful request</li>
+					<li>Example: transform coordinates from CRS in database to CRS requested by user</li>
+					</ul>
+				</section>
+				<section>
+					<h2>06 | 09 CSW – Catalogue Service for the Web </h2>
+					<br><table>
+					<tr>
+						<td><ul>
+							<li>A catalogue server publishes collections of descriptive information (metadata) about geospatial data </li>
+							<li>Defines interface to search for metadata (so client can ‘discover’ geospatial data)</li>
+							<li>Transaction: insert, update & delete of metadata (to publish metadata)</li>
+							<li>Harvest: pull existing metadata from other servers</li>
+						</ul></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/CSW.png" width="750" align=center></td>
+					</tr>
+					</table>												
+				</section>
+				<section>
+					<h2>06 | 10 Services </h2>
+					<p style="text-align: justify;"> Service chaining: different services combined to produce the output</p><br>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Services02.png" width="500" align=center>
+				</section>
+				<section>
+					<h2>06 | 11 Services </h2>
+					<br><p style="text-align: justify;"> Publish – Find – Agree - Bind</p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/PFAB.png" width="600" align=center>
+				</section>
+				<section>
+					<h2>06 | 12 Rights management services </h2>
+					<br><p style="text-align: justify;"> <strong>The ‘agree’ part: rights management services</strong></p>
+					<table>
+					<tr>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Rightsmanagement.png" width="900" align=center></td>
+						<td><strong>Related to the Institutional and organizational aspects of SDI</strong></td>
+					</tr>
+					</table>
+				</section>
+				<section>
+					<h2>06 | 13 Service oriented architecture</h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Service_oriented_arch.png" width="600" align=center>
+				</section>
+				<section>
+					<h2>06 | 14 Service oriented architecture</h2>
+					<br><p style="text-align: justify;"><strong> Different technical services and components are distributed over the net.<br><br>
+					Talk to each other through APIs<br><br>
+					If standardised, components from different software providers can talk to each other</strong></p><br>
+					<p style="text-align: right;"><strong><i style="font-size:150%; color:red;">Standards are needed!</i></strong></p>
+				</section>
+				<section id="01.7.0">
+					<h1 style="color:#5DADE2;">07 | Standards</h1>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Standards.png" width="300" align=center>
+					<ol>
+						<li>Definition</li>
+						<li>Standardization bodies</li>
+						<li>ISO/TC211</li>
+						<li>Open Geospatial Consortium OGC</li>
+					</ol>
+				</section>
+				<section>
+					<h2>07 | 01 What are standards? </h2>
+					<br><p style="text-align: justify;"> <strong>Standards are everywhere</strong></p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Standards01.png" height="400" align=center>
+				</section>
+				<section>
+					<h2>07 | 02 What are standards? </h2>
+					<br><p style="text-align: justify;"> <strong>Standards are...</strong></p>
+					<blockquote> “Documented agreements containing technical specifications or other precise criteria to be used consistently as rules, guidelines, or definitions of characteristics, to ensure that materials, products, processes and services are fit for their purpose”</blockquote>
+					<p style="text-align:right;"> (ISO, 2019)</p>
+				</section>
+				<section>
+					<h2>07 | 03 What are standards? </h2>
+					<table>
+					<tr>
+						<td rowspan="2"> <img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/International_standards.jpg" width="500"></td> 
+						<td><ul>
+							<li>Usually in the form of documents</li>
+							<li>They are implementation neutral
+								<ul><li>E.g. Adapter for the electricity net should work for any device</li>
+								<li>E.g. Any software should be able to use or implement standards</li></ul>
+							</li>
+						</ul></td>
+					</tr>
+					<tr><td>
+						<blockquote style="text-align:right; color:red;"> “The interesting thing about Standards is that there are so many to chose from…”</blockquote>
+					</td></tr>
+					</table>
+				</section>	
+				<section>	
+					<h2>07 | 04 Standardization bodies</h2>
+					<br><p style="text-align: justify;"><strong>Many standardization bodies exist</strong></p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Standardization_bodies.png" width="800" class=plain>
+				</section>	
+				<section>	
+					<h2>07 | 05 ISO/TC211</h2>
+					<br><p style="text-align: justify;"><strong>38 Participating Members, 31 Observing Members</strong></p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/ISO_TC211.jpg" width="800" class=plain>
+				</section>	
+				<section>
+					<h2>07 | 06 Open Geospatial consortium OGC</h2>
+					<table><tr>
+						<td><div style="border: 1px gray; background-color:#D6EAF8"> Not-for-profit, international voluntary consensus standards organization; leading development of geospatial standards </div></td>
+						<td rowspan="2">
+							<div> <img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Implementations.png" width="280" class=plain >
+							<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Usercommunity.png" width="400" class=plain></div></tr>
+					<tr><td><ul>
+							<li>Founded in 1994</li>
+							<li>520+ members and growing</li>
+							<li>50+ standards</li>
+							<li>Thousands of implementations</li>
+							<li>Broad user community implementation worldwide</li>
+							<li>Alliances and collaborative activities with ISO and many other SDO’s</li>
+						</ul></td>
+					</tr></table>
+				</section>
+				<section>
+					<h2>07 | 07 Open Geospatial consortium OGC</h2>
+					<br><p style="text-align: justify;"><strong>A document, established by consensus and approved by the OGC Membership, that provides rules and guidelines, aimed at the optimum degree of interoperability in a given context.</strong></p>
+					<table>
+						<tr><td><ul>
+							<li>Community requirements</li>
+							<li>Member requirements</li>
+							<li>Market trends</li>
+							<li>Technology trends</li>
+							</ul></td>
+							<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/OGC.png" width="400" class=plain></td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>07 | 08 Types of standards</h2>
+					<br><p style="text-align: justify;"><strong>Different types of standards: technical and semantic</strong></p>
+					<div style="border: 1px gray; background-color:#D6EAF8"> Technical standards will guarantee interaction between different (software-)systems by providing common or shared interfaces</div><br><br>
+					<div style="border: 1px gray; background-color:#3498DB; color:white">Semantics imply that geographic information provided by different organizations at different moments in time and for different purposes can unambiguously be interpreted and if necessary integrated. Semantic standards focus on this aspect.</div>				
+				</section>
+				<section>
+					<h2>07 | 09 Types of standards</h2>
+					<br><p style="text-align: justify;"><strong>In summary:</strong></p>
+					<q>technical standards will make you connected, while semantic standards will make you understood (Reuvers, 2005)</q><br>
+					<br><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Plugs.jpg" width="280" class=plain align=center-left> <img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Doubt.jpg" width="280" class=plain align=center-right>
+				</section>
+				<section>
+					<h2>07 | 10 Types of standards</h2>
+					<br><p style="text-align: justify;"><strong>Different types of standards: de facto and de juro:</strong></p>
+					<ul><li>De facto:
+						<ul><li>e.g. SQL, SHP, KML</li>
+							<li>Open Geospatial consortium standards</li>
+						</ul></li>
+						<li>De jure (legal)
+							<ul><li>ISO/TC 211</li>
+								<li>CEN/TC 287</li>
+								<li>Federal Geographic Data Committee (FGDC, USA)</li>
+							</ul></li>
+					</ul>
+					<br><p style="text-align: justify;"><strong>Sometimes a de facto standard is formally adopted (e.g. KML)</strong></p>
+				</section>
+				<section>
+					<h2>07 | 11 Standards for SDI</h2>
+					<br><table><tr>
+					<td><p style="text-align:left"><b>Standards for</b></p>
+						<div style="text-align:left"><ul>
+						<li>Data</li>
+						<li>Services</li>
+						<li>Metadata</li>
+						</ul></div></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Standards_for_SDI.png" height="400" class=plain align=center-right></td>
+						</tr></table>	
+				</section>
+				<section>
+					<h2>07 | 12 Data related standards for SDI</h2>
+					<br><p style="text-align: justify;"><strong>Standards for data (semantic!)</strong></p><br>
+					<p style="text-align: justify;">More than exchange formats. Specify what must be included in datasets and how it must be stored<br><br>Focus on standardised conceptual/logical data models and data specifications (UML)<br><br>Standards and specifications related to geographical objects</p>
+				</section>
+				<section>
+					<h2>07 | 13 Service related standards</h2>
+					<br><p style="text-align: justify;"><strong>Standards for services (How it works: technical!)</strong></p><br>
+					<p style="text-align: justify;">OGC standards (often also covered by ISO) for use with all kinds of client-server combinations</p>
+					<ul>
+						<li>Web Map Service (WMS, ISO 19128)</li>
+						<li>Web Feature Service (WFS, ISO 19142)</li>
+						<li>Web Coverage Service (WCS)</li>
+						<li>Web Processing Service (WPS)</li></ul><br>
+					<p style="text-align: justify;"><strong>Similar to the services available in an SDI!</strong></p>
+				</section>
+				<section>
+					<h2>07 | 14 Service related standards</h2>
+					<p style="text-align: justify;"><strong>Define information about data or services, needed to search, explore, assess, connect to available resources</strong></p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Metadata_Standards.png" height="400" class="plain" align="center-right">
+				</section>
+				<section id="01.8.0">
+					<h1 style="color:#5DADE2;">08  | Metadata</h1><br>
+					<table><tr>
+					<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Metadata.png" height="500" class=plain></td>
+					<td><ol>
+						<li>Definition</li>
+						<li>Uses</li>
+						<li>Use communities</li>
+						<li>Storage of (geospatial) metadata</li>
+						<li>Types of (geospatial) metadata</li>
+						<li>Metadata Schema</li>
+						<li>Elements</li>
+					</ol></td>
+					</table>
+				</section> 
+				<section>
+					<h2>08 | 02 What are metadata</h2>
+					<table><tr>
+					<td style="width:50%"><p style="text-align: justify;"><strong>Metadata are everywhere</strong></p>
+					<p style="text-align: justify;">Metadata can be found on <span style="color:red;">all consumer products</span> in our food chain (check a coca cola can) or any other product for that matter. It gives you information on <u>who produced/delivered</u> the product and how you can contact them, a <u>description</u> of the product, it provides a (bar-)code with <u>unique identifier</u>, a <u>‘preview’</u> of the product, information on how to use the product (or not), the ingredients, information about the <u>quality</u>, the <u>validity</u> date (the date it was produced and the date until you can consume it), the <u>size/volume</u>, etc.<br> 
+					The same happens in our <span style="color:red">information society</span>: e.g. books. It happens (partially) also in the context of data, and geospatial data and <span style="color:red"> Spatial Data Infrastructures </span> in particular.</p></td>
+					<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/labels.png" width="600" height="500"class="plain"><td></td>
+					</tr></table>
+				</section>
+				<section>
+					<h2>08 | 03 What are metadata used for?</h2>
+					<table><tr><td style="width:60%">
+					<div style="border: 1px gray; background-color:#E67E22; color:white; padding:1em"><strong>Inform the user about</strong>
+					<ul><li>What is the (information) product about?</li>
+					<li>What is inside and what does it consist of (in the description or list of elements / ingredients)?</li>
+					<li>To whom I can direct my questions or complaints (name, address, e-mail)?</li>
+					<li>How does it look like (visuals)?</li>
+					<li>Is it old or current (dates)?</li>
+					<li>What is the quality (through the dates, the composition …)</li>
+					<li>How can I use it: what is the purpose (e.g. the soup is not good for plants)</li>
+					</ul></div></td>
+					<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Book_information.jpg" height="400" class="plain" align="center-right">
+					</td></tr></table><br>
+					<h3><b>Usually the metadata are mandatory and standardized!</b></h3>
+				</section>
+				<section>
+					<h2>08 | 04 Metadata for different communities…</h2>
+					<table>
+						<tr><td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/metadata_communities.png" height="500" class="plain" align="center-right"></td>
+						<td style="width:50%"><div style="border: 1px gray; background-color:#D4AC0D; color:white; padding:1em;" ><strong> Different communities,other standards</strong><br>The <b>Dublin Core standard</b> is used for documenting reports, archiving files, etc. It consist of several elements to understand the document / file:<br>
+						<ul><li>Title and abstract</li>
+							<li>Author(s), contributors, reviewers…</li>
+							<li>Keywords</li>
+							<li>Date of initiation, date of last update</li>
+							<li>Information about quality assurance, adoption/acceptance</li>
+							<li>History of the document or file in the form of a log-table</li>
+						</ul></td></tr></div></table>
+				</section>
+				<section>
+					<h2>08 | 05 Storage of (geospatial) metadata</h2>
+					<table><tr>
+						<td style="width:50%"><p style="text-align: justify;"><strong>Where storing metadata?</strong><br>
+						Metadata should be stored <b>with the data</b> and might be stored in a <b>catalogue</b>. In software such as ArcGIS or QGIS the metadata file is automatically stored in the folder where also the other files are stored. When taking a copy of the data (to provide them to others) you will have all relevant files together.</p></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Metadata_cycle.png" height="400" class="plain" align="center-right"></td></tr>
+					</table>
+				</section>
+
+
+				<section>
+					<h2>08 | 06 Storage of (geospatial) metadata</h2>
+					<table>
+						<tr><td style="width:50%"><p style="text-align: justify;">A catalogue allows you to <b>group the metadata records together</b> and to expose the information via the web through a ‘discovery’ or catalogue service. The latter allows to have all information on datasets (and services) of the SDI in one place.</p></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Catalogview.jpg" width="600" height="300"class="plain" align="right"></td></tr>
+					</table>
+				</section>
+				<section>
+					<h2>08 | 07 Types of (geospatial) metadata</h2>
+					<table><tr>
+						<td style="width:45%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Types_geospatial_metadata.png" height="400" class="plain" align="center-right"></td>
+						<td><div style="border: 1px gray; background-color:#F5CBA7; padding:10px"> <p style="text-align: justify; font-size:1em;"><strong>Different types for different purposes</strong><br>
+						<br><b>Discovery</b> - Users need to find the relevant datasets in the first place: searching datasets on a particular topic for a particular area for example. Discovery requires search mechanisms.
+						<br><b>Evaluation</b> - Before using a geospatial dataset it is necessary to assess whether it is ‘fit-for-purpose’: is the quality and currency enough for my use-case; what is the history (lineage) of the dataset, etc.
+						<br><b>Use</b> - When using the (geospatial) dataset users need to know some details about the characteristics of the data elements: the type of features and how they are/were defined; the meaning of the attributes and their technical characteristics, etc.</p></div></td></tr>
+					</table>
+				</section>
+				<section>
+					<h2>08 | 08 Metadata Schema</h2>
+					<br><p style="text-align: justify;">It is recommended <span style="color:#D35400">to start with the mandatory metadata elements </span> which are required for discovery purposes and which are ‘easy’ to maintain: e.g. title, abstract, reference date, language, topic category. Usually metadata elements are grouped.<br><br>Some <span style="color:#D35400">optional elements </span>are also recommended: e.g. responsibility party, lineage, online resource.<br><br> The table shows the so-called core elements of the ISO 19115:2003 standard.</p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Attention.png" width="150">
+				</section>
+				<section>
+					<h2>08 | 09 Metadata Schema</h2>
+
+					<table><tr>
+						<td style="width:45%"><div style="border: 1px gray; background-color:#3498DB; padding:0.25em; color:white"><p style="text-align:left"><b>Schema consists of metadata elements.</b><br>Some are:</p>
+							<ul><li>M - Mandatory</li>
+							<li>O - Optional</li>
+							<li>C - Conditional</li></ul>
+							</div></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Metadata_schema.jpg" width="600" class="plain" align="right"></td></tr>
+					</table>
+				</section>
+				<section>
+					<h2>08 | 10 Mandatory elements</h2>
+					<table><tr>
+						<td style="width:50%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Mandatory_Elements.jpg" width="500" class="plain"></td>
+						<td><div><p style="text-align: justify;">The <b>core</b> <span style="color:#D35400">metadata elements</span> answering the following questions:<br><br>“Does a dataset on a specific topic exist (‘<span style="color:#D35400">what</span>’)?”, “For a specific place (‘<span style="color:#D35400">where</span>’)?”,“For a specific date or period (‘<span style="color:#D35400">when</span>’)?” and “A point of contact to learn more about or order the dataset (‘<span style="color:#D35400">who</span>’)?”.<br><br>
+						Using the recommended optional elements in addition to the mandatory elements will increase interoperability, allowing users to understand without ambiguity the geographic data and the related metadata provided by either the producer or the distributor. <span style="color:#D35400">Dataset metadata profiles of this International Standard shall include this core.</span></p></div></td>
+					</tr>
+					</table>
+				</section>
+				<section>
+					<h2>08 | 11 Identification elements</h2>
+					<table>
+						<tr><td style="width:45%">
+							<div><p style="text-align: justify;">Identification information contains information to uniquely identify the data. Identification information includes information about the citation for the resource (title), an abstract, an identifier, keyword(s), the purpose, credit, the status and points of contact. The MD_Identification entity is mandatory. It contains mandatory, conditional, and optional elements.</p><br>
+							<div><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/layers.jpg" height="150" align="right" class="plain">
+							<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/data_icon.png" height="150" align="center" class="plain"></div></div></td>
+							<td> <div style="border: 1px gray; background-color:#D4AC0D; color:white; padding:1em;"><b>Identification elements</b><br><br>
+							<b>Title</b> - Should be self-explaining and not too long – don’t use the filename of the resource!<br>
+							<b>Abstract</b> - Should be concise and explain what the dataset is about, usually 1/3 to ½ page text <br>
+							<b>Identifier</b> - a unique code for the resource, not automatically generated but part of a PID strategy for information infrastructures<br>
+							<b>Keyword(s)</b> - the topic(s) covered by the dataset; might use an existing vocabulary (e.g. GEMET)<br>
+							<b>Format</b> - vector or raster data <br>
+							<b>Type</b> - it can be a dataset, a dataset series or a web service </div>
+						</td></tr>
+					</table>
+				</section>
+				<section>
+					<h2>08 | 12 CRS and other elements</h2>
+					<table>
+						<tr><td><p style="text-align: justify;"><b>Coordinate Reference System</b> is referring to the projects, the ellipsoid and datum of the dataset including a link to the CRS type (code list) and projection parameters.<br><br>
+						Also the <b>extent</b> of the dataset is given (as part of the identification) by 4 coordinates or a geographic identifier.</p></td>
+							<td rowspan="2"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/CRS_elements.jpg" height="600" align="right" class="plain"></td></tr>
+						<tr><td style="width:60%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Coordinates_ref_system.jpg" height="300" align="right" class="plain"></td></tr>
+					</table>
+				</section>	
+				<section>
+					<h2>08 | 13 Data Quality elements</h2>
+					<table>
+						<tr><td style="width:45%"><p style="text-align: justify;">Data Quality contains a general assessment of the quality of the dataset. Data Quality is an aggregate of the <b>Lineage</b> and <b>Data Quality Elements</b>. The latter can include following elements: completeness, logical consistency, positional accuracy, thematic accuracy and temporal accuracy. Those five entities can be further subdivided to the sub-elements of data quality. <br><br>
+						This package also contains information about the <b>sources</b> and <b>production processes</b> used in producing a dataset. The lineage entity is <b>optional</b> and contains a statement about the lineage or history of a dataset. It is an aggregate of process step performed on the data and the source information (starting dataset).</p></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Data_quality_elements.jpg" height="500" align="right" class="plain"></td>
+					</tr></table>	
+				</section>
+				<section>
+					<h2>08 | 14 Constraint elements</h2>
+					<table>
+						<tr><td style="width:50%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Constraints.jpg" height="500" align="right" class="plain"></td>
+						<td><p style="text-align: justify;">Constraints can impose limitations of sharing and use. The reasons might be variable. Sensitive information such as personal or military information might need to be secured, or vulnerable species or habitats might be protected as well. On the other hand there might be legal constraints related to the existence of copyrights, patents or licenses (paying fees), or there might be some restrictions on what users can do with the data.<br><br>
+						In INSPIRE, two elements have been imposed:<br> 1) the conditions for accessing the data and for use and <br>2) the possible limitation for public use (since normally all geospatial data should be open for the public).</p></td>
+					</tr></table>
+				</section>
+				<section id="01.9.0">
+					<h1 style="color:#5DADE2;">09 | Geoportals</h1>
+					<ol>
+						<li>How to find information</li>
+					</ol>
+				</section>
+				<section>
+					<h2>09 | 01 Geoportals How to find geographic information</h2>
+					<p style="text-align: justify;"><strong>Geoportals as one of the possible applications to connect to the geographical (meta)data</strong></p>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/geoportals.png" width="700"align="center" class="plain">
+				</section>
+				<section>
+					<h2>09 | 02 Geoportals</h2>
+					<table><tr>
+						<td style="width:50%"> <p style="text-align: justify;"><b>Key component of a SDI</b><br>
+						<br><q>“[…] the medium through which the users access the available information [in SDIs]”</q>(Van Loenen et al., 2010)</p></td>
+						<td><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/door.jpg" width="300"align="right" class="plain"></td>
+					</tr></table>
+					<p style="text-align: justify;"><b>Some definitions and characteristics:</b><br>
+					<br><q>“A geoportal may be defined as an internet or intranet entry point with the tools for retrieving metadata, searching for GI, visualizing GI, downloading GI, disseminating GI and in some cases the ordering of GI services” </q>(Giff et al., 2008)</p>
+				</section>
+				<section id="01.10.0">
+					<h1 style="color:#5DADE2;">10 | Concepts Exercise</h1>
+				</section>
+				<Section>
+					<h2 style="color:#5DADE2;"> 00 | Test exercise 1 </h2>
+					<iframe src="https://eo4geo.planetek.it/mod/hvp/embed.php?id=41" width="875" height="585" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://eo4geo.planetek.it/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+				</section>
+
+
+						
+				<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
+				<section> 
+				<h1 style="color:#5DADE2;"> Reference list </h1>
+				<br>
+				<reference_list>exemplary doi:<br><br>
+				Barbara Hofer (2018). Innovation in geoprocessing for a Digital Earth. International Journal in Digital Earth.
+				<br>
+				<a href="https://doi.org/10.1080/17538947.2017.1379154">10.1080/17538947.2017.1379154</a>
+				</reference_list>
+				</section>
+				
+				
+				
+			
+			</div>
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: 'c/t',
+				viewDistance: 500,
+				preloadIframes: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>

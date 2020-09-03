@@ -1,0 +1,423 @@
+<!-- 	Authors: Santiago Molano - KU Leuven 
+		Template Creation Date: August 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS: 
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>Overview of SDI standards</title>
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<!--link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css"><!-- anthrazit background design --> 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    <!-- base target="_blank"--> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+			 <!-- FORMATTING FOR HEADER -->
+			
+					
+				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
+			
+				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
+				 <div  class = "presentation_title" style=" text-align: center " > Overview of SDI Standards 
+				</div>	<!--The title of the presentation appears on each slide-->
+				 
+
+			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
+				@prefix dc: <http://purl.org/dc/terms/>.
+				@prefix eo4geo: <http://bok.eo4geo.eu/>.
+				<>  	dc:title "Overview of SDI Standards ";
+					dc:creator "-----";
+					dc:subject "Copernicus, EO4GEO, WP5, Satellite, Earth Observation";
+					dc:abstract "Interoperability is a key factor for linking different technologies and exchanging data & information across different organisations. Standardization improves communication between stakeholders and it avoids solutions that are software-specific. As such standards are the basis of interoperability.
+					The module explains why standards are used, who creates them and how this process works. It describes the key standardization bodies in the field of geographic information: OGC, ISO TC 211 and CEN/TC 287. The module also explains where geospatial standards can be found (some are for free, others must be paid for). Participants will learn to interpret standards through an example: how are standard documents set-up; how to understand the documents; ... 
+					The standards used in the geospatial world are identified and explained. Moreover it is explained how they are used in the different components of a spatial data infrastructure. Standards for data, metadata and data services are introduced and how they related to each other. Focus is on the 19100 series of standards. 
+					The training material consist of presentations, exercises and supporting documents. The module is NOT a self-learning module, but needs class tutoring and interactions. ";
+					dc:tableOfContents "(1.	Why standards are needed
+						2.	Who creates standards, where can standards be found?
+						3.	The interpretation of standards by example
+						4.	The standards used in the different components of an SDI:
+						a.	Standards for data
+						b.	Standards for metadata
+						c.	Standards for services
+						5.	Exercises on reading and interpreting standards: intro, different steps, practicing and discussing the results
+						6.	Further reading and ‘home-work’";
+					dc:description "Learning outcomes:
+						•	To explain why standards are needed 
+						•	To describe how and by whom standards are created
+						•	To know where to find standards
+						•	To read and interpret standards
+						•	To describe the standards used in the different components of a spatial data infrastructure
+						•	To identify and explain which standards should be used in your organisation and for which data product process";
+					dc:contributor "Marc Olijslagers, Danny Vandenbroucke";
+					dc:created "2020-08-27";
+					dc:type "InteractiveResource";
+					dc:format "html";
+					dc:language "EN"; 
+					dc:SizeOrDuration "1.5h"
+					dc:audience "students";
+					dc:educationLevel "EQF 4";
+					dc:source "Earlier versions of this training module have been developed within the context of the EnviSDI Summer School on SDI for environmental datasets in 2010 and 2011. The module was changed/improved as part of the LINKVIT project in 2015 (http://www.linkvit.eu/en/) and a new version was developed for NGI-BE, the Belgian National Mapping Agency in 2018."";
+					dc:rightsHolder "SADL, KU Leuven";
+					dc:license "CC BY-SA 4.0";
+					dc:relation eo4geo:TA7-5-1;
+					dc:relation eo4geo:TA7-5-2;
+					dc:relation eo4geo:GS3 .	
+								-->
+
+
+			<div class="slides">
+				
+			
+				<section >
+					<h1 style="font-size:60px">SDI Standards</h1><br>
+					<h2 style="font-size:40px"> Why they are needed, how they are created and how to work with them</h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+				</section>
+				
+							
+				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
+			<section > 
+				<section > 
+						<br><h1>WELCOME! </h1> 
+						<p style="font-size:22px">With the following slides and interactive material you will be able to take part in the journey to discover <strong><span style="color: rgb(41, 105, 176);">Spatial Data Infrastructures</span></strong> (<em>SDI</em>) its components and benefits through the observation of multiple examples and exercises.&nbsp;</p><br>
+						<p style="font-size:22px; text-align:justify">You can navigate through the course by pressing the navigation arrows at the bottom of each slide or using your arrow keys on your keyboard. You can move horizontally <span style="color: rgb(44, 130, 201);"><strong>(</strong></span><span style="color: rgb(41, 105, 176);"><strong>&larr; &rarr;)</strong>&nbsp;</span>for viewing each theme and vertically <strong><span style="color: rgb(44, 130, 201);">(&uarr;&darr;)</span></strong> to view extra recommended information</p>					
+
+						<br><img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/navigation_arrows.png" alt="navigation arrows">	
+					</section >
+			</section>
+
+				<section >
+					<h1 style="font-size:60px">SDI Standards</h1><br>
+					<h2 style="font-size:40px"> Why they are needed, how they are created and how to work with them</h2><br>
+					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
+					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
+				</section>
+				<section>
+					<h1 style="color:#5DADE2;">SDI Standards</h1>
+					<div style="position: absolute; width: 100%; right: 10em">
+					<table>
+						<tr><th>#</th><th align="center">Content</th></tr>
+						<tr><td><a href="#03.1.1">1</a></td><td>What are standards?</td></tr>
+						<tr><td><a href="#03.1.2">2</a></td><td>Why Standards are needed?</td></tr>
+						<tr><td><a href="#03.1.3">3</a></td><td>Who creates standards?</td></tr>
+						<tr><td><a href="#03.1.4">4</a></td><td>Standardisation Process</td></tr>
+						<tr><td><a href="#03.1.5">5</a></td><td>Where to find geospatial standards?</td></tr>
+						<tr><td><a href="#03.1.6">6</a></td><td>ISO 19100 Series</td></tr>
+					</table></div>
+					<div style="position: absolute; width: 100%; right: -10em">
+					<table>
+						<tr><th>#</th><th align="center">Content</th></tr>
+						<tr><td><a href="#03.1.7">7</a></td><td>ISO 19100 Infrastructure</td></tr>
+						<tr><td><a href="#03.1.8">8</a></td><td>Standards for Data</td></tr>
+						<tr><td><a href="#03.1.9">9</a></td><td>SDI and Geospatial Standards</td></tr>
+						<tr><td><a href="#03.1.10">10</a></td><td>Standards for services</td></tr>
+						<tr><td><a href="#03.1.11">11</a></td><td>Where to find standards</td></tr>
+						<tr><td><a href="#03.1.12">12</a></td><td>Additional Documentation</td></tr>
+					</table></div>
+				</section>
+
+				<section id="03.1.1">
+					<h2 style="color:#5DADE2;">01 | What are standards?</h2>
+					<p style= "text-align: left;"><br><b>Standards are… </b></p>
+					<div style="border: 1em gray; background-color:#D6EAF8; align=center; position: absolute; width: 80%; left: 5em; padding:1em" class="fragment fade-up"> <q>Documented agreements containing technical specifications or other precise criteria to be used consistently as rules, guidelines, or definitions of characteristics, to ensure that materials, products, processes and services are fit for their purpose</q> (ISO, 2019)</div>
+				</section>
+				<section>
+				<h2 style="color:#5DADE2;">01 | What are standards?</h2>
+				<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=4&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section id="03.1.2">
+					<h2 style="color:#5DADE2;">02 | Why Standards are needed?</h2>
+					<p style= "text-align: left;"><b>Standardization:</b></p>
+					<ul><li class="fragment fade-down">Lets stakeholders communicate and understand each other</li><br>
+					<li class="fragment fade-down">Makes it easier to integrate new information</li><br>
+					<li class="fragment fade-down">Facilitates the reuse of existing information</li><br>
+					<li class="fragment fade-down">Avoids errors due to misinterpretation</li><br>
+					<li class="fragment fade-down">Makes software development more efficient, promotes reuse of software components</li><br>
+					<li class="fragment fade-down">Allows communication between distributed services</li></ul>
+				</section>
+				<section id="03.1.3">
+					<h2 style="color:#5DADE2;">03 | Who creates standards?</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=6&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">03 | 01 ISO/TC 211</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=7&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2>03 | 02 Open Geospatial consortium OGC</h2>
+					<table><tr>
+						<td><div style="border: 1px gray; background-color:#D6EAF8"> Not-for-profit, international voluntary consensus standards organization; leading development of geospatial standards </div></td>
+						<td rowspan="2">
+							<div> <img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Implementations.png" width="280" class=plain >
+							<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module01/Usercommunity.png" width="400" class=plain></div></tr>
+					<tr><td><ul>
+							<li>Founded in 1994</li>
+							<li>520+ members and growing</li>
+							<li>50+ standards</li>
+							<li>Thousands of implementations</li>
+							<li>Broad user community implementation worldwide</li>
+							<li>Alliances and collaborative activities with ISO and many other SDO’s</li>
+						</ul></td>
+					</tr></table>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">03 | 03 W3C Contributions</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=9&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section id="03.1.4">
+					<h2 style="color:#5DADE2;">04 | Standardisation process</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=10&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">04 | Standardisation process</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=11&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">04 | 01 Stages of a standard during the process</h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/image13.PNG" height="500" class="plain" align="center-right">
+				</section>
+				<section id="03.1.5">
+					<h2 style="color:#5DADE2;">05 | Where to find geospatial standards?</h2>
+					<p style="text-align:left" class="fragment fade-down"><b>ISO</b><br><a>https://www.iso.org/home.html</a><br>The online browsing platform allows to previous some parts of the standard.<br>
+					<a>https://www.iso.org/obp/ui</a><br><BR></p>
+					<iframe src="https://www.iso.org/home.html" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen" class="fragment fade-down"></iframe >
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">05 | Where to find geospatial standards?</h2>
+					<p style="text-align:left" class="fragment fade-down"><b>OGC</b><br><a>https://www.opengeospatial.org/</a><br>Under menu standards. Not only standards, also supporting documents etc.</p><iframe data-src="https://ogcapi.ogc.org/" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen" class="fragment fade-down"></iframe>
+					<aside class="notes">Quickly show the sites</aside>	
+				</section>
+				<section id="03.1.6">
+					<h2 style="color:#5DADE2;">06 | ISO 19100 series</h2><br>
+					<p style="text-align:left;">Some concepts (valid for all ISO standards):<br></p><br>
+					<div style="text-align:left;"><ul style="text-align:left;"><li><b>Mandatory </b>(M): has to be present</li><br>
+					<li><b>Conditional </b>(C): has to be present in certain conditions </li><br>
+					<li><b>Optional </b>(O): may choose to include. </li></ul></div>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">06 | ISO 19100 series</h2><br>
+					<p style="text-align:left;">Requirements:<br></p>
+					<div style="text-align:left;"><ul style="text-align:left;"><li><b>Shall</b>: it is required to; it is necessary</li>
+					<li><b>Shall not</b>: it is not allowed/permitted to, do not</li></ul></div>
+					<p style="text-align:left;">Recommendation</p>
+					<div style="text-align:left;"><ul style="text-align:left;"><li><b>Should</b>: it is recommended that</li>
+					<li><b>Should not</b>: it is not recommended that; ought not to</li></ul><br></div>
+					<p style="text-align:left;">Permission</p>
+					<div style="text-align:left;"><ul style="text-align:left;"><li><b>May</b>: is allowed to</li>
+					<li><b>Need not</b>: is not requited to </li></ul></div>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">06 | ISO 19100 series</h2><br>
+					<p style="text-align:left;"><b>Scope of the ISO 19100 series</b>(from ISO 19101):<br><br>The focus of this family of standards is to:</p>
+					<ol><li>define the basic semantics and structure of geographic 	information for data management and data interchange 	purposes</li>
+					<li>define geographic information service components and 	their behavior for data processing purposes.</li></ol>
+					<aside class="notes">Data (metadata is part of data)And services</aside>
+				</section>
+				<section id="03.1.7">
+					<h2 style="color:#5DADE2;">07 | ISO 19100 Infrastructure</h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/image14.PNG" height="400" class="plain" align="center-right">
+					<aside class="notes">Provides structure, Makes that all standards use the same methodology, vocabulary etc </aside>
+				</section>
+				<section>
+					<h1 style="color:#5DADE2;">07 | 01 ISO 19100 – reference model</h1><br><br>
+					<p style="text-align:left;"><b>Defines the scope of work in ISO/TC211 and resulting 19000 series of standards<br><br> The reference model identifies all components involved and defines how they fit together</b></p>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 02 | 01 Integration of geographic information with information technology</h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/image15.PNG" height="400" class="plain" align="center-right">
+					<aside class="notes">Standardization of geographic information can best be served by a set of standards that integrates a detailed
+					description of the concepts of geographic information with the concepts of information technology. A goal of this
+					standardization effort is to facilitate interoperability of geographic information systems, including interoperability in
+					distributed computing environments (from ISO19101:2002)
+					</aside>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 02 | 02 Domain reference model</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=21&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+					<aside class="notes">The framework for the ISO 19100 series of geographic information standards including this International
+					Standard. The framework and reference model cover the more general aspects of the ISO 19100 series of standards. The reference model identifies all components involved and defines how they fit together. It relates the different aspects of the ISO 19100 series of standards together and provides a common basis for communication.
+					<br> Geographic information services define the encoding of information in transfer formats and the methodology for presentation of geographic information that is based on cartography and the old traditions of standardized visualisations. This area also includes the field of satellite positioning; together with the formats and interfaces necessary to utilize modern navigational satellite systems.
+					<br> Data administration is concerned with the description of quality principles and quality evaluation procedures for geographic information datasets. Data administration also includes the description of the data itself, or metadata, together with feature catalogues. This area also covers the spatial referencing of geographical objects — either directly through coordinates, or more indirectly by use of, for instance, area codes like postal or zip codes, addresses, etc.
+					<br> Data models and operators are concerned with the underlying geometry of the globe and how geographic features and their spatial characteristics may be modelled. This area defines important spatial characteristics and how these are related to each other.
+					<br> Profiles and functional standards consider the technique of profiling. Profiling consists of putting together “packages/subsets” of the total set of standards to fit individual application areas or users. This supports rapid implementation and penetration in the user environments due to the comprehensiveness of the total set of standards. Equally important is the task of “absorbing” existing de facto standards from the commercial sector and harmonizing them with profiles of the emerging ISO standards.</aside>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 02 | 03 Application schema</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=22&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+					<aside class="notes"> An application schema is a conceptual schema that defines how a universe of discourse is described as data. Application schemas contain semantics for data interpretation as well as data structures for generation of, for example, XML-schemas. The application schema provides a description of the semantic structure of the dataset. The application schema also identifies the spatial feature types, feature attribute types, feature relationship types and feature operation types</aside>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 02 | 04 ISO 19103 conceptual schema language</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=23&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 03  ISO 19104: Terminology</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=24&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 04  19105 Conformance and testing</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=25&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 04  19105 Conformance and testing</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=26&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 04 | 01  Conformity testing</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=27&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 05  19106 Profiles</h2>
+					<p style="text-align:left;"> The standard itself defines a profile as:<br><br><b>Profile</b><br>Set of one or more base standards or subsets of base standards, and, where applicable, the identification of chosen clauses, classes, options and parameters of those base standards, that are necessary for accomplishing a particular function</p>
+					<p style="text-align:left;"><strong>Note:</strong><br>A profile is derived from base standards so that by definition, conformance to a profile is conformance to the base standards from which it is derived.<br><br>By profiling standards are adapted to a specific application</p>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 05  19106 Profiles</h2>
+					<p style="text-align:left;"><b>2 types of profiles:</b></p>
+					<ul><li>When a profile is established as a pure subset of the ISO geographic information standards, possibly together with other ISO standards</li><br>
+					<li>class 2 allows profiles to include extensions within the context permitted in the base standard and permits the profiling of non-ISO geographic information standards as parts of profiles.</li></ul>
+					<aside class="notes">Conformance class 2 allows profiles to include extensions within the context permitted in the base standard
+					and permits the profiling of non-ISO geographic information standards as parts of profiles. When such a profile
+					adds any information that is not covered in a base ISO geographic information standard or other ISO standard,
+					then the profile will not be processed as an ISO geographic information standard but may be established
+					under the authority of the standards organization, member body or liaison organization making the profile.</aside>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 05  | 01 19106:Why profiling?</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=30&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">07 | 05 | 02 Exercise</h2>
+					<p style="text-align:left;"> Recognize the items from the metadata infrastructure standards   in any other ISO 19100 standard. <br><br> What is the scope, which other standards are normatively referenced, see how UML is used, what are the different tests in the abstract test suite</p>
+				</section>
+
+				<section id="03.1.8">
+					<h2 style="color:#5DADE2;">01 | 08 Standards for Data</h2>
+					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/image23.PNG" height="400" class="plain" align="center-right">
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 08 | 01 Data Standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=33&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 08 | 01 Data Standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=34&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 08 | 02 From specification to application</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=35&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>	
+				<section>
+					<h2 style="color:#5DADE2;">01 | 08 | 02 Data standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=36&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section id="03.1.10">
+					<h2 style="color:#5DADE2;">01 | 9 SDI and Geospatial Standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=37&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section id="03.1.10">
+					<h2 style="color:#5DADE2;">01 | 10 Standards for services</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=38&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 10 | 01 Standards for services</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=39&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 10 | 02 Standards for metadata</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=40&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 10 | 03 Metadata standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=41&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section>
+					<h2 style="color:#5DADE2;">01 | 10 | 03 Metadata standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=42&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section id="03.1.11">
+					<h2 style="color:#5DADE2;">01 | 11 Where to find standards</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=43&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				<section id="03.1.12">
+					<h2 style="color:#5DADE2;">01 | 12 Additional documentation</h2>
+					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module03/SDI_M3_Overview_SDI_Standards.pdf#page=44&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				</section>
+				
+				
+				<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
+				<section> 
+				<h1 style="color:#5DADE2;"> Reference list </h1>
+				<br>
+				<reference_list>exemplary doi:<br><br>
+				Barbara Hofer (2018). Innovation in geoprocessing for a Digital Earth. International Journal in Digital Earth.
+				<br>
+				<a href="https://doi.org/10.1080/17538947.2017.1379154">10.1080/17538947.2017.1379154</a>
+				</reference_list>
+				</section>
+				
+				
+							
+			</div>
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: 'c/t',
+				viewDistance: 500,
+				preloadIframes: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>
