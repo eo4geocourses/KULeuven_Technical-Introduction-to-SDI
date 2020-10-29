@@ -83,17 +83,14 @@
 
 			<div class="slides">
 				
-			
+			<section>
 				<section >
 					<h1 style="font-size:60px">Data models and data specifications</h1><br>
 					<h2 style="font-size:30px">Use of models, scope and specification objectives. Modelling frameworks and applied examples</h2><br>
 					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
 					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
 				</section>
-				
-							
-				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
-			<section > 
+						
 					<section > 
 						<br><h1>WELCOME! </h1> 
 						<p style="font-size:22px">With the following slides and interactive material you will be able to take part in the journey to discover <strong><span style="color: rgb(41, 105, 176);">Spatial Data Infrastructures</span></strong> (<em>SDI</em>) its components and benefits through the observation of multiple examples and exercises.&nbsp;</p><br>
@@ -103,334 +100,1017 @@
 					</section >
 			</section>
 
-				<section >
-					<h1 style="font-size:60px">Data models and data specifications</h1><br>
-					<h2 style="font-size:30px">Use of models, scope and specification objectives. Modelling frameworks and applied examples</h2><br>
-					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
-					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
-				</section>
 				<section>
 					<h1 style="color:#5DADE2;">MetadataData models and data specifications</h1>
 					<div style="position: absolute; width: 100%; left: 0em">
 					<table>
 						<tr><th>#</th><th align="center">Contents</th></tr>
 						<tr><td><a href="#05.1.1">1</a></td><td>Motivation and Background</td></tr>
-						<tr><td><a href="#05.1.2">2</a></td><td>Scope & objectives of data specifications for SDI’s</td></tr>
+						<tr><td><a href="#05.1.2">2</a></td><td>Scope &amp; objectives of data specifications for SDI’s</td></tr>
 						<tr><td><a href="#05.1.3">3</a></td><td>The modelling framework for data specifications (ISO 19131)</td></tr>
 						<tr><td><a href="#05.1.4">4</a></td><td>Development of data specifications</td></tr>
-						<tr><td><a href="#05.1.5">5</a></td><td>Examples of data models: ISO 19152</td></tr>
-						<tr><td><a href="#05.1.6">6</a></td><td>Exercises</tr>
+						<tr><td><a href="#05.1.5">5</a></td><td>Examples of data models: ISO 19152</td></tr>						
 					</table></div>
 
 				</section>
-				<section id="05.1.1">
-					<h2 style="color:#5DADE2;">01 | SDI components </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=3&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">At the bottom you have the data components of the infrastructure containing the spatial data itself but also the metadata that describe the data and that make it possible for user to find and to understand the offered data sets. The data component side also holds different registers to store information commonly used by different datasets: code lists, thesauri, and so on...<br>
-					On top of the data layer we find the service layer containing services that can be called by users and applications to retrieve information on the data (like metadata or in the form of webmaps) or to retrieve the data itself. These services are grouped/collected by the “Service Bus”. In between the services and the service bus there might be a layer managing the access to the different services the Geospatial Rights Management layer (GeoRM).
-					<br>And completely at the top you’ll have the application and geoportal layer that will be used by the users of data. 
-					The subject of this training module is the part indicated by the red rectangle it concerns the DS</aside>
+				<section id="slide3">
+				   <div class="ppt-txt" style="position: absolute; top: 10px; left: 0px; height: 76px;  width: 828px">
+				<h2 style="font-size: 39px;">SDI components (example of INSPIRE)</h2>
+				   </div>
+						<br>
+			   
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image3.png">
+				 	
+					<div class="all-div; fragment" style="position: absolute; top: 220px; left: 000px; height: 179px;  width: 950px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/shape1.png">
+				   </div>
+				<div class="all-div; fragment" style="position: absolute; top: 315px; left: 302px; height: 179px;  width: 302px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/shape2.png">
+				   </div>
+				   
+				<aside class="notes">
+				Notes for slide 3
+				At the bottom you have the data components of the infrastructure containing the spatial data itself but also the metadata that describe the data and that make it possible for user to find and to understand the offered data sets. The data component side also holds different registers to store information commonly used by different datasets: code lists, thesauri, and so on...
+				<br>On top of the data layer we find the service layer containing services that can be called by users and applications to retrieve information on the data (like metadata or in the form of webmaps) or to retrieve the data itself. These services are grouped/collected by the “Service Bus”. In between the services and the service bus there might be a layer managing the access to the different services the Geospatial Rights Management layer (GeoRM).
+				<br>And completely at the top you’ll have the application and geoportal layer that will be used by the users of data. 
+				<br>The subject of this training module is the part indicated by the red rectangle it concerns the DS<br>3<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Interoperability of data </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=4&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">This slide shows the situation when there is no interoperability at all, this reflects how it used to be.<br>A user had to search for input data by contacting different data producers, all having their own rules for access and use of their data products. In many cases these datasets were retrieved in different formats (f.e. shapefile, ASCII-files, …) and it was up to the user to interpret this heterogeneous data and to identify, extract and post process the data in order to end up with a harmonised dataset to be used for further analysis.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Examples of incompatibility and inconsistency of spatial data</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=5&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes"> This slide addresses some issues of incompatibility and inconsistency which can happen at the borders (in different MS). We make a distinction between two types of inconsistencies. <br> 1. On the one hand, the semantic and schematic differences, illustrated here with two examples<br>a. different ways of modelling houses: as individual houses or as building blocks (an aggregation of individual houses)<br> a. different classifications for the same entity (industrial zone at one side of the border and Built-up area at the other side of the border.<br> On the other hand, different spatial representations:<br>
-					1. Vector vs raster<br> 2. 2D vs 3D<br> 3. River as poly or as line (depending on scale but also on the content you want to model and on the use of the data).<br> 4. Different boundaries  agree to use same geometry <br> 5. Overlapping and shift <br>
-					6. Inconsistency between data themes (a road that does not follow the DEM)</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Levels of heterogeneity (1)</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=6&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes"> We just talked about the lack of interoperability in different data sources.
-					Let’s have a closer look now to the different levels of heterogeneity. <br>
+				<section id="slide4">
+				   <div class="ppt-txt" style="position: absolute; top: -10px; left: 22px; height: 104px;  width: 828px">
+				<p style="font-size: 39px; font-weight: bold;">Interoperability of data</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 53px; left: 22px; height: 26px;  width: 842px">
+				<p style="font-size: 24px;">Motivation and Background
+				</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 425px;  width: 920px">
+				<p style="font-size: 24px; font-weight: bold;font-style: italic;">The starting point
+				</p><br>
 
-					The first level of heterogeneity is what I call the “Syntactic Heterogeneity”. Data may be implemented in different syntax which can be translated as data that is stored in different formats: shapefile, ascii-file, relational versus object-oriented database models. But it is also related to the geometric representation of geographic objects f.e. some datasets may use the vector approach while other datasets are using the raster approach to depict the same type of objects.
-					With the existing technologies of today this is not an invincible problem. For most of the cases conversion algorithms are offered within the most commonly used software products. It would be very convenient though that everyone uses the same syntax so conversion will be unnecessary.<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 445px; height: 349px;  width: 495px">
+				<ul><li><p style="font-size: 24px;">Access to spatial data in various ways: copies via CD
+				</p></li>
+				<br>
+				<li><p style="font-size: 24px;">User has to deal with interpreting heterogeneous data in different formats, identify, extract and post-process the data needed
+				</p></li></ul>
+				<br><br>
 
-					The second level of heterogeneity is the Structural or also called the schematic heterogeneity. This has to do with how you model the information in a certain structure inside the database. So even if you use the same syntax (or database format) and you deal with objects/concepts with a semantic meaning then you still can model them in a different way in different schemes. If you ask two people to model a certain piece of information in a same database model, you probably end up with two different database schemes but they cover the same information/semantic concepts. It all concerns the way the information is organised inside the database. You can have different levels of aggregation or detail. Objects in one schema can be considered as properties in another but in the end it concerns the same Real World concepts. You can see a schema as the personal perception of a somebody on a real world concept. <br>
-					This second level of heterogeneity is also of a technical kind and can be solved by actual technologies that can align different schemas describing the same real world concepts. But again it would be very convenient that everybody applies the same schemas.<br></aside>
+				<p style="font-size: 24px;">→ Lack of interoperability
+				</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 141px; left: 174px; height: 361px;  width: 244px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image4.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 4
+				This slide shows the situation when there is no interoperability at all, this reflects how it used to be.
+				<br>
+				<br>A user had to search for input data by contacting different data producers, all having their own rules for access and use of their data products. In many cases these datasets were retrieved in different formats (f.e. shapefile, ASCII-files, …) and it was up to the user to interpret this heterogeneous data and to identify, extract and post process the data in order to end up with a harmonised dataset to be used for further analysis.
+				<br>
+				<br>So, in the future this is something we would like to solve. The whole process of searching, retrieving and combining different data sources should be made much easier and preferably in automatic way. <br>4<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Levels of heterogeneity (2)</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=7&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes"> The 3rd level of heterogeneity is the semantic heterogeneity.<br> This is the most complex level of the three to deal with. It means that people are giving different meanings to the same real world concept. This is not strange and it probably depends on the discipline from which point of view you are looking at the real world concept.<br> A typical example is the geographical object: road. <br> From the point of view of the road authority, responsible for the quality of the pavement of the road, the concept road will get a different meaning than looked at it through the eyes of the people responsible for the traffic flows, for them the type of pavement (concrete or asphalt) is not important they are more interested in the connectivity of the roads in order to manage traffic flows, traffic jams and so on. <br> The same concept can have different meanings and it is the challenge here to align these different meanings. So if in one MS they talk about a certain type of soil we would like to know that this type of soil has the same name, the same meaning in another MS.</aside>
+				<section id="slide5">
+
+				   <div class="ppt-h2" style="position: absolute; top: 30px; left: 0px; height: 104px;  width: 912px">
+				<h2>Examples of incompatibility and inconsistency of spatial data</h2>
+				   </div>
+				
+				   <div class="img-div" style="position: absolute; top: 170px; left: 485px; height: 137px;  width: 466px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image5.png"></img>
+				   </div>
+
+				   <div class="img-div" style="position: absolute; top: 262px; left: 65px; height: 339px;  width: 391px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image6.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 150px; left: 100px; height: 390px;  width: 439px">
+				<p style="font-size: 28px; text-align: left">Semantic and schematic differences
+				</p>
+				   </div>
+					<div class="ppt-txt" style="position: absolute; top: 350px; left: 400px; height: 390px;  width: 439px">
+						
+				<p style="font-size: 28px; text-align: right">Semantic and schematic differences
+				</p>
+				   </div>
+						
+				<aside class="notes">
+				Notes for slide 5
+				This slide addresses some issues of incompatibility and inconsistency which can happen at the borders (in different MS).
+				<br>We make a distinction between two types of inconsistencies. 
+				<br>On the one hand, the semantic and schematic differences, illustrated here with two examples 
+				<br>different ways of modelling houses: as individual houses or as building blocks (an aggregation of individual houses)
+				<br>OR
+				<br>different classifications for the same entity (industrial zone at one side of the border and Built-up area at the other side of the border.
+				<br>On the other hand, different spatial representations:
+				<br>Vector vs raster
+				<br>2D vs 3D
+				<br>River as poly or as line (depending on scale but also on the content you want to model and on the use of the data).
+				<br>Different boundaries  agree to use same geometry
+				<br>Overlapping and shift 
+				<br>Inconsistency between data themes (a road that does not follow the DEM)<br>5<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Interoperability of data (1)</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=8&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">The scope now is to make data interoperable and to solve the different levels of heterogeneity that we talked about in the previous slides. The result would be that each producer and each user can easily exchange data amongst each other with our without the aid of a coordinator in between.<br> As I said before establishing technical interoperability in not that difficult because todays applications and software are able help in the harmonisation process. It only requires means and actions.<br>Implementing semantic interoperability however is something else. Here we have to make sure that the data content is understood by everybody in the same way. It means we all have to agree on using harmonised definitions and classifications for objects while at this moment many different definitions and classification systems exist for the same objects in different countries. The idea would be to map the existing heterogeneity to these universal definitions and classifications so data becomes exchangeable and understood by everybody in the same way.<br></aside>
+				<section id="slide6">
+				   <div class="ppt-txt" style="position: absolute; top: -10px; left: 22px; height: 104px;  width: 828px">
+				<h2 style="font-size: 39px;">Levels of heterogeneity (1)</h2>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 125px; left: 22px; height: 394px;  width: 920px">
+				<p style="font-size: 28px;"><strong>Syntactic</strong> heterogeneity
+				</p><br>
+
+				<p style="font-size: 24px;">Data may be implemented in a different syntax of different paradigms, such as relational or object- oriented models. Syntactic heterogeneity is also related to the geometric representation of geographic objects, e.g., raster and vector representations.
+				</p>
+				<br>
+				<p style="font-size: 28px;"><strong>Structural</strong> or <strong>schematic</strong> heterogeneity
+				</p><br>
+
+				<p style="font-size: 24px;">Objects in one database are considered as properties in another, or object classes can have different aggregation or generalisation hierarchies, although they might describe the same Real World concepts.</p>
+				   </div>
+				<aside class="notes">
+				Notes for slide 6
+				We just talked about the lack of interoperability in different data sources.
+				<br>Let’s have a closer look now to the different levels of heterogeneity. 
+				<br>
+				<br>The first level of heterogeneity is what I call the “Syntactic Heterogeneity”. Data may be implemented in different syntax which can be translated as data that is stored in different formats: shapefile, ascii-file, relational versus object-oriented database models. But it is also related to the geometric representation of geographic objects f.e. some datasets may use the vector approach while other datasets are using the raster approach to depict the same type of objects.
+				<br>With the existing technologies of today this is not an invincible problem. For most of the cases conversion algorithms are offered within the most commonly used software products. It would be very convenient though that everyone uses the same syntax so conversion will be unnecessary.
+				<br>
+				<br>The second level of heterogeneity is the Structural or also called the schematic heterogeneity. This has to do with how you model the information in a certain structure inside the database. So even if you use the same syntax (or database format) and you deal with objects/concepts with a semantic meaning then you still can model them in a different way in different schemes. If you ask two people to model a certain piece of information in a same database model, you probably end up with two different database schemes but they cover the same information/semantic concepts. It all concerns the way the information is organised inside the database. You can have different levels of aggregation or detail. Objects in one schema can be considered as properties in another but in the end it concerns the same Real World concepts. You can see a schema as the personal perception of a somebody on a real world concept. 
+				<br>This second level of heterogeneity is also of a technical kind and can be solved by actual technologies that can align different schemas describing the same real world concepts. But again it would be very convenient that everybody applies the same schemas.<br>6<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Interoperability of data (2)</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=9&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">This slide shows in a graphical way what INSPIRE is aiming at:<br> Instead that every user is searching with his own means for a dataset of his needs, spending a lot of time in pre-processing it to the desired format in order to combine it with other datasets, INSPIRE would offer access to spatial data via network services and the data that would be made available follows the structure of a harmonised data specification to achieve interoperability.<br>
-					There is an important remark to make about this provision of interoperability. The MS are not obliged to modify the datasets that are internally used. But at least the data providers should offer a transformation between their internal model and the harmonised data specification which can be exchanged.</aside>
-				</section>				
-				<section>
-					<h2 style="color:#5DADE2;">01 | How </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=10&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">How can we make this facilitation of data access, data use and interoperability work. It is through defining common cross-domain models that will be used to exchange the data. You can compare it with selecting the right plug that fits the socket.</aside>
+				<section id="slide7">
+				   <div class="ppt-txt" style="position: absolute; top: 16px; left: 22px; height: 65px;  width: 828px">
+				<h2 style="font-size: 39px;">Levels of heterogeneity (2)</h2>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 158px; left: 22px; height: 361px;  width: 920px">
+				<p style="font-size: 28px;"><strong>Semantic</strong> heterogeneity
+				</p><br>
+
+				<p style="font-size: 24px;">A Real World concept may have more than one meaning to comply with various disciplines, giving as a consequence semantic heterogeneity. 
+				</p>
+				<br>
+				<p style="font-size: 24px;">e.g. Different classifications/definitions of roads when viewed from different perspectives: traffic network route directions, spatial planning…  &lt;&gt; 1 on 1 match</p>
+				   </div>
+				<aside class="notes">
+				Notes for slide 7
+				The 3rd level of heterogeneity is the semantic heterogeneity.
+				<br>
+				<br>This is the most complex level of the three to deal with. It means that people are giving different meanings to the same real world concept. This is not strange and it probably depends on the discipline from which point of view you are looking at the real world concept.
+				<br>A typical example is the geographical object: road. 
+				<br>From the point of view of the road authority, responsible for the quality of the pavement of the road, the concept road will get a different meaning than looked at it through the eyes of the people responsible for the traffic flows, for them the type of pavement (concrete or asphalt) is not important they are more interested in the connectivity of the roads in order to manage traffic flows, traffic jams and so on.
+				<br>The same concept can have different meanings and it is the challenge here to align these different meanings. So if in one MS they talk about a certain type of soil we would like to know that this type of soil has the same name, the same meaning in another MS.
+				<br>7<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Implementation alternatives </h2>
-					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image10.png" height="500" class="plain" align="center-right">
-					<aside class="notes">What are now the different implementation alternatives to reach this harmonisation towards the INSPIRE DS? At the start of the INSPIRE story, three different implementation strategies were proposed:<br> The first one is the on-the-fly transformation of spatial data through download services that automatically transform the source data to the schema of the INSPIRE DS. The data is on the fly processed after the request for the data has been send by the user;<br>
-					The second proposed implementation strategy, is the offline transformation of spatial data. It means that each data provider transforms his own data into the appropriate INSPIRE DS and offers the result to the user by means of an INSPIRE download service.<br>
-					The third possibility is the external transformation of spatial data by a separate network service. Here the idea is that the user first downloads the source dataset and makes use of a separate transformation service to transform the data into the INPSIRE DS.<br>
-					At this point in time, the implementation of INSPIRE is in full process and it became clear that the second option is the most preferred one and also the most implemented strategy.<br>
-					Why are the other options not so popular?<br> The first alternative is technically possible but the disadvantage is that the processing happens on-the-fly and this requires time to retrieve the final result, certainly with large datasets.<br>
-					The last option has the same problem as the first one, but here is also another reason why it is not commonly used in practise: each dataset requires a specific transformation to arrive to the DS, so it means that a specific transformation service must be created for each existing data source, which makes it difficult to keep the overview of all services.</aside>
+				<section id="slide8">
+				   <div class="ppt-txt" style="position: absolute; top: 3px; left: 22px; height: 63px;  width: 828px">
+				<h2 style="font-size: 39px;">Interoperability of data (1)</h2>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 133px; left: 22px; height: 386px;  width: 920px">
+				<p style="font-size: 28px;"><strong>Technical</strong> interoperability
+				</p>
+				<p style="font-size: 28px;">should guarantee that system components can interoperate
+				</p>
+				<br>
+				<p style="font-size: 28px;"><strong>Semantic</strong> interoperability
+				</p>
+				<p style="font-size: 28px;">should guarantee that data content is understood by all in the same way</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 323px; left: 472px; height: 212px;  width: 253px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image7.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 8
+				The scope now is to make data interoperable and to solve the different levels of heterogeneity that we talked about in the previous slides. The result would be that each producer and each user can easily exchange data amongst each other with our without the aid of a coordinator in between.
+				<br>As I said before establishing technical interoperability in not that difficult because todays applications and software are able help in the harmonisation process. It only requires means and actions.
+				<br>Implementing semantic interoperability however is something else. Here we have to make sure that the data content is understood by everybody in the same way. It means we all have to agree on using harmonised definitions and classifications for objects while at this moment many different definitions and classification systems exist for the same objects in different countries. The idea would be to map the existing heterogeneity to these universal definitions and classifications so data becomes exchangeable and understood by everybody in the same way.
+				<br>
+				<br>Technical: already established by many systems
+				<br>Semantic: still a long way to go. Inspire first step, Linked Data / semantic web<br>8<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Conclusion: Common Data Specifications is the Goal </h2>
-					<table><tr><td><ol>
-						<li>Member States should make data available within the scope of INSPIRE using
-							<ul><li>The same spatial <b>object types</b> (and definitions)</li>
-							<li>The same <b>attributes</b> (and definitions, types, code lists) and relationships to other types, e.g. BuildingHeight, BuildingSize</li>
-							<li>A common <b>encoding</b> (GML application schemas)</li>
-							<li>Common <b>portrayal</b> rules</li></ol></li></td>
-						<td width="40%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image11.png"  class="plain" align="center"></td>
-					</tr></table>
+				<section id="slide9">
+					<div class="ppt-txt" style="position: absolute; top: 15px; left: 22px; height: 61px;  width: 828px">
+				<h2 style="font-size: 39px; font-weight: bold;">Interoperability of data (2)</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 150px; left: 22px; height: 425px;  width: 858px">
+				<p style="font-size: 24px; font-weight: bold;font-style: italic;">…what a SDI aiming at
+				</p>
+				<br>
+				<br>
+				<br>
+					</div>
+					
+					<div class="ppt-txt" style="position: absolute; top: 250px; left: 550px; height: 300px;  width: 450px">
+				<p style="font-size: 24px;">Provide access to spatial data via network services and according to a harmonised data specification to achieve interoperability of data
+				</p>
+				<br>
+				<p style="font-size: 24px;">Datasets used within organizations may remain unchanged
+				</p>
+				<br>
+				<p style="font-size: 24px;">Data or service providers have to provide a transformation between their internal model and the harmonised data specification</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 250px; left: 120px; height: 352px;  width: 231px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image8.png"></img>
+				   </div>
+
+				   
+
+				<aside class="notes">
+				Notes for slide 9
+				This slide shows in a graphical way what INSPIRE is aiming at:
+				<br>Instead that every user is searching with his own means for a dataset of his needs, spending a lot of time in pre-processing it to the desired format in order to combine it with other datasets, INSPIRE would offer access to spatial data via network services and the data that would be made available follows the structure of a harmonised data specification to achieve interoperability.
+				<br>There is an important remark to make about this provision of interoperability. The MS are not obliged to modify the datasets that are internally used. But at least the data providers should offer a transformation between their internal model and the harmonised data specification which can be exchanged. <br>9<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Conclusion: Common Data Specifications is the Goal </h2>
-					<table><tr><td><p style="text-align:justify">
-						2. This facilitates interoperability and pan-European/cross-border applications <br>(e.g. information systems, reporting systems, forecasting models)
-						</p></td>
-						<td width="45%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image12.png"  class="plain" align="center"></td>
-					</tr></table>
-					<aside class="notes">The common data specification goal can be resumed as follows:<br> When MSs make their spatial data available within the scope of INSPIRE it means by using the same spatial object types, same attributes and relationships with other types, using a common GML encoding and common portrayal rules as specified in the DS technical guidelines, then interoperability will be facilitated. This will result in valuable Pan-European/cross-border applications which can benefit from the availability of harmonised datasets. Applications that can be useful to policy makers or applications useful to risk management and so on…</aside>
+				<section id="slide10">
+				   <div class="ppt-txt" style="position: absolute; top: 5px; left: 22px; height: 66px;  width: 828px">
+				<p style="font-size: 39px;">How?</p>
+				   </div><br>
+
+
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 425px;  width: 887px">
+				<p style="font-size: 28px;">Facilitate data use and interoperability by adopting common cross-domain models to exchange data
+				</p>
+				<br>
+				<br>
+				<br>
+				<br><br><br>
+
+
+				<br>
+				<p style="font-size: 28px; text-align: center;"><strong>DATA INTEROPERABILITY</strong></p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 204px; left: 265px; height: 132px;  width: 418px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image9.png">
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 10
+				How can we make this facilitation of data access, data use and interoperability work. It is through defining common cross-domain models that will be used to exchange the data. You can compare it with selecting the right plug that fits the socket.<br>10<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Targeted benefit </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=13&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">Picture of the ideal world as we would like to have it.<br>We see a situation where there is cross-domain/ cross-sector interoperability of spatial data. This makes it easy to exchange and combine different datasets from different sectors in order to perform all kinds of analysis. 
-					In reality, we ‘re still far away from it.<br>
-					Benefits:<br>Improved data comparability and consistency,<br>Cross-sector data interoperability<br>Cross-border interoperability<br>Reducing barriers among organisations,<br>Promoting inter-institutional collaboration</aside>
+				<section id="slide11">
+				   <div class="ppt-txt" style="position: absolute; top: 6px; left: 22px; height: 60px;  width: 828px">
+				<p style="font-size: 39px;">Implementation alternatives</p>
+				   </div><br><br>
+
+					<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image10.png">
+				<aside class="notes">
+				Notes for slide 11
+				What are now the different implementation alternatives to reach this harmonisation towards the INSPIRE DS? At the start of the INSPIRE story, three different implementation strategies were proposed:
+				<br>The first one is the on-the-fly transformation of spatial data through download services that automatically transform the source data to the schema of the INSPIRE DS. The data is on the fly processed after the request for the data has been send by the user;
+				<br>The second proposed implementation strategy, is the offline transformation of spatial data. It means that each data provider transforms his own data into the appropriate INSPIRE DS and offers the result to the user by means of an INSPIRE download service.
+				<br>The third possibility is the external transformation of spatial data by a separate network service. Here the idea is that the user first downloads the source dataset and makes use of a separate transformation service to transform the data into the INPSIRE DS.
+				<br>At this point in time, the implementation of INSPIRE is in full process and it became clear that the second option is the most preferred one and also the most implemented strategy.
+				<br>Why are the other options not so popular?
+				<br>The first alternative is technically possible but the disadvantage is that the processing happens on-the-fly and this requires time to retrieve the final result, certainly with large datasets.
+				<br>The last option has the same problem as the first one, but here is also another reason why it is not commonly used in practise: each dataset requires a specific transformation to arrive to the DS, so it means that a specific transformation service must be created for each existing data source, which makes it difficult to keep the overview of all services.<br>11<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Example: key requirements of the INSPIRE directive (1) </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=14&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes"><b>Without repetitive manual intervention:</b> no need for preprocessing anymore <br>Coherent: it means that the result can be interpreted in its totality<br>
-					In another article we can read that INSPIRE will lay down implementing rules for reaching this interoperability and where practicable harmonization of spatial datasets. To develop these rules existing initiatives and especially international standards for the harmonization of spatial datasets will be taken into account.</aside>
+				<section id="slide12">
+				   <div class="ppt-txt" style="position: absolute; top: 7px; left: 22px; height: 59px;  width: 828px">
+				<p style="font-size: 39px;">Conclusion: common Data Specifications is the goal</p>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 115px; left: 22px; height: 425px;  width: 570px">
+				<p style="font-size: 24px;">Member States should make data available within the scope of INSPIRE using
+				</p><br>
+
+				<ul><li><p style="font-size: 20px;">the same spatial object types (and definitions)
+				</p></li>
+				<li><p style="font-size: 20px;">the same attributes (and definitions, types, code lists) and relationships to other types, e.g. BuildingHeight, BuildingSize
+				</p></li>
+				<li><p style="font-size: 20px;">a common encoding (GML application schemas)
+				</p></li>
+				<li><p style="font-size: 20px;">common portrayal rules
+				</p></li></ul>
+				<br><br>
+
+				<p style="font-size: 24px;">This facilitates interoperability and pan-European/cross-border applications (e.g. information systems, reporting systems, forecasting models)
+				</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 80px; left: 639px; height: 225px;  width: 198px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image11.png"></img>
+				   </div>
+
+				   <div class="img-div" style="position: absolute; top: 310px; left: 639px; height: 230px;  width: 275px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image12.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 12
+				The common data specification goal can be resumed as follows:
+				<br>When MSs make their spatial data available within the scope of INSPIRE it means by using the same spatial object types, same attributes and relationships with other types, using a common GML encoding and common portrayal rules as specified in the DS technical guidelines, then interoperability will be facilitated. This will result in valuable Pan-European/cross-border applications which can benefit from the availability of harmonised datasets. Applications that can be useful to policy makers or applications useful to risk management and so on…
+				<br>12<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">01 | Example: key requirements of the INSPIRE directive (2) </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=15&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">In article 8 we see that these implementing rules will address a certain number of aspects of spatial data:<br>One of these aspects is the use of a common framework for the unique identification of spatial objects, which means that each spatial object will be identifiable through a persistent and unique key.<br> Another important aspect is that there will be some key attributes defined for every geographical object and that multilingual thesauri will be required for different policies which may have an impact on the environment.<br>Based on this articles we can say that INSPIRE is about making existing heterogeneous data in different MS, exchangeable and interoperable within the whole European Union.</aside>
+				<section id="slide13">
+				   <div class="ppt-txt" style="position: absolute; top: 9px; left: 22px; height: 54px;  width: 828px">
+				<p style="font-size: 39px;"><strong>Targeted benefit</strong></p>
+				   </div><br>
+					 <div class="ppt-txt" style="position: absolute; top: 60px; left: 150px; height: 450px;  width: 828px">
+					<img class="ppt-img" style="height: 450px; allign:center" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image13.png"></img>
+					</div>
+				   <div class="ppt-txt" style="position: absolute; top: 508px; left: 144px; height: 24px;  width: 299px">
+					   
+				<p style="font-size: 14px; font-weight: bold;">Source: EC Joint Research Centre</p>
+				   </div>
+				<aside class="notes">
+				Notes for slide 13
+				Picture of the ideal world as we would like to have it.
+				<br>We see a situation where there is cross-domain/ cross-sector interoperability of spatial data. This makes it easy to exchange and combine different datasets from different sectors in order to perform all kinds of analysis. 
+				<br>In reality, we ‘re still far away from it.
+				<br>
+				<br>Benefits
+				<br>Improved data comparability and consistency,
+				<br>Cross-sector data interoperability
+				<br>Cross-border interoperability
+				<br>Reducing barriers among organisations,
+				<br>Promoting inter-institutional collaboration<br>13<br></aside>
+				</section>
+				<section id="slide14">
+				   <div class="ppt-txt" style="position: absolute; top: 5px; left: 22px; height: 61px;  width: 828px">
+				<h2 style="font-size: 39px;">Example: key requirements of the INSPIRE directive (1)</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 133px; left: 22px; height: 425px;  width: 920px">
+				<q style="font-size: 24px;">Art  3(7): “<strong>Interoperability</strong> means the possibility for spatial data sets <strong>to be combined</strong>, and for services to interact, <strong>without repetitive manual intervention</strong>, in such a way that the <strong>result is coherent</strong> and the added value of the data sets and services is enhanced”
+				</q>
+				<br><br>
+
+				<q style="font-size: 24px;">Art 7(1): “Implementing rules laying down <strong>technical arrangements</strong> for the interoperability and, where practicable, <strong>harmonisation</strong> of spatial data sets and services … shall be adopted…. <strong>Relevant user requirements, existing initiatives and international standards</strong> for the harmonisation of spatial data sets, as well as feasibility and cost-benefit considerations shall be taken into account in the development of the implementing rules.”
+				</q>
+				   </div>
+				<aside class="notes">
+				Notes for slide 14
+				Without repetitive manual intervention: no need for preprocessing anymore
+				<br>Coherent: it means that the result can be interpreted in its totality
+				<br>
+				<br>In another article we can read that INSPIRE will lay down implementing rules for reaching this interoperability and where practicable harmonization of spatial datasets. To develop these rules existing initiatives and especially international standards for the harmonization of spatial datasets will be taken into account.
+				<br>14<br></aside>
+				</section>
+				<section id="slide15">
+				   <div class="ppt-txt" style="position: absolute; top: 12px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">Example: key requirements of the INSPIRE directive (2)</h2>
+				   </div><br><br>
+
+
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 425px;  width: 920px">
+				<p style="font-size: 26px;"><br>
+				Art 8(2): The <strong>implementing rules</strong> shall address the following aspects of spatial data:
+				</p>
+				<br>
+				<p style="font-size: 22px;">(a) <strong>a common framework</strong> for the <strong>unique identification of spatial objects</strong>, to which identifiers under national systems can be mapped in order to <strong>ensure interoperability</strong> between them;
+				</p>
+				<br>
+				<p style="font-size: 22px;">(b) the <strong>relationship</strong> between spatial objects;
+				</p>
+				<br>
+				<p style="font-size: 22px;">(c) the <strong>key attributes</strong> and the corresponding <strong>multilingual thesauri</strong> commonly required for policies which may have an impact on the environment;
+				</p>
+				<br>
+				<p style="font-size: 22px;">(d) information on the <strong>temporal</strong> dimension of the data;
+				</p>
+				<br>
+				<p style="font-size: 22px;">(e) updates of the data.
+				</p>
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 15
+				In article 8 we see that these implementing rules will address a certain number of aspects of spatial data:
+				<br>One of these aspects is the use of a common framework for the unique identification of spatial objects, which means that each spatial object will be identifiable through a persistent and unique key.
+				<br>Another important aspect is that there will be some key attributes defined for every geographical object and that multilingual thesauri will be required for different policies which may have an impact on the environment.
+				<br>Based on this articles we can say that INSPIRE is about making existing heterogeneous data in different MS, exchangeable and interoperable within the whole European Union.
+				<br>15<br></aside>
 				</section>
 				<section id="05.1.2">
-					<h1 style="color:#5DADE2;">02 | Scope & objectives of data specifications for SDI’s</h1>
+					<h1 style="color:#5DADE2;">02 | Scope &amp; objectives of data specifications for SDI’s</h1>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | Thematic scope </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=17&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">In general we can say that INSPIRE is aiming at thematic domains that concern environmental policies - public sector data. This slide shows the complete list of thematic domains (34 in total) which are grouped in 3 annexes because of different priorities, different timeline and deadlines to implement data components of the INSPIRE directive.<br>Annex 1 themes are the basic reference data and they were the first themes to be modelled because themes from the other annexes could depend on them.</aside>
+								<section id="slide17">
+				   <div class="ppt-txt" style="position: absolute; top: 7px; left: 22px; height: 61px;  width: 828px">
+				<h2 style="font-size: 39px;">Thematic scope</h2>
+				   </div><br>
+
+			   <br>
+
+				<img class="ppt-img" style="height: 500px; allign:center" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/inspire.png"></img>
+
+				<aside class="notes">
+				Notes for slide 17
+				In general we can say that INSPIRE is aiming at thematic domains that concern environmental policies - public sector data. This slide shows the complete list of thematic domains (34 in total) which are grouped in 3 annexes because of different priorities, different timeline and deadlines to implement data components of the INSPIRE directive.
+				<br>
+				<br>Annex 1 themes are the basic reference data and they were the first themes to be modelled because themes from the other annexes could depend on them.<br>17<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | SDI data scope</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=18&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">Although we tend to attach a lot of thematic data to the spatial data, this is not the scope of INSPIRE.<br>
-					We have seen now the thematic domains that INSPIRE focusses on. But the next question is: What kind of thematic data falls within the scope? Here we often can notice misinterpretations of the directive The data scope of INSPIRE is strictly “Spatial data” and not all kind of thematic data. It really concerns the spatial objects that can be identified within a certain thematic domain or within multiple domains, including some crucial key attributes necessary to describe these objects. Business data, which mostly is non-spatial but which can be spatially referenced, is out of scope. As an example: Information from water quality measurements in surface water is out of scope but the spatial objects delineating these surface waters are definitely within the scope.<br>MS are encouraged to re-use the INSPIRE DS for their own usage and there is a possibility to extend them for example to include business data, but it is not an obligation.</aside>
+				<section id="slide18">
+				   <div class="ppt-txt" style="position: absolute; top: 7px; left: 22px; height: 54px;  width: 828px">
+				<p style="font-size: 39px;">SDI data scope</p>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 83px; left: 22px; height: 425px;  width: 920px">
+				<p style="font-size: 28px;">Scope is spatial data – not all kinds of thematic/descriptive data
+				</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br><br>
+				<br>
+
+				<br>
+				<p style="font-size: 28px;">Re-use the INSPIRE data specs for own usage
+				</p><br>
+
+				<ul><li><p style="font-size: 20px;">Extensions
+				</p></li>
+				<li><p style="font-size: 20px;">Additional constraints
+				</p></li>
+				<li><p style="font-size: 20px;">Re-use of common objects
+				</p></li></ul>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 153px; left: 268px; height: 201px;  width: 326px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image48.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 18
+				Although we tend to attach a lot of thematic data to the spatial data, this is not the scope of INSPIRE.
+				<br>We have seen now the thematic domains that INSPIRE focusses on. But the next question is: What kind of thematic data falls within the scope? Here we often can notice misinterpretations of the directive The data scope of INSPIRE is strictly “Spatial data” and not all kind of thematic data. It really concerns the spatial objects that can be identified within a certain thematic domain or within multiple domains, including some crucial key attributes necessary to describe these objects. Business data, which mostly is non-spatial but which can be spatially referenced, is out of scope. As an example: Information from water quality measurements in surface water is out of scope but the spatial objects delineating these surface waters are definitely within the scope.
+				<br>MS are encouraged to re-use the INSPIRE DS for their own usage and there is a possibility to extend them for example to include business data, but it is not an obligation. 
+				<br>18<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | Exercise 1: Find your scope</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=20&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+
+				<section id="slide20">
+				   <div class="img-div" style="position: absolute; top: 12px; left: 783px; height: 124px;  width: 161px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image49.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 0px; left: 15px; height: 62px;  width: 828px">
+				<p style="font-size: 39px;">Exercise 1: Find your scope</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 144px; left: 66px; height: 343px;  width: 828px">
+				<p style="font-size: 24px;">Go to INSPIRE website<a> https://inspire.ec.europa.eu/inspire-tools</a>
+				</p>
+				<p style="font-size: 24px;">Use the tool “Find your scope” (toolkit):
+				</p><br>
+
+				<ol><li><p style="font-size: 20px;">In catalogue of INSPIRE objects: 
+				</p><br>
+
+				<ul><li><p style="font-size: 20px;">find “zone” --&gt; limit to only “Spatial object type” --&gt; narrow search “terrestrial zone”
+				</p></li>
+				<li><p style="font-size: 20px;">Which Object, INSPIRE Data Theme, Application Schema
+				</p></li>
+				<li><p style="font-size: 20px;">What are the other possible specialisations of TransportArea?
+				</p></li></ul></li>
+				<br>
+				<li><p style="font-size: 20px;">To find the Spatial object that should be used for a dataset that stores the locations of stations where magnetic measurements are performed. (use “Direct Search”)
+				</p></li>
+				<br>
+				<li><p style="font-size: 20px;">Find your own scope…
+				</p></li></ol>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 12px; left: 12px; height: 0px;  width: 960px">
+					  <img class="ppt-img" data-src="">1</img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 91px; left: 22px; height: 32px;  width: 202px">
+				<p style="font-size: 20px;">Example of INSPIRE</p>
+				   </div>
+				<aside class="notes">
+				Notes for slide 20
+				20<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | Exercise 1: Result (1)</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=21&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide21">
+				   <div class="ppt-txt" style="position: absolute; top: 8px; left: 17px; height: 50px;  width: 828px">
+				<p style="font-size: 39px;">Exercise 1: Result (1)</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 437px;  width: 921px">
+				<p style="font-size: 24px;">PortArea – Transport Networks – Water TN
+				</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 157px; left: 99px; height: 341px;  width: 723px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image50.png"></img>
+				   </div>
+
+				   <div class="img-div" style="position: absolute; top: 12px; left: 783px; height: 124px;  width: 161px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image49.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 21
+				21<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | Exercise 1: Result (2)</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=22&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide22">
+				   <div class="ppt-txt" style="position: absolute; top: 2px; left: 22px; height: 58px;  width: 828px">
+				<p style="font-size: 39px;">Exercise 1: Result (2)</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 437px;  width: 921px">
+				<p style="font-size: 24px;">Direct search: “magnetic field”
+				</p>
+				<p style="font-size: 20px;">Relevant objects? Observed Event (NZ) vs Geoph Station (GE - Geophysics)
+				</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 175px; left: 216px; height: 349px;  width: 488px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image51.png"></img>
+				   </div>
+
+				   <div class="img-div" style="position: absolute; top: 12px; left: 803px; height: 109px;  width: 141px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image49.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 22
+				22<br></aside>
 				</section>
 				<section id="05.1.3">
 					<h1 style="color:#5DADE2;">03 | The modelling framework for data specifications (ISO 19131)</h1>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Data harmonisation and data specs aspects</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=24&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">We already saw that the GCM is the guidance for good modelling practises for all DS. The result of the modelling should be a harmonised set of DS for all themes.<br>
-					This harmonisation can be reached by following the different harmonisation aspects covered in the GCM and they are listed on this slide (from the INSPIRE principles over identifier management, data capturing requirements to conformance issues). In the next slides we will highlight some of the most important harmonisation aspects</aside>
+				<section id="slide24">
+				   <div class="ppt-txt" style="position: absolute; top: 0px; left: 22px; height: 61px;  width: 828px">
+				<h2 style="font-size: 39px;">Data harmonisation and data specs aspects</h2>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 229px; left: 33px; height: 56px;  width: 139px">
+
+				<p style="font-size: 20px;">Example from
+				</p>
+				<p style="font-size: 20px;">INSPIRE</p>
+				   </div>
+									<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px;  width: 600px">
+									<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image52.png"></img>
+									</div>
+				<aside class="notes">
+				Notes for slide 24
+				We already saw that the GCM is the guidance for good modelling practises for all DS. The result of the modelling should be a harmonised set of DS for all themes.
+				<br>This harmonisation can be reached by following the different harmonisation aspects covered in the GCM and they are listed on this slide (from the INSPIRE principles over identifier management, data capturing requirements to conformance issues). In the next slides we will highlight some of the most important harmonisation aspects.
+				<br>24<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Harmonisation General Principles</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=25&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">We can distinguish some categories in the list of harmonisation aspects. First of all there are some “General principles”:<br>
-					1. Of course these include the INSPIRE principles saying that:<br>
-					- spatial data must be stored and made available on the most appropriate level;<br>
-					- That it must be possible to share and combine spatial data from different sources in a consistent way;<br>
-					2. another principle is the use of consistent language when referring to terms to overcome semantic problems. This can be reached by making use of a glossary with common definitions.<br>
-					3. but also the possibility to fall back on a reference model is one of the base principles. It is the framework of all the technical parts that support us in modelling information and administration of data;<br>
-					INSPIRE principles: Data harmonisation is a methodology to reach these goals. <br>
-					Terminolgy: This component will support the use of a consistent language when referring to terms via a glossary. This needs to be registered and managed through change control with multi-lingual support. The ESDI needs to select a common terminology from all of the existing terminologies and/or their translations. <br>
-					Ref Model: This component will define the framework of the technical parts including topics like information modelling (i.e. conceptual modelling framework with rules for application schemas) and data administration (i.e. reference systems). It will provide a structure which allows the components of INSPIRE which are related to data specifications to be described in a consistent manner.</aside>
+				<section id="slide25">
+				   <div class="ppt-txt" style="position: absolute; top: 5px; left: 22px; height: 61px;  width: 828px">
+				<p style="font-size: 39px;">Harmonisation General Principles</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 53px; left: 22px; height: 26px;  width: 842px">
+				<p style="font-size: 24px;">The modelling framework</p>
+				   </div>
+					<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image53.png"></img>
+					</div>
+				<aside class="notes">
+				Notes for slide 25
+				We can distinguish some categories in the list of harmonisation aspects. First of all there are some “General principles”:
+				<br>Of course these include the INSPIRE principles saying that:
+				<br>spatial data must be stored and made available on the most appropriate level;
+				<br>That it must be possible to share and combine spatial data from different sources in a consistent way;
+				<br>another principle is the use of consistent language when referring to terms to overcome semantic problems. This can be reached by making use of a glossary with common definitions.
+				<br>but also the possibility to fall back on a reference model is one of the base principles. It is the framework of all the technical parts that support us in modelling information and administration of data;
+				<br>
+				<br>
+				<br>INSPIRE principles: Data harmonisation is a methodology to reach these goals. 
+				<br>Terminolgy: This component will support the use of a consistent language when referring to terms via a glossary. This needs to be registered and managed through change control with multi-lingual support. The ESDI needs to select a common terminology from all of the existing terminologies and/or their translations. 
+				<br>Ref Model: This component will define the framework of the technical parts including topics like information modelling (i.e. conceptual modelling framework with rules for application schemas) and data administration (i.e. reference systems). It will provide a structure which allows the components of INSPIRE which are related to data specifications to be described in a consistent manner.
+				<br>25<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Harmonisation Schemas</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=26&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">Beside the general principles we also have some principles related to schemas:<br>
-					One aspect will deal with the question: How to describe these schemas? If everybody is allowed to use his own way of documenting these schemas, we will end up again with an undesired heterogeneity. So there must be some general rules that define a common way of documenting. The rule is to establish feature catalogues which define the types of spatial objects and their properties. While the application schema gives a full description of the content and structure expressed in a conceptual schema language like UML.<br>
-					Harmonising data also means dealing with spatial and temporal aspects. There is a need for common information on spatial geometries and topology (what are the geometry types to be used and what are their characteristics) but also on the way temporal characteristics of data will be managed.<br>
-					When talking about exchanging spatial data we cannot go around the aspect of coordinate referencing. So instructions/guidelines/recommendations towards common European reference systems, including the definition of European geographical grids, are needed for creating a harmonised data space across Europe. <br>
-					To avoid storing geometries more than once, it is necessary to have a mechanism to reference information to existing base-topographic/spatial objects, f.e. you can use the geometry of the theme “buildings” to add other thematic information like Industrial facilities by referencing the relevant geometry instead of redefining it. How this should be done, is tackled in the GCM by the aspect of Object Reference Modelling.<br>
-					<b>A feature catalogue </b> define the types of spatial objects and their properties (attributes, association roles, operations) as well as constraints and are required when turning the data into usable information. <br>
-					<b>An application schema </b>is the full description of the contents and structure of a spatial dataset is given by the which is expressed in a formal conceptual schema language.<br>
-					The feature catalogue defines the <b>meaning </b> of the spatial object types and their properties while the application schema describes the <b>formal structure</b>. Text elements in the feature catalogues should be maintained at least in the official European languages.</aside>
+				<section id="slide26">
+				   <div class="ppt-txt" style="position: absolute; top: 9px; left: 22px; height: 50px;  width: 828px">
+				<p style="font-size: 39px;">Harmonisation Schemas</p>
+				   </div>
+					<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+							<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image54.png"></img>
+					</div>
+				<aside class="notes">
+				Notes for slide 26
+				Beside the general principles we also have some principles related to schemas:
+				<br>
+				<br>One aspect will deal with the question: How to describe these schemas? If everybody is allowed to use his own way of documenting these schemas, we will end up again with an undesired heterogeneity. So there must be some general rules that define a common way of documenting. The rule is to establish feature catalogues which define the types of spatial objects and their properties. While the application schema gives a full description of the content and structure expressed in a conceptual schema language like UML.
+				<br>
+				<br>Harmonising data also means dealing with spatial and temporal aspects. There is a need for common information on spatial geometries and topology (what are the geometry types to be used and what are their characteristics) but also on the way temporal characteristics of data will be managed.
+				<br>
+				<br>When talking about exchanging spatial data we cannot go around the aspect of coordinate referencing. So instructions/guidelines/recommendations towards common European reference systems, including the definition of European geographical grids, are needed for creating a harmonised data space across Europe. 
+				<br>
+				<br>To avoid storing geometries more than once, it is necessary to have a mechanism to reference information to existing base-topographic/spatial objects, f.e. you can use the geometry of the theme “buildings” to add other thematic information like Industrial facilities by referencing the relevant geometry instead of redefining it. How this should be done, is tackled in the GCM by the aspect of Object Reference Modelling.
+				<br>
+				<br>
+				<br>
+				<br>A feature catalogue define the types of spatial objects and their properties (attributes, association roles, operations) as well as constraints and are required when turning the data into usable information. 
+				<br>An application schema is the full description of the contents and structure of a spatial dataset is given by the which is expressed in a formal conceptual schema language.
+				<br>The feature catalogue defines the meaning of the spatial object types and their properties while the application schema describes the formal structure. Text elements in the feature catalogues should be maintained at least in the official European languages.<br>26<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Harmonisation Translations</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=27&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">The following slide brings us to the category of translation aspects.<br>
-					As the INSPIRE directive will be applicable in all European MS. It is logical, in order to make the DS understandable by all MS, that translations are made in all official European languages. This at least for the most crucial information.<br>
-					Data translation from a local application schema to the INSPIRE application schema of the relevant theme is also addressed in the GCM.<br>
-					Another kind of translation is the “portrayal model”. This will clarify how standardised portrayal catalogues can be used to harmonised the portrayal of data, i.e. object of the same type will be displayed with the same symbol even if they come from different data sources.</aside>
+				<section id="slide27">
+				   <div class="ppt-h2" style="position: absolute; top: 16px; left: -192px; height: 50px;  width: 828px">
+				<h2>Harmonisation Translations</h2>
+				   </div>
+				<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+				<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image55.png"></img>
+					</div>
+				<aside class="notes">
+				Notes for slide 27
+				The following slide brings us to the category of translation aspects.
+				<br>
+				<br>As the INSPIRE directive will be applicable in all European MS. It is logical, in order to make the DS understandable by all MS, that translations are made in all official European languages. This at least for the most crucial information.
+				<br>
+				<br>Data translation from a local application schema to the INSPIRE application schema of the relevant theme is also addressed in the GCM.
+				<br>
+				<br>Another kind of translation is the “portrayal model”. This will clarify how standardised portrayal catalogues can be used to harmonised the portrayal of data, i.e. object of the same type will be displayed with the same symbol even if they come from different data sources.<br>27<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Harmonisation Identification</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=28&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">Next category of harmonisation aspects is concerning the identification of objects.<br>
-					The identifier management is one of the key issues in INSPIRE. It states that every spatial object (at least for annex I, II) should get a unique and persistent identifier (i.e. INPSIRE identifier). All annex III themes followed this good practise although it was initially not required. The “INSPIRE id” makes it possible to reference each object by means of its identifier.<br> Registers are very important in the harmonisation process. They are functioning as the libraries/dictionaries that hold the information commonly agreed on. There will be registers for listing possible reference systems, listing possible “UOM”s, code lists (i.e. values of classifications) used in the different themes, thesauri, … <br>
-					Those registers will become available through registry services so they can be used by other models or applications.<br>
-					Metadata play also an important part in the identification of datasets and services. Information stored in the MD gives the user an idea of what he may expect from the described dataset of service. There are different levels of MD as we will see later on in this module.</aside>
+				<section id="slide28">
+				   <div class="ppt-txt" style="position: absolute; top: 16px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">Harmonisation Identification</h2>
+				   </div>
+					<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+								<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image56.png"></img>
+									</div>
+				<aside class="notes">
+				Notes for slide 28
+				Next category of harmonisation aspects is concerning the identification of objects.
+				<br>
+				<br>The identifier management is one of the key issues in INSPIRE. It states that every spatial object (at least for annex I, II) should get a unique and persistent identifier (i.e. INPSIRE identifier). All annex III themes followed this good practise although it was initially not required. The “INSPIRE id” makes it possible to reference each object by means of its identifier.
+				<br>
+				<br>Registers are very important in the harmonisation process. They are functioning as the libraries/dictionaries that hold the information commonly agreed on. There will be registers for listing possible reference systems, listing possible “UOM”s, code lists (i.e. values of classifications) used in the different themes, thesauri, …
+				<br>Those registers will become available through registry services so they can be used by other models or applications.
+				<br>
+				<br>Metadata play also an important part in the identification of datasets and services. Information stored in the MD gives the user an idea of what he may expect from the described dataset of service. There are different levels of MD as we will see later on in this module.
+				<br>28<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Harmonisation Data Quality</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=29&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">A last category of harmonisation aspects concerns “data quality” elements.<br>
-					- One of these elements focusses on the maintenance of data products and spatial objects within those products. How to deal with updates? What are the best practises for versioning of objects (introducing a new object and deprecating the old one). <br>
-					- the quality component will advise the need to publish quality levels of each spatial dataset using the criteria defined in the ISO 19100 series of standards, including completeness, consistency, currency and accuracy. This will include methods of best practice in publishing Acceptable Quality Levels… <br>
-					- in this category also consistency between data is addressed and this in terms of format, logical and topological accordance, and so on.<br>
-					- DQ concerns also multiple representations or the best practises of how data can be aggregated: <br>
-					1. over time and space; 2. but also across different resolutions also called generalisation of data.<br>
-					Maintenance: This component will define best practice in ensuring that application data can be managed against updates of reference information without interruption of services. This will require the definition of mechanisms by different stakeholder areas to manage where this is required and it is feasible. <b> RSS feeds for change information?</b> <br>
-					Quality: This component will advise the need to publish quality levels of each spatial dataset using the criteria defined in the ISO 19100 series of standards, including completeness, consistency, currency and accuracy. This will include methods of best practice in publishing AQL etc <br>
-					Consistency: Format, logical, topological etc</aside>
+				<section id="slide29">
+				   <div class="ppt-txt" style="position: absolute; top: 9px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">Harmonisation Data Quality</h2>
+				   </div>
+					<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+							<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image57.png"></img>
+					</div>
+				<aside class="notes">
+				Notes for slide 29
+				A last category of harmonisation aspects concerns “data quality” elements.
+				<br>One of these elements focusses on the maintenance of data products and spatial objects within those products. How to deal with updates? What are the best practises for versioning of objects (introducing a new object and deprecating the old one). 
+				<br>the quality component will advise the need to publish quality levels of each spatial dataset using the criteria defined in the ISO 19100 series of standards, including completeness, consistency, currency and accuracy. This will include methods of best practice in publishing Acceptable Quality Levels…
+				<br>in this category also consistency between data is addressed and this in terms of format, logical and topological accordance, and so on.
+				<br>DQ concerns also multiple representations or the best practises of how data can be aggregated: 
+				<br>over time and space;
+				<br>but also across different resolutions also called generalisation of data.
+				<br>
+				<br>Maintenance: This component will define best practice in ensuring that application data can be managed against updates of reference information without interruption of services. This will require the definition of mechanisms by different stakeholder areas to manage where this is required and it is feasible. RSS feeds for change information?
+				<br>
+				<br>Quality: This component will advise the need to publish quality levels of each spatial dataset using the criteria defined in the ISO 19100 series of standards, including completeness, consistency, currency and accuracy. This will include methods of best practice in publishing AQL etc 
+				<br>
+				<br>Consistency: Format, logical, topological etc
+				<br>
+				<br>
+				<br>- Multiple representations 
+				<br>- Derived reporting (example: typically water samples at 1 km intervals are reported to the European level) <br>29<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Harmonisation Other aspects</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=30&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">All aspects on this slide do not fit in one of the previous categories however they cannot be disregarded when it concerns data harmonisation.<br>
-					- The data transfer aspect focusses mainly on the encoding of data. As said before, within the INSPIRE framework, GML is seen as the standard for encoding data. But for coverage data this might not be the proper format to exchange data. Therefor the GCM will give some guidance in alternative encoding mechanisms.<br>
-					- The data capturing aspect covers the DS-specific criteria regarding, which spatial objects are to be taken on board (in scope or out of scope) or which coordinates will represent certain spatial objects. Also a certain accuracy of data capture can be required.<br>
-					- And last but not least the conformance aspect. For a dataset to be declared as INSPIRE conformant it needs to pass conformance tests as specified in the individual DS of the theme it belongs to.<br>
-					This overview of harmonisation aspects is not to bore you but they all come back in the final DS documents throughout the different chapters. Some of these aspects are a repetition from one of the general framework documents (like GCM, guidelines for O&M) but others are described by the Data Specification document itself.</aside>
+				<section id="slide30">
+				   <div class="ppt-txt" style="position: absolute; top: 16px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">Harmonisation Other aspects</h2>
+				   </div>
+				<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image58.png"></img>
+					</div>
+				<aside class="notes">
+				Notes for slide 30
+				All aspects on this slide do not fit in one of the previous categories however they cannot be disregarded when it concerns data harmonisation.
+				<br>The data transfer aspect focusses mainly on the encoding of data. As said before, within the INSPIRE framework, GML is seen as the standard for encoding data. But for coverage data this might not be the proper format to exchange data. Therefor the GCM will give some guidance in alternative encoding mechanisms.
+				<br>The data capturing aspect covers the DS-specific criteria regarding, which spatial objects are to be taken on board (in scope or out of scope) or which coordinates will represent certain spatial objects. Also a certain accuracy of data capture can be required.
+				<br>And last but not least the conformance aspect. For a dataset to be declared as INSPIRE conformant it needs to pass conformance tests as specified in the individual DS of the theme it belongs to.
+				<br>
+				<br>This overview of harmonisation aspects is not to bore you but they all come back in the final DS documents throughout the different chapters. Some of these aspects are a repetition from one of the general framework documents (like GCM, guidelines for O&amp;M) but others are described by the Data Specification document itself.
+				<br>30<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | Some wrap-up questions</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=31&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide31">
+				   <div class="ppt-txt" style="position: absolute; top: 7px; left: 29px; height: 58px;  width: 828px">
+				<p style="font-size: 39px;">Some wrap-up questions</p>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 60px; left: 22px; height: 425px;  width: 920px">
+					   <p style="font-size: 24px;">The modelling framework</p><br>
+
+				<p style="font-size: 24px;">Where does the abbreviation GCM stands for (used in the INSPIRE context)?
+				</p><br>
+
+				<p style="font-size: 24px;">How many thematic domains, divided in how many annexes, are addressed by the INSPIRE directive?
+				</p><br>
+
+				<p style="font-size: 24px;">Which kind of heterogeneity?
+				</p>
+				<br>
+				<br>
+				<br>
+				<br><br>
+				<br>
+
+				<p style="font-size: 24px;">What are next from “Encoding” and “Harmonised vocabularies” the other two major cornerstones of data interoperability?
+				</p>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 290px; left: 123px; height: 150px;  width: 750px">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram1.png"></img>
+				  </div>
+				<aside class="notes">
+				Notes for slide 31
+				31<br></aside>
 				</section>
 				<section id="05.1.4">
 					<h1 style="color:#5DADE2;">04 | Development of data specifications</h1>
 					<aside class="notes">Let’s have a quick look now to the development process of the DS in part 3 of this module.<br>
 					The knowledge of the process is not crucial to understand the DS but it gives you some useful background on the different steps followed and the involvement of different people and communities.</aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | What is a data specification?</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=33&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">We already talked a lot about DS: <br>
-					- What are their scope and objectives?<br>
-					- What are the building blocks and the principles behind them?<br>
-					But what is now a proper definition of a DS, also called a data product specification?<br>
-					<strong>Detailed description of a data set or data set series together with additional information that will enable it to be created, supplied to and used by another party [ISO 19131]</strong><br>
-					Or in human language and applied to the INSPIRE framework: It is the user manual for anyone that has to create, modify a dataset within the scope of INSPIRE.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Data Specification</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=34&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">The creation process of such INSPIRE DS followed a step-wise methodology with moments of feedback and with the involvement of the relevant stakeholders. Here on this slide you can see the workflow of the process indicating as well the feedback possibilities (iterations) between the different steps. <br>
-					It started with the development of relevant “use cases” from these use cases, user requirements were drafted and the spatial objects were identified. In parallel an as-is analysis was made of the existing datasets. Based on those requirements and the description of the real situation, gaps were identified and the results of all three processes were used to draft the first version of DS. Then followed a implementation, testing and validation phase after which a new round of feedback was possible and the comments were used to fine tune the DS.<br>
-					To give you an idea of the duration of this process: For the annex II and III themes, that were developed in parallel with each other, it took approximately 2 years until the final DS were ready for adoption.<br>
-					In the coming slides I will explain the separate steps in more detail.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Use case development</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=35&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">The first step in the development process was the defining of relevant use cases. <br>
-					Many stakeholders could propose Use Cases that should be taken into account for the further development process. The major sources on which the UC were inspired, are listed here.<br>
-					Relevant UC could be derived from or influenced by:<br>
-					- existing European environmental policies, fe MS have already certain reporting obligations concerning environmental information;<br>
-					- a survey on user requirements;<br>
-					- reference material provided by Spatial Data Interest Communities (SDIC) and Legally Mandated Organisations (LMO). Both groups were already involved in other aspects of the INSPIRE framework. This material was based on real-life implementations of certain themes, which gave a good insight on the how and why datasets were modelled in a specific way.<br>
-					- similar EU-funded initiatives and projects.<br>
-					This all illustrates that the DS did not come out of the bleu, a lot of material came from existing situations and had to be considered as UC to serve as a base of the DS development.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Identification of user requirements and spatial object typesUse case development</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=36&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes"> The second step was, to identify the User Requirements and the essential spatial objects from all the material gathered in the first step. <br> The requirements could regard:<br>
-					- data content; MD; DQ; Portrayal; Other elements of the DS </aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | As-is analysis</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=37&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">In the third step is based on the reference material provided in the first step. It concerns an As-Is analysis of the current situation regarding current procedures and workflows of (theme specific) spatial data sets.<br>
-					Apart from the reference material, there was also looked to which extent existing international standards were already in use and of course the knowledge of field experts could not be disregarded in this phase.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Example of As-is analysis</h2>
-					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image60.png"  class="plain" align="center">
-					<aside class="notes">This slides gives an example of the workflow that MSs should follow, to report on Habitats according a certain article of the Habitat directive. The MSs need to report on and upload data to the EEA and ETC/BD, they perform a QC, based on the result a second delivery with corrections can be asked. The final result is then stored in a common repository from which a harmonised database on the state of habitats throughout Europe is created. This resulting database can then be used by the EEA to make new assessments according the Biogeographical Regions of Europe. <br>
-					So this is an example of an established workflow which cannot be neglected in the development process of the DS.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Gap analysis</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=39&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">In the fourth step the user requirements are compared to what is already present in existing data sources. User requirements that are not met yet are identified as “Gaps”. This is called the gap analysis phase. DS must be designed to close these gaps.</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Data specification development</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=40&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">All previous steps belong to the  preparation phase for the real development of the DS. The development of the DS was done by a group of domain experts (TWG). That group had to design the DS in such way that the user requirements were met and that the mapping between the existing data and the final harmonised model was quite straight forward.<br>
-					The group had to consider two major aspects that are related to each other : <br>
-					1. The data harmonisation process should not lead to excessive costs for the data providers because then they will not do the effort to transform their data;<br>
-					2. the data specification should not require collection of new data</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Implementation, validation and Cost-Benefit Analysis</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=41&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">The resulting draft versions of the DS were then implemented and send back to the data communities for testing and validation in real world conditions. 
-					Their remarks were evaluated and processed in a new iteration round in order to come up with the final DS.
-					(Cost-benefit analysis is difficult to make in a quantitative way. Economic value is difficult to estimate, but several studies exist and already many papers on this topic are published in the IJSDIR.)</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Which level of harmonisation is “just right”?</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=42&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">When developing DS it is important to find the appropriate level of harmonisation.
-					If the model is too simple, there will be no added value and nobody will use it because it cannot fulfil the user requirements.
-					If the model is too complex on the other hand it might be difficult to implement. A number of benefits will only be available for a limited number of users. And the cost of harmonisation will be too high.<br>
-					The compromise is somewhere in the middle and to find this equilibrium it required:<br>
-					- an iterative process with testing, validation and adaption phases;<br>
-					- user requirements that were well-defined;
-					AND
-					- a good understanding of the existing geographic information</aside>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 | Result</h2>
-					<table> <tr> <td><ul><li> Data specification for all Annex Themes
-						<ul><li>Textual description of the data model </li>
-						<li>UML model</li>
-						<li>GML application schema</li></ul></td>
-					</li></ul></p>
-					<td width="65%"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image62.png"  class="plain" align="center"></td></tr>
-					</table>
-					<aside class="notes"> To resume and also to make the link to the next part of the module ‘understanding the technical guidelines’, I give you again the result of the DS process.<br>
-					For each annex theme of inspire a DS document is created with a textual description of the model, the model as a UML diagram and the final GML application schema which will be used in the transformation process of data sources into the Data model of the DS.<br>
-					These documents will be the key components for data providers to deal with the transformation process. The other framework documents that we talked about can be considered as essential background material.</aside>
+				<section id="slide33">
+				   <div class="ppt-txt" style="position: absolute; top: 16px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">What is a data specification?</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 56px; height: 425px;  width: 852px">
+				<br>
+				<p style="font-size: 28px; font-weight: bold; text-align: center;">DATA SPECIFICATION
+				</p>
+				<p style="font-size: 28px; text-align: center;">II
+				</p>
+				<p style="font-size: 28px; font-weight: bold; text-align: center;">Synonym to data product specification
+				</p>
+				<br>
+				<br>
+				<p style="font-size: 28px;">Detailed <strong>description</strong> of a <strong>data</strong> set or data set series together with additional information that will enable it to be <strong>created, supplied</strong> to and used by <strong>another party</strong> 
+				</p><br>
 
+				<p style="font-size: 28px; font-weight: bold; text-align: center;">[ISO 19131]
+				</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 155px; left: 89px; height: 117px;  width: 122px">
+					  <img class="ppt-img" data-src=""></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 33
+				We already talked a lot about DS: 
+				<br>What are their scope and objectives?
+				<br>What are the building blocks and the principles behind them?
+				<br>But what is now a proper definition of a DS, also called a data product specification?
+				<br>Detailed description of a data set or data set series together with additional information that will enable it to be created, supplied to and used by another party [ISO 19131]
+				<br>Or in human language and applied to the INSPIRE framework: It is the user manual for anyone that has to create, modify a dataset within the scope of INSPIRE.<br>33<br></aside>
+				</section>
+				<section id="slide34">
+				   <div class="ppt-txt" style="position: absolute; top: 13px; left: 22px; height: 55px;  width: 828px">
+				<h2 style="font-size: 39px;">Data Specification</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 124px; left: 607px; height: 404px;  width: 335px">
+				<br>
+				<br>
+				<br>
+				<p style="font-size: 32px;">Step-wise methodology</p>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 79px; left: 149px; height: 451px;  width: 411px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram2.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 34
+				The creation process of such INSPIRE DS followed a step-wise methodology with moments of feedback and with the involvement of the relevant stakeholders. Here on this slide you can see the workflow of the process indicating as well the feedback possibilities (iterations) between the different steps. 
+				<br>It started with the development of relevant “use cases” from these use cases, user requirements were drafted and the spatial objects were identified. In parallel an as-is analysis was made of the existing datasets. Based on those requirements and the description of the real situation, gaps were identified and the results of all three processes were used to draft the first version of DS. Then followed a implementation, testing and validation phase after which a new round of feedback was possible and the comments were used to fine tune the DS.
+				<br>To give you an idea of the duration of this process: For the annex II and III themes, that were developed in parallel with each other, it took approximately 2 years until the final DS were ready for adoption.
+				<br>In the coming slides I will explain the separate steps in more detail.<br>34<br></aside>
+				</section>
+				<section id="slide35">
+				   <div class="ppt-txt" style="position: absolute; top: 10px; left: 21px; height: 49px;  width: 828px">
+				<h2 style="font-size: 39px;">Use case development</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 122px; left: 597px; height: 358px;  width: 335px">
+				<p style="font-size: 30px; font-weight: bold;">Step 1
+				</p>
+				<br>
+				<p style="font-size: 26px;">Major sources are: 
+				</p><br>
+
+				<ul><li><p style="font-size: 26px;">European environmental policies
+				</p></li>
+				<li><p style="font-size: 26px;">User requirements survey 
+				</p></li>
+				<li><p style="font-size: 26px;">SDIC/LMO reference material
+				</p></li>
+				<li><p style="font-size: 26px;">EU-funded initiatives and projects</p></li></ul>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 82px; left: 153px; height: 441px;  width: 404px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram3.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 35
+				The first step in the development process was the defining of relevant use cases. 
+				<br>Many stakeholders could propose Use Cases that should be taken into account for the further development process. The major sources on which the UC were inspired, are listed here.
+				<br>Relevant UC could be derived from or influenced by:
+				<br>existing European environmental policies, fe MS have already certain reporting obligations concerning environmental information;
+				<br>a survey on user requirements;
+				<br>reference material provided by Spatial Data Interest Communities (SDIC) and Legally Mandated Organisations (LMO). Both groups were already involved in other aspects of the INSPIRE framework. This material was based on real-life implementations of certain themes, which gave a good insight on the how and why datasets were modelled in a specific way.
+				<br>similar EU-funded initiatives and projects.
+				<br>This all illustrates that the DS did not come out of the bleu, a lot of material came from existing situations and had to be considered as UC to serve as a base of the DS development.<br>35<br></aside>
+				</section>
+				<section id="slide36">
+				   <div class="ppt-txt" style="position: absolute; top: 8px; left: 22px; height: 60px;  width: 828px">
+				<h2 style="font-size: 35px;">Identification of user requirements and spatial object types</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 125px; left: 597px; height: 358px;  width: 335px">
+				<p style="font-size: 30px; font-weight: bold;">Step 2
+				</p>
+				<br>
+				<p style="font-size: 26px;">Identify requirements on:
+				</p>
+				<p style="font-size: 26px;">the data content
+				</p>
+				<p style="font-size: 26px;">metadata, data quality, portrayal and other elements of the data specification</p>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 110px; left: 158px; height: 452px;  width: 400px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram4.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 36
+				The second step was, to identify the User Requirements and the essential spatial objects from all the material gathered in the first step. 
+				<br>The requirements could regard:
+				<br>data content 
+				<br>MD
+				<br>DQ
+				<br>Portrayal
+				<br>Other elements of the DS
+				<br>36<br></aside>
+				</section>
+				<section id="slide37">
+				   <div class="ppt-txt" style="position: absolute; top: 11px; left: 22px; height: 53px;  width: 828px">
+				<h2 style="font-size: 39px;">As-is analysis</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 116px; left: 594px; height: 404px;  width: 335px">
+				<p style="font-size: 30px; font-weight: bold;">Step 3
+				</p>
+				<br>
+				<p style="font-size: 26px;">Analyse the current situation regarding spatial data sets for the theme, based on: 
+				</p><br>
+
+				<ul><li><p style="font-size: 26px;">the reference material
+				</p></li>
+				<li><p style="font-size: 26px;">existing internationally standardised data specifications
+				</p></li>
+				<li><p style="font-size: 26px;">expertise/field experts
+				</p></li></ul>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 110px; left: 162px; height: 463px;  width: 403px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram5.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 37
+				In the third step is based on the reference material provided in the first step. It concerns an As-Is analysis of the current situation regarding current procedures and workflows of (theme specific) spatial data sets.
+				<br>Apart from the reference material, there was also looked to which extent existing international standards were already in use and of course the knowledge of field experts could not be disregarded in this phase.<br>37<br></aside>
+				</section>
+				<section id="slide38">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 22px; height: 35px;  width: 828px">
+				<p style="font-size: 39px;">Example of As-is analysis</p>
+				   </div>
+				<div class="ppt-txt" style="position: absolute; top: 100px; left: 200px; height: 500px; ">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image60.png"></img>
+				</div>
+				<aside class="notes">
+				Notes for slide 38
+				This slides gives an example of the workflow that MSs should follow, to report on Habitats according a certain article of the Habitat directive. The MSs need to report on and upload data to the EEA and ETC/BD, they perform a QC, based on the result a second delivery with corrections can be asked. The final result is then stored in a common repository from which a harmonised database on the state of habitats throughout Europe is created. This resulting database can then be used by the EEA to make new assessments according the Biogeographical Regions of Europe. 
+				<br>So this is an example of an established workflow which cannot be neglected in the development process of the DS.<br>38<br></aside>
+				</section>
+				<section id="slide39">
+				   <div class="ppt-txt" style="position: absolute; top: 11px; left: 22px; height: 52px;  width: 718px">
+				<h2 style="font-size: 39px;">Gap analysis</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 119px; left: 589px; height: 404px;  width: 335px">
+				<p style="font-size: 30px; font-weight: bold;">Step 4
+				</p>
+				<br>
+				<p style="font-size: 26px;">Compare identified data sources with identified user requirements</p>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 79px; left: 162px; height: 455px;  width: 402px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram6.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 39
+				In the fourth step the user requirements are compared to what is already present in existing data sources. User requirements that are not met yet are identified as “Gaps”. This is called the gap analysis phase. DS must be designed to close these gaps.
+				<br>39<br></aside>
+				</section>
+				<section id="slide40">
+				   <div class="ppt-txt" style="position: absolute; top: 9px; left: 22px; height: 54px;  width: 828px">
+				<h2 style="font-size: 39px;">Data specification development</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 120px; left: 589px; height: 404px;  width: 335px">
+				<p style="font-size: 30px; font-weight: bold;">Step 5
+				</p>
+				<br>
+				<p style="font-size: 20px;font-style: italic;">The data specifications must be designed to ensure easy mapping between existing data and the harmonised data specification.
+				</p>
+				<br>
+				<p style="font-size: 26px;">Consider:
+				</p><br>
+
+				<ul><li><p style="font-size: 26px;">No excessive costs
+				</p></li>
+				<li><p style="font-size: 26px;">No collection of new data!</p></li></ul>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 79px; left: 162px; height: 455px;  width: 403px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram7.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 40
+				All previous steps belong to the  preparation phase for the real development of the DS. The development of the DS was done by a group of domain experts (TWG). That group had to design the DS in such way that the user requirements were met and that the mapping between the existing data and the final harmonised model was quite straight forward.
+				<br>The group had to consider two major aspects that are related to each other : 
+				<br>The data harmonisation process should not lead to excessive costs for the data providers because then they will not do the effort to transform their data;
+				<br>the data specification should not require collection of new data
+				<br>40<br></aside>
+				</section>
+				<section id="slide41">
+				   <div class="ppt-txt" style="position: absolute; top: 11px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 35px;">Implementation, validation and Cost-Benefit Analysis</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 53px; left: 22px; height: 26px;  width: 842px">
+				<p style="font-size: 24px;">Development</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 121px; left: 593px; height: 403px;  width: 334px">
+				<p style="font-size: 30px; font-weight: bold;">Step 6-7
+				</p>
+				<br>
+				<ul><li><p style="font-size: 26px;">review process
+				</p></li>
+				<li><p style="font-size: 26px;">test under real world conditions
+				</p></li>
+				<li><p style="font-size: 26px;">analyse costs and benefits
+				</p></li>
+				<br>
+				<p style="font-size: 26px;">Final round of harmonisation</p></ul>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 79px; left: 162px; height: 455px;  width: 404px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/diagram7.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 41
+				The resulting draft versions of the DS were then implemented and send back to the data communities for testing and validation in real world conditions. 
+				<br>Their remarks were evaluated and processed in a new iteration round in order to come up with the final DS.
+				<br>
+				<br>(Cost-benefit analysis is difficult to make in a quantitative way. Economic value is difficult to estimate, but several studies exist and already many papers on this topic are published in the IJSDIR.)<br>41<br></aside>
+				</section>
+				<section id="slide42">
+				   <div class="ppt-txt" style="position: absolute; top: 16px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 34px;">Which level of harmonisation is “just right”?</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 288px; left: 35px; height: 211px;  width: 858px">
+				<p style="font-size: 28px;">Requires: 
+				</p><br>
+
+				<ul><li><p style="font-size: 24px;">an iterative process
+				</p></li>
+				<li><p style="font-size: 24px;">well-established requirements
+				</p></li>
+				<li><p style="font-size: 24px;">good understanding of the existing geographic information
+				</p></li>
+				<li><p style="font-size: 24px;">testing and validation</p></li></ul>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 79px; left: 311px; height: 233px;  width: 497px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image61.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 42
+				When developing DS it is important to find the appropriate level of harmonisation.
+				<br>If the model is too simple, there will be no added value and nobody will use it because it cannot fulfil the user requirements.
+				<br>If the model is too complex on the other hand it might be difficult to implement. A number of benefits will only be available for a limited number of users. And the cost of harmonisation will be too high.
+				<br>The compromise is somewhere in the middle and to find this equilibrium it required:
+				<br>an iterative process with testing, validation and adaption phases;
+				<br>user requirements that were well-defined;
+				<br>AND
+				<br>a good understanding of the existing geographic information
+				<br>42<br></aside>
+				</section>
+				<section id="slide43">
+				   <div class="ppt-txt" style="position: absolute; top: 13px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">Result</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 425px;  width: 920px">
+				<p style="font-size: 28px;">Data specification for all Annex Themes
+				</p><br>
+
+				<ul><li><p style="font-size: 24px;">Textual description of the data model 
+				</p></li>
+				<li><p style="font-size: 24px;">UML model
+				</p></li>
+				<li><p style="font-size: 24px;">GML application schema
+				</p></li></ul>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 173px; left: 510px; height: 346px;  width: 591px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image62.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 43
+				To resume and also to make the link to the next part of the module ‘understanding the technical guidelines’, I give you again the result of the DS process. 
+				<br>For each annex theme of inspire a DS document is created with a textual description of the model, the model as a UML diagram and the final GML application schema which will be used in the transformation process of data sources into the Data model of the DS.
+				<br>These documents will be the key components for data providers to deal with the transformation process. The other framework documents that we talked about can be considered as essential background material.<br>43<br></aside>
 				</section>
 				<section id="05.1.5">
 					<h1 style="color:#5DADE2;">05 | Examples of data models: ISO 19152</h1>
 					<aside class="notes">In the following slides I will try to guide you through the DS document of CP which is an annex I theme. I’ll just highlight some elements that are really theme specific by following the DS document structure.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Scope</h2>
+					<h2 style="color:#5DADE2;">CP - Scope</h2>
 					<br><ul style="text-align:left;"><li class="fragment fade-up">The scope of the cadastral information in the INSPIRE context is limited to the <b>geographic side</b> of the cadastral information systems (land administration)</li><br>
 					<li class="fragment fade-up">INSPIRE <b>does not</b> aim at harmonising the concepts of ownership and rights related to the parcels</li><br>
 					<li class="fragment fade-up">Cadastral parcels should serve the purpose of generic information locators. Having included the <b>reference to the national registers</b> as a <b>property</b> (attribute) of the INSPIRE parcels, national data sources can be reached.</li></ul>
@@ -439,7 +1119,7 @@
 					Cadastral parcels should serve the purpose of generic information locators. This means that it is sufficient to include only a reference with a code or a key (as an attribute of a parcel object) to the national registers in order to reach the information stored in the national data sources.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Bacground</h2>
+					<h2 style="color:#5DADE2;">CP - Bacground</h2>
 					<br><ul style="text-align:left;"><li class="fragment fade-up">All countries run a register <ul><br><li class="fragment fade-up">Usually a partition of the country with exceptions</li></ul><br>
 					<li class="fragment fade-up">Basic unit of the system is the parcel</li><br>
 					<li class="fragment fade-up">The cadastral parcels should be, as much as possible, single areas of Earth surface (land and/or water) under homogenous real property rights and unique ownership, where real property rights and ownership are defined by national laws.</li></ul>
@@ -449,7 +1129,7 @@
 					- And one of the criteria is that a parcel should be a single area of Earth surface (if possible) under homogenous property rights and unique ownership.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Basic components</h2>
+					<h2 style="color:#5DADE2;">CP - Basic components</h2>
 					<br><ul style="text-align:left;"><li class="fragment fade-up">Parcel (basic unit)</li><br>
 					<li class="fragment fade-up">Subdivision (municipalities, sections, districts, parishes, urban or rural blocks, etc)<br>
 						<ul><br><li class="fragment fade-up"> Carry information for the parcels inside the subdivision: accuracy or scale</li></ul><br>
@@ -462,29 +1142,52 @@
 					- In the case that cadastral information is attached to the boundary of cadastral parcels it is necessary to store the cadastral boundaries otherwise it is optional.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Application schema</h2>
+					<h2 style="color:#5DADE2;">CP - Application schema</h2>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image63.png"  width="470" class="plain" align="center">
 					<aside class="notes">This slide shows you the UML diagram of the CP application schema which is not complicated. We can distinguish 4 classes that are related to each other. Centrally we have the cadastral parcel which is part of a cadastral zone (the class on the right). The cadastral parcel is defined by its boundaries (the class at the bottom) and on top of the slide we have the basic property unit which is optional for countries where national cadastral reference is given to one or a group of parcel(s) defined by unique ownership and homogeneous real property rights.</aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Feature types</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=49&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-					<aside class="notes">Here we see a list of the four classes as feature types (i.e. spatial identifiable objects). And we can see that there is only 1 feature type mandatory (cadastral parcel) all the rest is auxiliary (mandatory in specific conditions) but the core profile is actually limited to the Cadastral parcel feature type.<br>
-					This is a good example that implementing INSPIRE DS is not so complex as often is argued. If we look to the attributes that belong to a CP, we see:<br>
-					- geometry<br>
-					- inspireID: External object identifier of the spatial object<br>
-					- Label: Text commonly used to display the cadastral parcel identification<br>
-					- nationalCadastralReference: Thematic identifier at national level of the cadastral parcel which ensures the link to the national cadastral register or equivalent.<br>
-					Some voidable properties<br>
-					- areaValue: Registered area value<br>
-					- referencePoint: point within the parcel used for label placement<br>
-					- validFrom and validTo: Official date and time when the cadastral parcel is legally established and deprecated;<br>
-					two lifeCycleInfo properties:<br>
-					- beginLifespanVersion and endLifespanVersion: Date and time at which this version of the spatial object was inserted or changed in the spatial data set and the date when it was superseded or retired<br>
-					Apart from the attributes you can see in the last compartment of the class that there are also some constraints defined which put some extra limitations on the content of some attributes.</aside>
+				<section id="slide49">
+				   <div class="ppt-txt" style="position: absolute; top: 12px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">CP – Feature types</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 22px; height: 425px;  width: 920px">
+				<ul><li><p style="font-size: 28px;">CadastralParcel (mandatory)
+				</p></li>
+				<li><p style="font-size: 28px;">CadastralZoning (auxiliary)
+				</p></li>
+				<li><p style="font-size: 28px;">CadastralBoundary (auxiliary)
+				</p></li>
+				<li><p style="font-size: 28px;">BasicPropertyUnit (auxiliary)
+				</p></li></ul>
+				<br>
+				<br>
+					</div>
+					<div class="img-div" style="position: absolute; top: 265px; left: 200px; height: 291px;  width: 263px">
+					<p style="font-size: 28px;">					Core Profile</p>
+					</div>
+				   <div class="img-div" style="position: absolute; top: 255px; left: 548px; height: 291px;  width: 263px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image64.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 49
+				Here we see a list of the four classes as feature types (i.e. spatial identifiable objects). And we can see that there is only 1 feature type mandatory (cadastral parcel) all the rest is auxiliary (mandatory in specific conditions) but the core profile is actually limited to the Cadastral parcel feature type.
+				<br>This is a good example that implementing INSPIRE DS is not so complex as often is argued. If we look to the attributes that belong to a CP, we see:
+				<br>geometry
+				<br>inspireID: External object identifier of the spatial object
+				<br>Label: Text commonly used to display the cadastral parcel identification
+				<br>nationalCadastralReference: Thematic identifier at national level of the cadastral parcel which ensures the link to the national cadastral register or equivalent.
+				<br>Some voidable properties
+				<br>areaValue: Registered area value
+				<br>referencePoint: point within the parcel used for label placement
+				<br>validFrom and validTo: Official date and time when the cadastral parcel is legally established and deprecated;
+				<br>two lifeCycleInfo properties:
+				<br>beginLifespanVersion and endLifespanVersion: Date and time at which this version of the spatial object was inserted or changed in the spatial data set and the date when it was superseded or retired
+				<br>Apart from the attributes you can see in the last compartment of the class that there are also some constraints defined which put some extra limitations on the content of some attributes.
+				<br>49<br></aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Requirements & Recommendations</h2>
+					<h2 style="color:#5DADE2;">CP - Requirements &amp; Recommendations</h2>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image65.png"  width="700" class="plain" align="center">
 					<aside class="notes">On this slide you see an IR requirement (remember the style, red and the double border), and some recommendations that were defined for the CP theme.<br>
 					The IR requirement makes the thematic identifier in the form of the nationalCadastralReference mandatory for a CP. It forms the link to the national cadastral registers with ownership and rights information.<br>
@@ -493,47 +1196,65 @@
 					But not all MS have National cadastral systems with that quality yet, this has to do with history with the inventory method of the parcels. In many countries there is already a digital layer but that does not have any legal value yet and the only legally binding document is an informative description in a kind of codex which does not avoid topological correctness. That is why this was only taken on board as a recommendation and not as a requirement.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Requirements & Recommendations</h2>
+					<h2 style="color:#5DADE2;">05 | CP - Requirements &amp; Recommendations</h2>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image66.png"  width="700" class="plain" align="center">
 					<aside class="notes">This slide illustrates that the DS is a technical guidance for data providers. In this case it shows how to deal with lifecycle issues of CPs. It gives some examples from reality where CP can change in time and the way these types of changes should be treated: either as a new parcel with a new identifier or just as a new version of the parcel with the same identifier, which than implements that the old version becomes retired.</aside>
 
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Requirements & Recommendations</h2>
+					<h2 style="color:#5DADE2;">05 | CP - Requirements &amp; Recommendations</h2>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image67.png"  width="700" class="plain" align="center">
 					<aside class="notes">Here we have an important recommendation that says that INSPIRE cadastral parcels should only be published when the parcels are officially published in the national register. So for work in progress it is not necessary to make it available through INSPIRE unless it is published in the National register i.e. when it is officially validated.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Geometry</h2>
-					<p style="color:#5DADE2; text-align:left"> 0-, 1-,2-,2,5 dimensional geometries <p>
+					<h2 style="color:#5DADE2;">CP - Geometry</h2>
+					<p style="color:#5DADE2; text-align:left"> 0-, 1-,2-,2,5 dimensional geometries </p>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image68.png"  width="700" class="plain" align="center">
 					<aside class="notes">These recommendations on geometry we have seen already, so polygons are recommended but by looking at the model we have seen that 1-dimensional features (boundaries) are also acceptable under certain circumstances.</aside>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | CP - Enumerations/codelists</h2>
+					<h2 style="color:#5DADE2;">CP - Enumerations/codelists</h2>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/image69.png"  width="700" class="plain" align="center">
 					<aside class="notes">Here you have an example of a codelist that provides the values that should be used to indicate the levels of aggregation (hierarchy) of cadastral zones.<br>
 					All the INSPIRE managed codelists are made available online through the INSPIRE codelist register</aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">05 | Land Administration Domain Model</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=55&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide55">
+				   <div class="ppt-txt" style="position: absolute; top: 13px; left: 22px; height: 50px;  width: 828px">
+				<h2 style="font-size: 39px;">Land Administration Domain Model</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 97px; left: 13px; height: 26px;  width: 842px">
+				<p style="font-size: 24px;">ISO 19152</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 149px; left: 13px; height: 308px;  width: 533px">
+				<p style="font-size: 28px;">Major packages of the data model
+				</p><br>
+
+				<ul><li><p style="font-size: 24px;">Party
+				</p></li>
+				<li><p style="font-size: 24px;">Administrative
+				</p></li>
+				<li><p style="font-size: 24px;">Spatial unit
+				</p></li>
+				<li><p style="font-size: 24px;">Surveying and representation
+				</p></li></ul>
+				<br>
+				  </div>
+				   <div class="img-div" style="position: absolute; top: 90px; left: 597px; height: 397px;  width: 341px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/image71.jpg"></img>
+				   </div>
+
+				<aside class="notes">
+					No notes for slide 55</aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">05 | Land Administration Domain Model</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module05/SDI-Standards_Training_M5_Data_Specs.pdf#page=56&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-				</section>
-				<section id="05.1.6">
-					<h1 style="color:#5DADE2;">06 | Exercises</h1>
-				</section>
-				
-				<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
+
 				<section> 
 				<h2> Reference list </h2>
 				<br>
 				<ul style="font-size:16px"><br><br>
-					<li>ISO/TC 211 Geographic information/Geomatics. (2007). ISO 19131:2007. ISO. Retrieved October 19, 2020, from https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/03/67/36760.html</li>
-					<li>Brodeur, J., & Badard, T. (2008). Modeling with ISO 191xx Standards. In S. Shekhar & H. Xiong (Eds.), Encyclopedia of GIS (pp. 705–716). Springer US. https://doi.org/10.1007/978-0-387-35973-1_811</li>
+					<li>ISO/TC 211 Geographic information/Geomatics. (2007). ISO 19131:2007. ISO. Retrieved October 19, 2020, from https://www.iso.org/cms/render/live/en/sites/isoorg/contents/data/standard/03/67/36760.html</li><br>
+
+					<li>Brodeur, J., &amp; Badard, T. (2008). Modeling with ISO 191xx Standards. In S. Shekhar &amp; H. Xiong (Eds.), Encyclopedia of GIS (pp. 705–716). Springer US. https://doi.org/10.1007/978-0-387-35973-1_811</li><br>
+
 					<li>ISO, I. (2015). 19109: 2015 Geographic information-Rules for application schema. International Organisation for Standardization.</li>
 				</ul>
 				</reference_list>
