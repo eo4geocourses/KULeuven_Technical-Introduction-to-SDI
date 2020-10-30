@@ -80,7 +80,7 @@
 
 			<div class="slides">
 				
-			
+			<section>
 				<section >
 					<h1 style="font-size:60px">Web Services to Access Spatial Data</h1><br>
 					<h2 style="font-size:30px">How they work, tools use and examples. Recommended Software, relevant standards and exercises</h2><br>
@@ -97,14 +97,8 @@
 
 						<br><img height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/navigation_arrows.png" alt="navigation arrows">	
 					</section >
+			</section>
 
-
-				<section >
-					<h1 style="font-size:60px">Web Services to Access Spatial Data</h1><br>
-					<h2 style="font-size:30px">How they work, tools use and examples. Recommended Software, relevant standards and exercises</h2><br>
-					<img width="300" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/KULEUVEN_SADL_CMYK_LOGO.png" alt="SADL" align=center-left>
-					<img width="100" height="100" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/logo_versie3.bmp" alt="KU Leuven" align=center-right>
-				</section>
 				<section>
 					<h1 style="color:#5DADE2;">Web services to access spatial data</h1>
 					<div style="position: absolute; width: 100%; left: 0em">
@@ -119,32 +113,43 @@
 
 				</section>
 				<section id="06.1.1">
-					<h1 style="color:#5DADE2;">01 | Web Services in Action</h1>
+					<h1 style="color:#5DADE2;">Web Services in Action</h1>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Examples of incompatibility and inconsistency of spatial data</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=3&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+					<h2 style="color:#5DADE2;">Examples of incompatibility and inconsistency of spatial data</h2>
+							<br>
+					<div class="ppt-txt" style="position: absolute; top: 100px; left: 50px; height: 500px; ">
+						<img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image3.png">
+					</div>
+			 					  				 	
+					<div class="all-div; fragment" style="position: absolute; top: 270px; left: 50px; height: 179px;  width: 800px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/Shape1.png">
+				   </div>
+				<div class="all-div; fragment" style="position: absolute; top: 220px; left: 290px; height: 179px;  width: 302px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Data_Models/shape2.png">
+				   </div>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Use case: map of Unesco site in Leuven</h2>
+					<h2 style="color:#5DADE2;">Use case: map of Unesco site in Leuven</h2>
 					<div align="right" style="position: absolute; width: 100%; left: 0em"><p align= "left" style="text-align:justify"> Let’s start with a demo…</p></div>
 					<div align="right" style="position: absolute; width: 100%; left: 0em"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image4.png"  class="plain" width="600"></div>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Use case: map of Unesco site in Leuven</h2>
+					<h2 style="color:#5DADE2;">Use case: map of Unesco site in Leuven</h2>
 					<div align="right" style="position: absolute; width: 40%; left: 0em"><p style="text-align:justify"> 
-						<ul><li> First I’ll go to <a>http://www.geopunt.be/</a> because I know there is a good chance to find a Flemish map there</li>
+						<ul><li> First I’ll go to <a>http://www.geopunt.be/</a> because I know there is a good chance to find a Flemish map there</li><br>
+
 						<li>I type in the search criteria ‘Unesco’</li></ul>
 					</p></div>
 					<div align="right" style="position: absolute; width: %; right: 0em"><img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image5.png"  class="plain" width="600"></div>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Use case: map of Unesco site in Leuven</h2>
+					<h2 style="color:#5DADE2;">Use case: map of Unesco site in Leuven</h2>
 					<p style="text-align:justify">After a click on the first search result</p>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image6.png"  class="plain" width="600">
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Use case: map of Unesco site in Leuven</h2>
+					<h2 style="color:#5DADE2;">Use case: map of Unesco site in Leuven</h2>
 					<p style="text-align:justify">Now there are multiple possibilities:<br><br>
 						<ol><li>Click on the link of the owner (‘Agentschap Onroerend Erfgoed’)</li><br>
 						<li>Click on the ‘Show on map’ (Bekijk op kaart) button</li><br>
@@ -153,23 +158,23 @@
 					</p>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Click on the link of the owner</h2>
+					<h2 style="color:#5DADE2;">Click on the link of the owner</h2>
 					<p style="text-align:justify">On the website of the data owner I see a link to the own geo-portal.<br> There I see the same area (brown with yellow), but this map also shows other related layers from the same data producer.</p>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image7.png"  class="plain" width="800">
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Click on the ‘Show on map’ button</h2>
+					<h2 style="color:#5DADE2;">Click on the ‘Show on map’ button</h2>
 					<p style="text-align:justify">Combine it with other maps (other themes) like historical maps </p>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image8.png"  class="plain" width="650"><br>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image9.png"  class="plain" width="650">
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Click on the metadata button </h2>
+					<h2 style="color:#5DADE2;">Click on the metadata button </h2>
 					<p style="text-align:justify">Abstract, contact information (again with a link to the website / geo-portal of the data producer)…</p>
 					<img src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/image10.png"  class="plain" width="900">
 				</section>
 				<SECTION>
-					<h2 style="color:#5DADE2;">01 | Use case: map of Unesco site in Leuven </h2>
+					<h2 style="color:#5DADE2;">Use case: map of Unesco site in Leuven </h2>
 					<p style="text-align:justify"> <b>Questions:</b></p>
 						<ul class="fragment fade-up"><li>So who has the data?</li>
 						<li>Is the data duplicated for each geo-portal?</li>
@@ -180,7 +185,7 @@
 						<li class="fragment fade-up">The data itself (shapefile, geo-database…) is kept securely on a private network behind the Web Viewing Service</li></ul>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">01 | Why do I need geo web services? </h2>
+					<h2 style="color:#5DADE2;">Why do I need geo web services? </h2>
 					<p style="text-align:justify"> <ul>
 						<li class="fragment fade-up">Web mapping is about more than google maps</li><br>
 						<li class="fragment fade-up">It's possible to: <ul><br>
@@ -194,29 +199,149 @@
 						<li class="fragment fade-up">It’s a requirement for any SDI to set up services so your data can be found and accessed</li></ul></p>
 				</section>
 				<section id="06.1.2">
-					<h1 style="color:#5DADE2;">02 | How the WWW works</h1>
+					<h1 style="color:#5DADE2;">How the WWW works</h1>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | The World Wide Web: how does it work? </h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=16&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide16">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">The World Wide Web: how does it work?</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 0px; height: 19px;  width: 56px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 56px; height: 347px;  width: 847px">
+				<p style="font-size: 28px;">Different protocols work together
+				</p>
+				<br>
+				<ul><li><p style="font-size: 28px;">Browser
+				</p></li>
+				<li><p style="font-size: 28px;">HTTP / HTTPS
+				</p></li>
+				<li><p style="font-size: 28px;">TCP/I¨P
+				</p></li>
+				<li><p style="font-size: 28px;">IPv4
+				</p></li>
+				<li><p style="font-size: 28px;">PPP/…
+				</p></li>
+				<li><p style="font-size: 28px;">Cable
+				</p></li></ul>
+				<br>
+				<br>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 131px; left: 543px; height: 339px;  width: 360px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image12.jpeg"></img>
+				   </div>
+
+				<aside class="notes">
+				No notes for slide 16
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | The World Wide Web: how does it work?</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=17&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide17">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">The World Wide Web: how does it work?</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 0px; height: 19px;  width: 56px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 56px; height: 347px;  width: 847px">
+				<p style="font-size: 28px;">Definition of web service (3WC):
+				</p>
+				<br>
+				<p style="font-size: 28px;"><strong>“A software system designed to support (interoperable) machine-to-machine interaction over a network.”</strong>
+				</p>
+				<br>
+				<ul><li><p style="font-size: 24px;">Web services allow us to create client/server applications
+				</p></li><br>
+
+				<li><p style="font-size: 24px;">Websites are for humans  ↔  Web Services are for software
+				</p></li><br>
+
+				<li><p style="font-size: 24px;">No GUI (Graphical User Interface) – only usable within applications
+				</p></li></ul>
+				   </div>
+				<aside class="notes">
+				No notes for slide 17
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | Introduction</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=18&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide18">
+				   <div class="img-div" style="position: absolute; top: 293px; left: 753px; height: 118px;  width: 200px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image13.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px; text-align: center;">Introduction</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 0px; height: 19px;  width: 56px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 39px; height: 405px;  width: 730px">
+				<p style="font-size: 28px;">Web services <strong>advantages</strong>:
+				</p><br>
+
+				<ul><li><p style="font-size: 24px;">Provide interoperability between various software applications
+				</p></li>
+				<li><p style="font-size: 24px;">Accessible via each network supporting <strong>open</strong> standards
+				</p></li>
+				<li><p style="font-size: 24px;">Allow software and services from different organisations and locations to be combined easily to provide an <strong>integrated service</strong>
+				</p></li>
+				<li><p style="font-size: 24px;">Are <strong>self-describing</strong>
+				</p></li></ul><br>
+
+				<p style="font-size: 28px;"><br>
+					Web Services main <strong>disadvantage</strong>:
+				</p><br>
+
+				<ul><li><p style="font-size: 24px;"><strong>Overhead:</strong> transmitting data (usually in XML) is not as efficient as using binary code. What you win in portability, you lose in efficiency.</p></li></ul>
+				   </div>
+				<aside class="notes">
+				No notes for slide 18
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">02 | How to request a service?</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=19&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide19">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">How to request a service?</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 0px; height: 19px;  width: 56px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 56px; height: 389px;  width: 646px">
+				<p style="font-size: 28px;">Remote procedure calls (<strong>RPC</strong>) 
+				</p><br>
+
+				<ul><li><p style="font-size: 20px;">A Client sends a request message to a known remote server to execute a specified procedure with supplied parameters 
+				</p></li>
+				<li><p style="font-size: 20px;">The remote server sends a response to the client 
+				</p></li></ul><br>
+
+				<p style="font-size: 16px; text-align: justify">Ex.:<br>
+
+				<a href="http://giswebservices.massgis.state.ma.us/geoserver/wms?VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&LAYERS=massgis:GISDATA.TOWNS_POLYM,massgis:GISDATA.NAVTEQRDS_ARC,massgis:GISDATA.NAVTEQRDS_ARC_INT&SRS=EPSG:26986&BBOX=232325.38526025353,898705.3447384972,238934.49648710093,903749.1401484597&WIDTH=570&HEIGHT=435&FORMAT=image/png&STYLES=Black_Lines,GISDATA.NAVTEQRDS_ARC::ForOrthos,GISDATA.NAVTEQRDS_ARC_INT::Default&TRANSPARENT=TRUE"><img  class="plain" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/GO_To_Course.png" alt="Go to link" align=center-right height="20px"></a>
+				</p>
+				<br>
+				<p style="font-size: 28px;">Service-oriented architecture (<strong>SOA</strong>):
+				</p><br>
+
+				<ul><li><p style="font-size: 20px;">The basic unit of communication is a XML message
+				</p></li><br>
+
+				<li><p style="font-size: 20px;">"message-oriented" services</p></li></ul>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 62px; left: 715px; height: 265px;  width: 235px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image14.png"></img>
+				   </div>
+
+				   <div class="img-div" style="position: absolute; top: 345px; left: 750px; height: 135px;  width: 175px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image15.jpg"></img>
+				   </div>
+
+				   <div class="all-div" style="position: absolute; top: 345px; left: 689px; height: 32px;  width: 51px">
+					  <img class="ppt-img" data-src=""></img>
+				   </div>
+
+				<aside class="notes">
+					No notes for slide 19</aside>
 				</section>
 				<section id="06.1.3">
-					<h1 style="color:#5DADE2;">03 | Relevant Standards</h1>
+					<h1 style="color:#5DADE2;">Relevant Standards</h1>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">03 | Principles of Open Standards</h2>
+					<h2 style="color:#5DADE2;">Principles of Open Standards</h2>
 					<p style="text-align:justify"> <ul>
 						<li class="fragment fade-up">Availability <ul><br>
 							<li>Open Standards are available for all to read and implement. </li></ul></li><br>
@@ -227,7 +352,7 @@
 						<li class="fragment fade-up" >INSPIRE: Maximum Reuse of existing standards (OGC, ISO, W3C)</li></ul></p>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">03 | World Wide Web Consortium (W3C)</h2>
+					<h2 style="color:#5DADE2;">World Wide Web Consortium (W3C)</h2>
 					<p style="text-align:justify"> <ul>
 						<li>Founded in 1994 (Tim Berners-Lee)</li><br>
 						<li>Define standards for the Internet</li><br>
@@ -237,7 +362,7 @@
 							<li>including 131 W3C Recommendations</li></ul></li></ul>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">03 | World Wide Web Consortium (W3C)</h2>
+					<h2 style="color:#5DADE2;">World Wide Web Consortium (W3C)</h2>
 					<p style="text-align:justify"> XML: eXtensible Markup Language</p><br>
 						<ul><li>World Wide Web Consortium (W3C) recommendation </li><br>
 						<li>Designed to <b>describe</b> data in textual format </li><br>
@@ -246,13 +371,70 @@
 						<li>XML (describe data), is NOT HTML (present data)</li><br>
 						<li>Filename extension: .xml</li></ul>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | XML Example</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=24&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide24">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 48px; height: 78px;  width: 762px">
+				<h2 style="font-size: 32px;">XML Example</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 157px; left: 48px; height: 337px;  width: 786px">
+				<p style="font-size: 22px;">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+				</p>
+				<p style="font-size: 22px;">&lt;painting&gt;  
+				</p>
+				<p style="font-size: 22px;">	&nbsp;&nbsp;&lt;img src="madonna.jpg" alt="Madonna" /&gt;  
+				</p>
+				<p style="font-size: 22px;">	&nbsp;&nbsp;&lt;caption&gt;This is Raphael's Foligno Madonna
+				</p>
+				<p style="font-size: 22px;">		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;date&gt;1511&lt;/date&gt;  
+				</p>
+				<p style="font-size: 22px;">		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;date&gt;1512&lt;/date&gt;  
+				</p>
+				<p style="font-size: 22px;">	&nbsp;&nbsp;&lt;/caption&gt;
+				</p>
+				<p style="font-size: 22px;">&lt;/painting&gt;
+				</p>
+				<br><br>
+
+				<a href="index_02_Lecture UML and XML.html" style="font-size: 22px;" target="_blank">Module “XML and UML”</a>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 24
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>24<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | XML Open Geospatial Consortium</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=25&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide25">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">Open Geospatial Consortium</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 47px; height: 354px;  width: 862px">
+				<ul><li><p style="font-size: 22px;">Founded in 1994
+				</p></li>
+				<br>
+				<li><p style="font-size: 22px;">Solve the issue of spatial data sharing and interoperability
+				</p></li><br>
+
+				<li><p style="font-size: 22px;">Sets the standards that allow geographic information systems to interoperate
+				</p></li>
+				<br>
+				<li><p style="font-size: 22px;">470+ members and growing
+				</p></li>
+				<br>
+				<li><p style="font-size: 22px;">34 “core” standards
+				</p><br>
+
+				<ul><li><p style="font-size: 19px;">15 extensions/profiles</p></li></ul></li></ul>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				   <div class="all-div" style="position: absolute; top: 271px; left: 401px; height: 272px;  width: 474px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/diagram9.png"></img>
+				   </div>
+
+				<aside class="notes">
+				Notes for slide 25
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>25<br></aside>
 				</section>
 				<section>
 					<h2 style="color:#5DADE2;">03 | WMS – Web Map Service</h2>
@@ -262,9 +444,29 @@
 					<li class="fragment fade-up">Limited client interactivity with the map</li><br>
 					<li class="fragment fade-up">Current version: 1.3 (is the same as ISO 19128)</li></ul><br>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | WMS – Web Map Service</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=27&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide27">
+				   <div class="ppt-txt" style="position: absolute; top: 185px; left: 69px; height: 224px;  width: 277px">
+				<p style="font-size: 22px;">Note:	
+				</p><br>
+
+				<p style="font-size: 22px;">     Source data from which the image is generated need not to be an image. It can be a Shapefile, PostGIS database, Oracle Spatial,…</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 136px; left: 399px; height: 323px;  width: 520px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image17.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 372px; left: 644px; height: 18px;  width: 68px">
+				<p style="font-size: 9px;">Opengeo.org</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 69px; height: 78px;  width: 742px">
+				<h2 style="font-size: 32px;">WMS – Web Map Service</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 27
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>27<br></aside>
 				</section>
 				<section>
 					<h2 style="color:#5DADE2;">03 | WMS – Web Map Service</h2>
@@ -276,90 +478,450 @@
 					<li class="fragment fade-up">Tell other programs what maps it can produce and which of those can be queried further<br><ul>
 						<li>getCapabilities (returns an XML file with the metadata)</li></ul></li></ol><br>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | WMS – GetCapabilities Request</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=29&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+
+
+
+
+				<section id="slide29">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">WMS – GetCapabilities Request</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 64px; height: 403px;  width: 846px">
+				<p style="font-size: 28px;">Provides the following information:
+				</p><br>
+
+				<ul><li><p style="font-size: 22px;">Image formats it can serve (jpeg, png, gif…)
+				</p></li>
+				<li><p style="font-size: 22px;">List of the map layers 
+				</p></li>
+				<li><p style="font-size: 22px;">List of layers supporting the optional GetFeatureInfo interface
+				</p></li>
+				<li><p style="font-size: 22px;">List of available spatial reference systems 
+				</p></li>
+				<li><p style="font-size: 22px;">List of exception formats for return of exceptions 
+				</p></li>
+				<li><p style="font-size: 22px;">(optional) SLD styles
+				</p></li>
+				<li><p style="font-size: 22px;">(optional) Vendor specific capabilities (or properties)
+				</p></li></ul><br>
+
+				<p style="font-size: 28px;"><br>
+				Example
+				</p><br>
+
+				<a style="font-size: 24px;">http://demo.opengeo.org/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities 
+				</a>
+				<p style="font-size: 27px;">Response is a XML file</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 29
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>29<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | WMS – GetMap Request</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=30&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide30">
+				   <div class="ppt-txt" style="position: absolute; top: 94px; left: 53px; height: 412px;  width: 872px">
+				<a href="http://demo.opengeo.org/geoserver/wms?SERVICE=WMS&REQUEST=GetMap&LAYERS=topp:states&SRS=EPSG:4326&BBOX=-124.731,24.956,-66.97,49.372&FORMAT=image/png&STYLES=&WIDTH=600&HEIGHT=255"><img  class="plain" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/GO_To_Course.png" alt="Go to link" align=center-right height="20px"></a>
+
+				<br>
+				<ul><li><p style="font-size: 15px;"><code>http://demo.opengeo.org/geoserver/wms? </code>	The 'root' URL of the service.
+				</p></li>
+				<li><p style="font-size: 15px;"><code>SERVICE=WMS	</code>	Request for a WMS service
+				</p></li>
+				<li><p style="font-size: 15px;"><code>REQUEST=GetMap </code>   	Request for a map image
+				</p></li>
+				<li><p style="font-size: 15px;"><code>LAYERS=topp:states</code>   	Which layer? Multiple layers possible with comma separated list
+				</p></li>
+				<li><p style="font-size: 15px;"><code>SRS=EPSG:4326  </code>  	The projection we are requesting using the EPSG code
+				</p></li>
+				<li><p style="font-size: 15px;"><code>BBOX==-124.731,24.956,-66.97,49.372 </code>	Bounding box coordinate
+				</p>
+				<ul><li><p style="font-size: 15px;">Format: “MinX, MinY, MaxX, MaxY”
+				</p></li></ul></li>
+				<li><p style="font-size: 15px;"><code>WIDTH=600 </code>   		Width of image we want
+				</p></li>
+				<li><p style="font-size: 15px;"><code>HEIGHT=255 </code>  		Height of image we want
+				</p></li>
+				<li><p style="font-size: 15px;"><code>FORMAT=image/pgn </code>   	Image type (possibilities: png, jpeg, gif &amp; tiff)
+				</p></li>
+				<li><p style="font-size: 15px;"><code>STYLES= </code>   		In case the WMS service offers multiple styling. Blanc  →  default style
+				</p>
+				<ul><li><p style="font-size: 15px;">			To be found in the GetCapabilities
+				</p></li></ul></li>
+				<li><p style="font-size: 15px;"><code>TRANSPARENT=FALSE</code>    	Will image be transparent in areas of no data</p></li></ul>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 53px; height: 78px;  width: 757px">
+				<h2 style="font-size: 32px;">WMS – GetMap Request</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 30
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>30<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 | WWMS – GetMap Response</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=31&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide31">
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 68px; height: 369px;  width: 873px">
+				<p style="font-size: 24px;">Image
+				</p>
+				<br>
+				<br>
+				<br>
+				<br><br>
+				<br>
+
+				<br>
+				<p style="font-size: 24px;">Error
+				</p><br>
+				<code>
+				<p style="font-size: 16px;">&lt;ServiceExceptionReport version="1.1.1"&gt; 
+				</p>
+				<p style="font-size: 16px;"> &nbsp;&nbsp;&nbsp;   &lt;ServiceException code=""&gt; 
+				</p>
+				<p style="font-size: 16px;">       &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;WIDTH and HEIGHT incorrectly specified 
+				</p>
+				<p style="font-size: 16px;">   &nbsp;&nbsp;&nbsp; &lt;/ServiceException&gt; 
+				</p>
+				<p style="font-size: 16px;">&lt;/ServiceExceptionReport&gt;</p></code>
+				   </div>
+									   <div class="img-div" style="position: absolute; top: 200px; left:100px; height: 323px;  width: 620px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image18.png"></img>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 75px; height: 78px;  width: 735px">
+				<h2 style="font-size: 32px;">WMS – GetMap Response</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 31
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>31<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |WMS – GetFeatureInfo Request</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=32&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide32">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">WMS – GetFeatureInfo Request</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 123px; left: 74px; height: 137px;  width: 846px">
+				<p style="font-size: 13px;">Example:
+				</p>
+				<a style="font-size: 13px;">http://demo.opengeo.org/geoserver/wms?SERVICE=WMS&REQUEST=getfeatureinfo&LAYERS=topp:states&BBOX=-124.731,24.956,-66.97,49.372&FORMAT=image/png&WIDTH=600&HEIGHT=255&X=100&Y=100&query_layers=topp:states
+				</a>
+				<a style="font-size: 13px;">http://www.ruimtemonitor.be/geoserver/wms?service=wms&request=getfeatureinfo&LAYERS=gemeenten_2003_rb&FORMAT=image/png&BBOX=21000,150000,117000,246000&WIDTH=256&HEIGHT=256&X=200&Y=200&query_layers=gemeenten_2003_rb</a>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 287px; left: 74px; height: 195px;  width: 835px">
+				<p style="font-size: 14px;"><strong>Response = XML or text file (dependent on your WMS server software)</strong><br><br>
+
+				<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+				&lt;FeatureInfoResponse&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;	&lt;FIELDS FEMALES="226581" MALES="227007" POP1999="482025" 	STATE_NAME="Wyoming" _ID_="6" _SHAPE_="[Geometry]" 	_LAYERID_="0"/&gt;<br>
+				&lt;/FeatureInfoResponse&gt; </code>
+				</p>
+				<br><br>
+				<br>
+
+				<p style="font-size: 10px;">→ <strong>response can be formatted by the (web) application</strong>
+				</p>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 420px; left: 175px; height: 41px;  width: 476px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image19.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 32
+				Voorbeeld “Concentratie van Paarden 2009 (per gemeente)” in ruimtemonitor Vlaanderen<br>smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>32<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |WFS – Web Feature Service</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=33&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide33">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">WFS – Web Feature Service</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 64px; height: 397px;  width: 856px">
+				<ul><li><p style="font-size: 26px;">Provides map data (GML) to a (web) client
+				</p></li>
+				<li><p style="font-size: 26px;">The client chooses style &amp; presentational details
+				</p></li>
+				<li><p style="font-size: 26px;">Geospatial features
+				</p></li>
+				<li><p style="font-size: 26px;">Optional: Transactional Web Feature Service (WFS-T) enables the creation, deletion, and updating of features
+				</p></li>
+				<li><p style="font-size: 26px;">Current version 2.0
+				</p></li>
+				<li><p style="font-size: 26px;">= ISO 19142
+				</p></li></ul>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 303px; left: 441px; height: 221px;  width: 463px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image20.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 509px; left: 707px; height: 18px;  width: 68px">
+				<p style="font-size: 9px;">Opengeo.org</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 33
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>33<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |WFS – Example</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=34&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide37">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 73px; height: 78px;  width: 767px">
+				<h2 style="font-size: 32px;">CSW – Catalogue Service FT Web</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 57px; height: 351px;  width: 837px">
+				<ul><li><p style="font-size: 20px;">A catalogue server publishes collections of descriptive information (metadata) about geospatial data 
+				</p></li>
+				<li><p style="font-size: 20px;">Defines interface to search for metadata (so you could ‘discover’ geospatial data)
+				</p>
+				<ul><li><p style="font-size: 17px;">Transaction: insert, update &amp; delete of metadata
+				</p></li>
+				<li><p style="font-size: 17px;">Harvest (optional) - create/update metadata by asking the server to 'pull' metadata from a specified target
+				</p></li></ul></li></ul>
+				<br><br>
+
+				<p style="font-size: 20px;"><strong>Module “Metadata and catalogue services”</strong>
+				</p>
+				<br>
+				<br>
+				   </div>
+				   <div class="img-div" style="position: absolute; top: 303px; left: 537px; height: 209px;  width: 297px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image22.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 37
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>37<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |WFS – Operations & Examples</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=35&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide38">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">CSW – Some Operations</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 119px; left: 36px; height: 403px;  width: 868px">
+				<p style="font-size: 24px;"><strong>getCapabilities</strong> 
+				</p>
+
+				<ul><li><p style="font-size: 16px;">Metadata about the service itself (indicating abilities, contact information…) 
+				</p></li>
+				<li><a style="font-size: 16px;">http://metadata.geopunt.be/zoekdienst/srv/dut/csw?service=CSW&request=GetCapabilities
+				</a></li></ul><br>
+				<br>
+
+
+
+				<p style="font-size: 24px;"><strong>getRecords</strong>
+				</p>
+
+				<ul><li><p style="font-size: 16px;">Does a search
+				</p></li>
+				<li><p style="font-size: 16px;">http://metadata.geopunt.be/zoekdienst/srv/dut/csw?service=CSW&version=2.0.2&request=GetRecords&CONSTRAINTLANGUAGE=CQL_TEXT&resultType=results
+				</p></li></ul><br><br>
+
+
+				<p style="font-size: 24px;"><strong>getRecordById</strong>
+				</p>
+
+				<ul><li><p style="font-size: 16px;">Returns the metadata (default representation) of a specific record using their identifier
+				</p></li>
+				<li><p style="font-size: 16px;">http://metadata.geopunt.be/zoekdienst/srv/dut/csw?service=CSW&version=2.0.2&request=GetRecordById&id=DE022DEF-20BF-4016-82A1-57BCC917AF4E 
+				</p></li></ul>
+				<br><br>
+
+				<p style="font-size: 24px;">All return a XML document</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 38
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>38<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |WFS – Operations & Examples</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=36&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide39">
+				   <div class="img-div" style="position: absolute; top: 89px; left: 106px; height: 444px;  width: 776px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image23.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 46px; height: 78px;  width: 764px">
+				<h2 style="font-size: 32px;">CSW – GetRecords Response</h2>
+				   </div>
+				<aside class="notes">
+				Notes for slide 39
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>39<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |CSW – Catalogue Service FT Web</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=37&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide40">
+				   <div class="img-div" style="position: absolute; top: 95px; left: 136px; height: 434px;  width: 688px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image24.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 90px; height: 78px;  width: 720px">
+				<h2 style="font-size: 32px;">CSW – GetRecordsByID Request</h2>
+				   </div>
+				<aside class="notes">
+				Notes for slide 40
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>40<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |CSW – Some Operations</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=38&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide41">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">Geographic Markup Language</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 128px; left: 54px; height: 403px;  width: 844px">
+				<p style="font-size: 20px;">Standard way for data to be passed from one geographic application to another 
+				</p>
+				<br>
+				<ul><li><p style="font-size: 24px;">Is the XML grammar defined by the Open Geospatial Consortium (OGC) to express geographical features.
+				</p></li>
+				<li><p style="font-size: 24px;">Response of WFS requests is GML
+				</p></li>
+				<li><p style="font-size: 24px;">Filename extension: .gml
+				</p></li></ul>
+				<br><br>
+
+
+				<code><p style="font-size: 11px;">&lt;gml:MultiLineString srsName="http://www.opengis.net/gml/srs/epsg.xml#27354"&gt;
+				</p>
+				<p style="font-size: 11px;">	&nbsp;&nbsp;&lt;gml:lineStringMember&gt; 
+				</p>
+				<p style="font-size: 11px;">		&nbsp;&nbsp;&nbsp;&nbsp;&lt;gml:LineString&gt; 
+				</p>
+				<p style="font-size: 11px;">		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;gml:coordinates decimal="." cs="," ts=" "&gt; 494475.71056415,5433016.8189323
+				</p>
+				<p style="font-size: 11px;">          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	494982.70115662,5 435041.95096618 &lt;/gml:coordinates&gt; 
+				</p>
+				<p style="font-size: 11px;">	&nbsp;&nbsp;&nbsp;&nbsp;	&lt;/gml:LineString&gt; 
+				</p>
+				<p style="font-size: 11px;">	&nbsp;&nbsp;&lt;/gml:lineStringMember&gt;
+				</p>
+				<p style="font-size: 11px;">&lt;/gml:MultiLineString&gt; 
+				</p></code>
+				<br>
+				<p style="font-size: 24px;">Module “Basic concepts of XML and GML”</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 41
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>41<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |CSW – GetRecords Response</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=39&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide42">
+				   <div class="img-div" style="position: absolute; top: 126px; left: 52px; height: 381px;  width: 573px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image25.png"></img>
+				   </div>
+
+				   <div class="img-div" style="position: absolute; top: 270px; left: 703px; height: 150px;  width: 188px">
+					  <img class="ppt-img" data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Web_services/image26.png"></img>
+				   </div>
+
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 52px; height: 78px;  width: 759px">
+				<h2 style="font-size: 32px;">GML example: Geometries</h2>
+				   </div>
+				<aside class="notes">
+				Notes for slide 42
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>42<br></aside>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |CSW – GetRecordsByID Request</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=40&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |Geographic Markup Language</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=41&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">03 |GML example: Geometries</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=42&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-				</section>	
 				<section id="06.1.4">
 					<h1 style="color:#5DADE2;">04 | Software and Tools</h1>
 				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 |WMS/WFS Clients and Servers</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=44&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
+				<section id="slide44">
+				   <div class="ppt-txt" style="position: absolute; top: 108px; left: 62px; height: 227px;  width: 837px">
+				<p style="font-size: 24px; font-weight: bold;"><strong>Desktop clients:</strong> 
+				</p>
+				<ul><li><p style="font-size: 20px;">QGIS
+				</p></li>
+				<li><p style="font-size: 20px;">ESRI ArcGIS for Desktop
+				</p></li>
+				<li><p style="font-size: 20px;">uDIG
+				</p></li>
+				<li><p style="font-size: 20px;">Kosmo
+				</p></li>
+				<li><p style="font-size: 20px;">MapWindow
+				</p></li></ul><br><br>
+
+
+				<p style="font-size: 24px;">Web mapping clients comparison:<br>
+				<a>http://geotux.tuxfamily.org/index.php/en/geo-blogs/item/291-comparacion-clientes-web-</a>
+				</p>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 72px; height: 76px;  width: 744px">
+				<h2 style="font-size: 32px;">WMS/WFS Clients and Servers</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 340px; left: 65px; height: 188px;  width: 752px"><br><br>
+
+
+				<p style="font-size: 24px; font-weight: bold;"><strong>Servers:</strong>
+				</p>
+				<table><tr><td>
+				<ul><li><p style="font-size: 20px;">GeoServer 
+				</p></li>
+				<li><p style="font-size: 20px;">MapServer 
+				</p></li>
+				<li><p style="font-size: 20px;">ESRI ArcGIS for Server
+				</p></li>
+				<li><p style="font-size: 20px;">Geomajas
+				</p></li></ul></td>
+
+				<td><ul><li><p style="font-size: 20px;">DEEGREE
+				</p</li>
+				<li><p style="font-size: 20px;">MapGuide OpenSource
+				</p></li>
+					<li><p style="font-size: 20px;">OpenGeo Suite </p></li></ul></td></tr></table>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 120px; height: 19px;  width: 42px">
+				<br>
+				   </div>
+				<aside class="notes">
+				Notes for slide 44
+				smeSpire Training: Basics of INSPIRE Network Services<br>27/10/2020<br>SADL KU Leuven<br>44<br></aside>
+				</section>
+				<section id="slide45">
+				   <div class="ppt-txt" style="position: absolute; top: 18px; left: 64px; height: 78px;  width: 856px">
+				<h2 style="font-size: 32px;">Software to use for the following exercise</h2>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 100px; left: 0px; height: 19px;  width: 56px">
+				<br>
+				   </div>
+				   <div class="ppt-txt" style="position: absolute; top: 126px; left: 64px; height: 354px;  width: 856px">
+				<p style="font-size: 28px;">Visit the following tools and software sites:<br>
+					<br>
+					<a href="http://www.geoicon.com/products/third-party-products/opengeosuite">OpenGeo Suite</a>  
+				</p>
+				<p style="font-size: 28px;"><a href="http://docs.geoserver.org/latest/en/user/extensions/inspire/index.html">GeoServer INSPIRE extension</a>
+				</p>
+				<p style="font-size: 28px;"><a href="https://www.qgis.org/en/site/forusers/download.html">Quantum GIS (QGIS)</a>   
+				</p>
+				<p style="font-size: 28px;"><a href="http://www.google.com/earth/">Google Earth </a>
+				</p>
+		
+				   </div>
+				<aside class="notes">
+				No notes for slide 45
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">04 |Software to use for the following exercise</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=45&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-				</section>	
-				<section>
-					<h2 style="color:#5DADE2;">04 |Software to use for the following exercise</h2>
-					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=44&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
-				</section>
-				<section>
-					<h2 style="color:#5DADE2;">04 |Software to use for the following exercise</h2>
+					<h2 style="color:#5DADE2;">Software to use for the following exercise</h2>
 					<iframe src="https://docs.geoserver.org/latest/en/user/extensions/inspire/index.html" width="1000" height="600"></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">04 |Software to use for the following exercise</h2>
+					<h2 style="color:#5DADE2;">Software to use for the following exercise</h2>
 					<iframe src="https://www.qgis.org/en/site/forusers/download.html" width="1000" height="600"></iframe>
 				</section>
 				<section id="06.1.5">
 					<h1 style="color:#5DADE2;">05 | Exercises</h1>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: objective</h2>
+					<h2 style="color:#5DADE2;">Exercise: objective</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=47&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
@@ -367,7 +929,7 @@
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=48&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Geoserver: installation</h2>
+					<h2 style="color:#5DADE2;">Geoserver: installation</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=49&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
@@ -375,27 +937,27 @@
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=50&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Geoserver: installation</h2>
+					<h2 style="color:#5DADE2;">Geoserver: installation</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=51&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Geoserver: configuration</h2>
+					<h2 style="color:#5DADE2;">Geoserver: configuration</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=52&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Geoserver: configuration</h2>
+					<h2 style="color:#5DADE2;">Geoserver: configuration</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=53&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=54&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=55&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=56&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
@@ -403,31 +965,31 @@
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=57&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=58&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=59&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=60&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=61&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=62&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=63&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
-					<h2 style="color:#5DADE2;">05 | Exercise: Publishing a Shape File</h2>
+					<h2 style="color:#5DADE2;">Exercise: Publishing a Shape File</h2>
 					<iframe data-src="https://eo4geo.sbg.ac.at/KULeuven/Technical_Introduction_SDI/Images_Module06/SDI-Standards_Training_Training_M6_WebServices.pdf#page=64&toolbar=0&view=FitW" width="100%" height="500" ></iframe>
 				</section>
 				<section>
@@ -441,9 +1003,11 @@
 					<h2> Reference list </h2>
 					<br>
 					<ul style="font-size:16px"><br><br>
-						<li>Kralidis, A. T. (2007). Geospatial web services: The evolution of geospatial data infrastructure. In The Geospatial Web (pp. 223-228). Springer, London.</li>
-						<li>van den Brink, L., Barnaghi, P., Tandy, J., Atemezing, G., Atkinson, R., Cochrane, B., ... & Janowicz, K. (2019). Best practices for publishing, retrieving, and using spatial data on the web. Semantic Web, 10(1), 95-114.</li>
-						<li>Rautenbach, V., Coetzee, S., & Iwaniak, A. (2013). Orchestrating OGC web services to produce thematic maps in a spatial information infrastructure. Computers, Environment and Urban Systems, 37, 107-120.</li>
+						<li>Kralidis, A. T. (2007). Geospatial web services: The evolution of geospatial data infrastructure. In The Geospatial Web (pp. 223-228). Springer, London.</li><br>
+
+						<li>van den Brink, L., Barnaghi, P., Tandy, J., Atemezing, G., Atkinson, R., Cochrane, B., ... &amp; Janowicz, K. (2019). Best practices for publishing, retrieving, and using spatial data on the web. Semantic Web, 10(1), 95-114.</li><br>
+
+						<li>Rautenbach, V., Coetzee, S., &amp; Iwaniak, A. (2013). Orchestrating OGC web services to produce thematic maps in a spatial information infrastructure. Computers, Environment and Urban Systems, 37, 107-120.</li>
 						<li>Clabby, J. (2003). Web services explained: Solutions and applications for the real world. Prentice Hall Professional.</li>
 					</ul>
 				</section>
